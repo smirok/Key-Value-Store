@@ -1,0 +1,39 @@
+name: "Build"
+
+on: [push, pull_request]
+
+jobs:
+  job:
+    name: "${{ matrix.os_label }}, ${{ matrix.cc }}, ${{ matrix.build_type }}"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        name: [ubuntu-clang, ubuntu-gcc]
+        include:
+          - name: ubuntu-clang
+            os: ubuntu-latest
+            os_label: Ubuntu
+            cxx: clang++
+            cc: clang
+
+          - name: ubuntu-gcc
+            os: ubuntu-latest
+            os_label: Ubuntu
+            cxx: g++
+            cc: gcc
+
+        build_type: [Release, Debug]
+
+    steps:
+    - name: "Checkout code"
+      uses: actions/checkout@v2
+
+    - name: "Install cmake"
+      uses: lukka/get-cmake@latest
+
+    - name: "Configure"
+      run: cmake -B build -DCMAKE_BUILD_TYPE="${{ matrix.build_type }}" -DCMAKE_CXX_COMPILER="${{ matrix.cxx }}" -DCMAKE_C_COMPILER="${{ matrix.cc }}"
+
+    - name: "Build code"
+      run: cmake --build build --config "${{ matrix.build_type }}"
