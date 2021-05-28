@@ -1,11 +1,8 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.15.3)
 project(tests)
 
 set(TEST_DIR ${CMAKE_CURRENT_LIST_DIR})
 include_directories(${TEST_DIR})
-
-cmake_minimum_required(VERSION 3.19)
-project(KeyValueStorage)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -18,7 +15,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(tests main.cpp)
+add_executable(tests main.cpp test.cpp)
 target_link_libraries(tests
         PRIVATE "gtest_main"
         PRIVATE "gmock_main")
@@ -36,4 +33,4 @@ if (ENABLE_TEST_COVERAGE)
             EXECUTABLE "ctest"     # Executable to run to gather coverage stats
             DEPENDENCIES "tests"    # Dependencies to build first
     )
-endif()
+endif ()
