@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(KeyValueStorage)
 
 set(CMAKE_CXX_STANDARD 17)
-
+add_compile_options(-Wall -Wextra -Werror -Wshadow -Wpedantic)
 include_directories(include)
 
 add_executable(KeyValueStorage
@@ -11,3 +11,5 @@ add_executable(KeyValueStorage
         src/Value.cpp include/Value.hpp
         src/KeyValue.cpp include/KeyValue.hpp
         src/KeyValueStore.cpp include/KeyValueStore.hpp)
+
+add_subdirectory("test")
