@@ -12,4 +12,5 @@ add_executable(KeyValueStorage
         src/KeyValue.cpp include/KeyValue.hpp
         src/KeyValueStore.cpp include/KeyValueStore.hpp)
 
+enable_testing()
 add_subdirectory("test")

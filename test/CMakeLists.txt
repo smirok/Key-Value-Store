@@ -22,8 +22,10 @@ target_link_libraries(tests
 
 add_test(
         NAME "tests"
-        COMMAND ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/tests
+        COMMAND ${CMAKE_BINARY_DIR}/test/tests
 )
+
+enable_testing()
 
 # Code coverage
 if (ENABLE_TEST_COVERAGE)
