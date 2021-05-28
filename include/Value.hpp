@@ -7,11 +7,15 @@ namespace kvs {
 
     class Value {
     public:
-        Value(const char *value, size_t size);
+        Value(const char *_value, size_t _size);
 
         const char *getValue() const;
 
         size_t getSize() const;
+
+    private:
+        const char *_value;
+        size_t _size;
     };
 
 }

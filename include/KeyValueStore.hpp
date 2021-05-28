@@ -6,6 +6,7 @@
 
 namespace kvs {
     class KeyValueStore {
+    public:
         void add(const KeyValue &);
         std::optional<KeyValue> get(const Key &) const;
         void del(const Key&);

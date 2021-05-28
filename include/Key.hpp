@@ -6,11 +6,17 @@
 namespace kvs {
 
     class Key {
-        Key(const char *value, size_t size);
+    public:
+        Key(const char *key, size_t size);
 
         const char *getKey() const;
 
         size_t getSize() const;
+
+    private:
+
+        const char *_key;
+        size_t _size;
     };
 
 }

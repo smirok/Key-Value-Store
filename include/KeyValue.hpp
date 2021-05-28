@@ -13,6 +13,10 @@ namespace kvs {
         Key getKey() const;
 
         Value getValue() const;
+
+    private:
+        Key _key;
+        Value _value;
     };
 
 }
