@@ -1,4 +1,5 @@
 #include "Key.hpp"
+#include <cstring>
 
 namespace kvs {
 
@@ -11,5 +12,9 @@ namespace kvs {
 
     size_t Key::getSize() const {
         return _size;
+    }
+
+    bool Key::operator==(Key key) const {
+        return std::strcmp(this->_key, key.getKey()) == 0;
     }
 }
