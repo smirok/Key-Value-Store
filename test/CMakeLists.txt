@@ -15,7 +15,13 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(tests main.cpp test.cpp)
+add_executable(tests
+        main.cpp test.cpp
+        BloomFilterTest.cpp
+        ../include/BloomFilter.hpp ../src/BloomFilter.cpp
+        ../include/Key.hpp ../src/Key.cpp
+        ../xxHash/xxhash.h ../xxHash/xxhash.c)
+
 target_link_libraries(tests
         PRIVATE "gtest_main"
         PRIVATE "gmock_main")

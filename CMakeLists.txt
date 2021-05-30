@@ -10,7 +10,9 @@ add_executable(KeyValueStorage
         src/Key.cpp include/Key.hpp
         src/Value.cpp include/Value.hpp
         src/KeyValue.cpp include/KeyValue.hpp
-        src/KeyValueStore.cpp include/KeyValueStore.hpp)
+        src/KeyValueStore.cpp include/KeyValueStore.hpp
+        src/BloomFilter.cpp include/BloomFilter.hpp
+        xxHash/xxhash.h xxHash/xxhash.c)
 
 enable_testing()
 add_subdirectory("test")
