@@ -12,7 +12,12 @@ add_executable(KeyValueStorage
         src/KeyValue.cpp include/KeyValue.hpp
         src/KeyValueStore.cpp include/KeyValueStore.hpp
         src/BloomFilter.cpp include/BloomFilter.hpp
-        xxHash/xxhash.h xxHash/xxhash.c src/Id.cpp include/Id.hpp include/LogicStorage.hpp src/Log.cpp include/Log.hpp)
+        xxHash/xxhash.h xxHash/xxhash.c
+        src/Id.cpp include/Id.hpp
+        include/LogicStorage.hpp
+        src/Log.cpp include/Log.hpp
+        src/File.cpp include/File.hpp
+        src/FileOffset.cpp include/FileOffset.hpp)
 
 enable_testing()
 add_subdirectory("test")

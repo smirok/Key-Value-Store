@@ -20,7 +20,14 @@ add_executable(tests
         BloomFilterTest.cpp
         ../include/BloomFilter.hpp ../src/BloomFilter.cpp
         ../include/Key.hpp ../src/Key.cpp
-        ../xxHash/xxhash.h ../xxHash/xxhash.c ../src/Id.cpp ../include/Id.hpp ../include/LogicStorage.hpp ../src/Log.cpp ../include/Log.hpp LogTest.cpp)
+        ../xxHash/xxhash.h ../xxHash/xxhash.c
+        ../src/Id.cpp ../include/Id.hpp
+        ../include/LogicStorage.hpp
+        ../src/Log.cpp ../include/Log.hpp
+        LogTest.cpp
+        ../src/File.cpp ../include/File.hpp
+        ../src/FileOffset.cpp ../include/FileOffset.hpp
+        FileTest.cpp)
 
 target_link_libraries(tests
         PRIVATE "gtest_main"
