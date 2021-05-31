@@ -1,18 +1,18 @@
 #include "testing.h"
 
-#include "TrieNodeSerializer.hpp"
+#include "RecordSerializer.hpp"
 
 namespace kvs {
 
-    TEST(TrieNodeSerializer, writeAndRead) {
-        TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(3, 11);
+    TEST(RecordSerializer, writeAndRead) {
+        RecordSerializer trieNodeSerializer = RecordSerializer(3, 11);
 
         std::string key = "key";
         std::string value = "abracadabra";
-        TrieNode trieNode = TrieNode(Key(key.c_str(), 3), false, Value(value.c_str(), 11));
+        Record trieNode = Record(Key(key.c_str(), 3), false, Value(value.c_str(), 11));
         char *trieNodeInBytes = trieNodeSerializer.trieNodeToBytes(trieNode);
 
-        TrieNode newTrieNode = trieNodeSerializer.bytesToTrieNode(trieNodeInBytes);
+        Record newTrieNode = trieNodeSerializer.bytesToTrieNode(trieNodeInBytes);
 
         delete[] trieNodeInBytes;
         EXPECT_EQ(strcmp(key.data(), newTrieNode.getKey().getKey()), 0);

@@ -1,22 +1,23 @@
 #ifndef KEYVALUESTORAGE_TRIENODESERIALIZER_HPP
 #define KEYVALUESTORAGE_TRIENODESERIALIZER_HPP
 
-#include <cstddef>
+#include <vector>
+#include "Record.hpp"
 #include "TrieNode.hpp"
 
 namespace kvs {
 
     class TrieNodeSerializer {
     public:
-        TrieNodeSerializer(std::size_t key_size, std::size_t value_size);
+        explicit TrieNodeSerializer(std::size_t idSize);
 
-        char *trieNodeToBytes(const TrieNode &trieNode);
+        char *recordToBytes(const TrieNode &record);
 
-        TrieNode bytesToTrieNode(const char *bytes);
+        TrieNode bytesToRecord(const char *bytes);
 
     private:
-        std::size_t _key_size;
-        std::size_t _value_size;
+        std::size_t _idSize;
+        static constexpr std::size_t ALPHABET_SIZE = 256;
     };
 
 }

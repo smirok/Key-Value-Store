@@ -1,21 +1,14 @@
 #include "TrieNode.hpp"
 
+#include <utility>
+
 namespace kvs {
 
-    TrieNode::TrieNode(const Key &key, bool isOutdated, const Value &value) : _key(key),
-                                                                              _isOutdated(isOutdated),
-                                                                              _value(value) {
+    TrieNode::TrieNode(std::vector<Id> nextRecords) : _nextRecords(std::move(nextRecords)) {
     }
 
-    Key TrieNode::getKey() const {
-        return _key;
+    std::vector<Id> TrieNode::getNextRecords() const {
+        return _nextRecords;
     }
 
-    bool TrieNode::getIsOutdated() const {
-        return _isOutdated;
-    }
-
-    Value TrieNode::getValue() const {
-        return _value;
-    }
 }

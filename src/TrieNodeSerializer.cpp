@@ -1,48 +1,30 @@
 #include "TrieNodeSerializer.hpp"
-#include "Value.hpp"
-
-#include <cstring>
-#include <iostream>
 
 namespace kvs {
 
-    TrieNodeSerializer::TrieNodeSerializer(std::size_t key_size, std::size_t value_size) : _key_size(key_size),
-                                                                                           _value_size(value_size) {
+    TrieNodeSerializer::TrieNodeSerializer(std::size_t idSize) : _idSize(idSize) {
     }
 
-    char *TrieNodeSerializer::trieNodeToBytes(const TrieNode &trieNode) {
-        char *result = new char[_key_size + 1 + _value_size];
+    char *TrieNodeSerializer::recordToBytes(const TrieNode &record) {
+        char *result = new char[_idSize * ALPHABET_SIZE];
 
-        Key key = trieNode.getKey();
-        bool isOutdated = trieNode.getIsOutdated();
-        Value value = trieNode.getValue();
+        std::vector<Id> nextRecords = record.getNextRecords();
+        for (auto &nextRecord : nextRecords) {
+            *(reinterpret_cast<std::size_t *>(result)) = nextRecord.getId();
+            result += Id::getIdSize();
+        }
 
-        std::memcpy(result, key.getKey(), key.getSize());
-        result += key.getSize();
-
-        *result = isOutdated;
-        result += 1;
-
-        std::memcpy(result, value.getValue(), value.getSize());
-        result += value.getSize();
-
-        return result - (_key_size + 1 + _value_size);
+        return result - (_idSize * ALPHABET_SIZE);
     }
 
-    TrieNode TrieNodeSerializer::bytesToTrieNode(const char *bytes) {
-        char *keyData = new char[_key_size + 1];
-        memcpy(keyData, bytes, _key_size);
-        bytes += _key_size;
-        keyData[_key_size] = '\0';
+    TrieNode TrieNodeSerializer::bytesToRecord(const char *bytes) {
+        std::vector<Id> ids;
+        ids.reserve(ALPHABET_SIZE);
+        for (std::size_t i = 0; i < ALPHABET_SIZE; ++i) {
+            ids.emplace_back(*(reinterpret_cast<std::size_t *>(const_cast<char *>(bytes))));
+            bytes += Id::getIdSize();
+        }
 
-        bool isOutdated = *bytes;
-        bytes += 1;
-
-        char *valueData = new char[_value_size + 1];
-        memcpy(valueData, bytes, _value_size);
-        valueData[_value_size] = '\0';
-
-        return TrieNode(Key(keyData, _key_size), isOutdated, Value(valueData, _value_size));
+        return TrieNode(ids);
     }
-
 }

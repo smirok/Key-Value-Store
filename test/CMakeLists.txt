@@ -30,10 +30,10 @@ add_executable(tests
         ../src/File.cpp ../include/File.hpp
         ../src/FileOffset.cpp ../include/FileOffset.hpp
         FileTest.cpp
-        ../src/Record.cpp ../include/Record.hpp
         ../src/TrieNode.cpp ../include/TrieNode.hpp
-        ../src/RecordSerializer.cpp ../include/RecordSerializer.hpp
+        ../src/Record.cpp ../include/Record.hpp
         ../src/TrieNodeSerializer.cpp ../include/TrieNodeSerializer.hpp
+        ../src/RecordSerializer.cpp ../include/RecordSerializer.hpp
         RecordSerializerTest.cpp
         TrieNodeSerializerTest.cpp)
 

@@ -1,19 +1,26 @@
 #ifndef KEYVALUESTORAGE_RECORD_HPP
 #define KEYVALUESTORAGE_RECORD_HPP
 
+#include "Key.hpp"
+#include "Value.hpp"
 #include <vector>
-#include "Id.hpp"
 
 namespace kvs {
 
     class Record {
     public:
-        Record(std::vector<Id> nextRecords);
+        Record(const Key& key, bool isOutdated, const Value& value);
 
-        std::vector<Id> getNextRecords() const;
+        Key getKey() const;
+
+        bool getIsOutdated() const;
+
+        Value getValue() const;
 
     private:
-        std::vector<Id> _nextRecords;
+        Key _key;
+        bool _isOutdated;
+        Value _value;
     };
 
 }

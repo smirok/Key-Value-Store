@@ -1,30 +1,48 @@
 #include "RecordSerializer.hpp"
+#include "Value.hpp"
+
+#include <cstring>
+#include <iostream>
 
 namespace kvs {
 
-    RecordSerializer::RecordSerializer(std::size_t idSize) : _idSize(idSize) {
+    RecordSerializer::RecordSerializer(std::size_t key_size, std::size_t value_size) : _key_size(key_size),
+                                                                                           _value_size(value_size) {
     }
 
-    char *RecordSerializer::recordToBytes(const Record &record) {
-        char *result = new char[_idSize * ALPHABET_SIZE];
+    char *RecordSerializer::trieNodeToBytes(const Record &trieNode) {
+        char *result = new char[_key_size + 1 + _value_size];
 
-        std::vector<Id> nextRecords = record.getNextRecords();
-        for (auto &nextRecord : nextRecords) {
-            *(reinterpret_cast<std::size_t *>(result)) = nextRecord.getId();
-            result += Id::getIdSize();
-        }
+        Key key = trieNode.getKey();
+        bool isOutdated = trieNode.getIsOutdated();
+        Value value = trieNode.getValue();
 
-        return result - (_idSize * ALPHABET_SIZE);
+        std::memcpy(result, key.getKey(), key.getSize());
+        result += key.getSize();
+
+        *result = isOutdated;
+        result += 1;
+
+        std::memcpy(result, value.getValue(), value.getSize());
+        result += value.getSize();
+
+        return result - (_key_size + 1 + _value_size);
     }
 
-    Record RecordSerializer::bytesToRecord(const char *bytes) {
-        std::vector<Id> ids;
-        ids.reserve(ALPHABET_SIZE);
-        for (std::size_t i = 0; i < ALPHABET_SIZE; ++i) {
-            ids.emplace_back(*(reinterpret_cast<std::size_t *>(const_cast<char *>(bytes))));
-            bytes += Id::getIdSize();
-        }
+    Record RecordSerializer::bytesToTrieNode(const char *bytes) {
+        char *keyData = new char[_key_size + 1];
+        memcpy(keyData, bytes, _key_size);
+        bytes += _key_size;
+        keyData[_key_size] = '\0';
 
-        return Record(ids);
+        bool isOutdated = *bytes;
+        bytes += 1;
+
+        char *valueData = new char[_value_size + 1];
+        memcpy(valueData, bytes, _value_size);
+        valueData[_value_size] = '\0';
+
+        return Record(Key(keyData, _key_size), isOutdated, Value(valueData, _value_size));
     }
+
 }

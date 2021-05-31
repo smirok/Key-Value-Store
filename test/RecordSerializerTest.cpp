@@ -1,21 +1,21 @@
 #include "testing.h"
 
-#include "RecordSerializer.hpp"
+#include "TrieNodeSerializer.hpp"
 
 namespace kvs {
 
-    TEST(RecordSerializer, writeAndRead) {
-        RecordSerializer recordSerializer = RecordSerializer(Id::getIdSize());
+    TEST(TrieNodeSerializer, writeAndRead) {
+        TrieNodeSerializer recordSerializer = TrieNodeSerializer(Id::getIdSize());
 
         std::vector<Id> nextIds;
         nextIds.reserve(256);
         for (std::size_t i = 0; i < 256; ++i) {
             nextIds.emplace_back(i);
         }
-        Record record = Record(nextIds);
+        TrieNode record = TrieNode(nextIds);
         char *recordInBytes = recordSerializer.recordToBytes(record);
 
-        Record newRecord = recordSerializer.bytesToRecord(recordInBytes);
+        TrieNode newRecord = recordSerializer.bytesToRecord(recordInBytes);
 
         delete[] recordInBytes;
 

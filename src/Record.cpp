@@ -1,14 +1,21 @@
 #include "Record.hpp"
 
-#include <utility>
-
 namespace kvs {
 
-    Record::Record(std::vector<Id> nextRecords) : _nextRecords(std::move(nextRecords)) {
+    Record::Record(const Key &key, bool isOutdated, const Value &value) : _key(key),
+                                                                              _isOutdated(isOutdated),
+                                                                              _value(value) {
     }
 
-    std::vector<Id> Record::getNextRecords() const {
-        return _nextRecords;
+    Key Record::getKey() const {
+        return _key;
     }
 
+    bool Record::getIsOutdated() const {
+        return _isOutdated;
+    }
+
+    Value Record::getValue() const {
+        return _value;
+    }
 }
