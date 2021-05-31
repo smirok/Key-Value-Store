@@ -4,11 +4,17 @@
 #include <optional>
 #include "KeyValue.hpp"
 #include "BloomFilter.hpp"
+#include "Log.hpp"
+#include "Storage.hpp"
 
 namespace kvs {
     class KeyValueStore {
     public:
-        KeyValueStore(const BloomFilter& bloomFilter);
+        KeyValueStore(std::size_t key_size,
+                      std::size_t value_size,
+                      const BloomFilter &bloomFilter,
+                      const Log &log,
+                      const Storage<Record> &_recordStorage);
 
         void add(const KeyValue &);
 
@@ -24,6 +30,14 @@ namespace kvs {
         void removeOutdatedParts();
 
         BloomFilter _bloomFilter;
+
+        Log _log;
+
+        Storage<Record> _recordStorage;
+
+        std::size_t _key_size;
+
+        std::size_t _value_size;
     };
 }
 

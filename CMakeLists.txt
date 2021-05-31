@@ -16,8 +16,13 @@ add_executable(KeyValueStorage
         src/Id.cpp include/Id.hpp
         include/LogicStorage.hpp
         src/Log.cpp include/Log.hpp
+        include/Storage.hpp
         src/File.cpp include/File.hpp
-        src/FileOffset.cpp include/FileOffset.hpp)
+        src/FileOffset.cpp include/FileOffset.hpp
+        src/Record.cpp include/Record.hpp
+        src/TrieNode.cpp include/TrieNode.hpp
+        src/RecordSerializer.cpp include/RecordSerializer.hpp
+        src/TrieNodeSerializer.cpp include/TrieNodeSerializer.hpp)
 
 enable_testing()
 add_subdirectory("test")

@@ -11,6 +11,8 @@ namespace kvs {
 
         std::size_t getId() const;
 
+        static std::size_t getIdSize() ;
+
     private:
         std::size_t _objectIdentifier;
     };
