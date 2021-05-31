@@ -7,10 +7,10 @@
 namespace kvs {
 
     RecordSerializer::RecordSerializer(std::size_t key_size, std::size_t value_size) : _key_size(key_size),
-                                                                                           _value_size(value_size) {
+                                                                                       _value_size(value_size) {
     }
 
-    char *RecordSerializer::trieNodeToBytes(const Record &trieNode) {
+    char *RecordSerializer::recordToBytes(const Record &trieNode) {
         char *result = new char[_key_size + 1 + _value_size];
 
         Key key = trieNode.getKey();
@@ -29,7 +29,7 @@ namespace kvs {
         return result - (_key_size + 1 + _value_size);
     }
 
-    Record RecordSerializer::bytesToTrieNode(const char *bytes) {
+    Record RecordSerializer::bytesToRecord(const char *bytes) {
         char *keyData = new char[_key_size + 1];
         memcpy(keyData, bytes, _key_size);
         bytes += _key_size;
@@ -43,6 +43,14 @@ namespace kvs {
         valueData[_value_size] = '\0';
 
         return Record(Key(keyData, _key_size), isOutdated, Value(valueData, _value_size));
+    }
+
+    std::size_t RecordSerializer::getKeySize() const {
+        return _key_size;
+    }
+
+    std::size_t RecordSerializer::getValueSize() const {
+        return _value_size;
     }
 
 }

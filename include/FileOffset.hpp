@@ -7,7 +7,7 @@ namespace kvs {
 
     class FileOffset {
     public:
-        FileOffset(std::size_t offset);
+        explicit FileOffset(std::size_t offset);
 
         std::size_t getOffset() const;
 

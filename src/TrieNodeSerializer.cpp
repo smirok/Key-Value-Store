@@ -5,7 +5,7 @@ namespace kvs {
     TrieNodeSerializer::TrieNodeSerializer(std::size_t idSize) : _idSize(idSize) {
     }
 
-    char *TrieNodeSerializer::recordToBytes(const TrieNode &record) {
+    char *TrieNodeSerializer::trieNodeToBytes(const TrieNode &record) {
         char *result = new char[_idSize * ALPHABET_SIZE];
 
         std::vector<Id> nextRecords = record.getNextRecords();
@@ -17,7 +17,7 @@ namespace kvs {
         return result - (_idSize * ALPHABET_SIZE);
     }
 
-    TrieNode TrieNodeSerializer::bytesToRecord(const char *bytes) {
+    TrieNode TrieNodeSerializer::bytesToTrieNode(const char *bytes) {
         std::vector<Id> ids;
         ids.reserve(ALPHABET_SIZE);
         for (std::size_t i = 0; i < ALPHABET_SIZE; ++i) {

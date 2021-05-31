@@ -11,9 +11,9 @@ namespace kvs {
     public:
         explicit TrieNodeSerializer(std::size_t idSize);
 
-        char *recordToBytes(const TrieNode &record);
+        char *trieNodeToBytes(const TrieNode &record);
 
-        TrieNode bytesToRecord(const char *bytes);
+        TrieNode bytesToTrieNode(const char *bytes);
 
     private:
         std::size_t _idSize;

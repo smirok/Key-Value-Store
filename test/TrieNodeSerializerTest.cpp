@@ -10,9 +10,9 @@ namespace kvs {
         std::string key = "key";
         std::string value = "abracadabra";
         Record trieNode = Record(Key(key.c_str(), 3), false, Value(value.c_str(), 11));
-        char *trieNodeInBytes = trieNodeSerializer.trieNodeToBytes(trieNode);
+        char *trieNodeInBytes = trieNodeSerializer.recordToBytes(trieNode);
 
-        Record newTrieNode = trieNodeSerializer.bytesToTrieNode(trieNodeInBytes);
+        Record newTrieNode = trieNodeSerializer.bytesToRecord(trieNodeInBytes);
 
         delete[] trieNodeInBytes;
         EXPECT_EQ(strcmp(key.data(), newTrieNode.getKey().getKey()), 0);

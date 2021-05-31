@@ -38,4 +38,8 @@ namespace kvs {
     File::~File() {
         fileStream.close();
     }
+
+    void File::clear() {
+        fileStream.clear();
+    }
 }

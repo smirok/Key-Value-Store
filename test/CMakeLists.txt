@@ -21,6 +21,7 @@ add_executable(tests
         ../include/BloomFilter.hpp ../src/BloomFilter.cpp
         ../include/Key.hpp ../src/Key.cpp
         ../include/Value.hpp ../src/Value.cpp
+        ../include/KeyValueStore.hpp ../src/KeyValueStore.cpp
         ../xxHash/xxhash.h ../xxHash/xxhash.c
         ../src/Id.cpp ../include/Id.hpp
         ../include/LogicStorage.hpp

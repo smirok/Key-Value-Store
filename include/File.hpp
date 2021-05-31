@@ -20,6 +20,8 @@ namespace kvs {
 
         void writeByOffset(const FileOffset &fileOffset, const char *data, std::size_t length);
 
+        void clear();
+
     private:
         std::fstream fileStream;
     };

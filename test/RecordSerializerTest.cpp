@@ -13,9 +13,9 @@ namespace kvs {
             nextIds.emplace_back(i);
         }
         TrieNode record = TrieNode(nextIds);
-        char *recordInBytes = recordSerializer.recordToBytes(record);
+        char *recordInBytes = recordSerializer.trieNodeToBytes(record);
 
-        TrieNode newRecord = recordSerializer.bytesToRecord(recordInBytes);
+        TrieNode newRecord = recordSerializer.bytesToTrieNode(recordInBytes);
 
         delete[] recordInBytes;
 
