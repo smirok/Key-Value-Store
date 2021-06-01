@@ -72,5 +72,23 @@ namespace kvs {
 
         remove("data.bin");
     }
+
+    TEST(RecordStorage, clear) {
+        File file = File("data.bin");
+        RecordSerializer recordSerializer = RecordSerializer(4, 8);
+        Storage<Record> storage(file, recordSerializer);
+
+        Record record(Key("aaaa", 4), false, Value("bbbbbbbb", 8));
+
+        Id id = storage.add(record);
+        EXPECT_EQ(id.getId(), 0);
+
+        storage.clear();
+
+        id = storage.add(record);
+        EXPECT_EQ(id.getId(), 0);
+
+        remove("data.bin");
+    }
 }
 

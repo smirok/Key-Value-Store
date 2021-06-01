@@ -4,7 +4,7 @@
 
 namespace kvs {
 
-    File::File(const std::string &fileName) {
+    File::File(const std::string &fileName) : _fileName(fileName) {
         fileStream.open(fileName, std::fstream::in | std::fstream::out | std::fstream::trunc);
     }
 
@@ -40,6 +40,7 @@ namespace kvs {
     }
 
     void File::clear() {
-        fileStream.clear();
+        fileStream.close();
+        fileStream.open(_fileName, std::fstream::in | std::fstream::out | std::fstream::trunc);
     }
 }

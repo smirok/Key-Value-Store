@@ -5,6 +5,8 @@
 #include "KeyValue.hpp"
 #include "File.hpp"
 #include "RecordSerializer.hpp"
+#include "TrieNode.hpp"
+#include "TrieNodeSerializer.hpp"
 #include <optional>
 
 namespace kvs {
@@ -69,6 +71,43 @@ namespace kvs {
     private:
         File &_dataFile;
         RecordSerializer _recordSerializer;
+    };
+
+    template<>
+    class Storage<TrieNode> {
+    public:
+        Storage(File &trieNodeFile, const TrieNodeSerializer &trieNodeSerializer) : _trieNodeFile(trieNodeFile),
+                                                                                    _trieNodeSerializer(
+                                                                                            trieNodeSerializer) {
+        }
+
+        Id add(const TrieNode &trieNode) {
+            char *recordInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
+            FileOffset recordOffset = _trieNodeFile.write(recordInBytes,
+                                                          256 * Id::getIdSize()); // TODO
+
+            return Id(recordOffset.getOffset() /
+                      (256 * Id::getIdSize())); // TODO how should do it
+        }
+
+        std::optional<TrieNode> get(const Id &id) {
+            char *trieNodeInBytes = _trieNodeFile.read(256 * Id::getIdSize(),
+                                                       FileOffset(256 * Id::getIdSize() *
+                                                                  id.getId()));
+
+            TrieNode trieNode = _trieNodeSerializer.bytesToTrieNode(trieNodeInBytes);
+            return std::make_optional(trieNode);
+        }
+
+        void remove(const Id &id) = delete;
+
+        void clear() {
+            _trieNodeFile.clear();
+        }
+
+    private:
+        File &_trieNodeFile;
+        TrieNodeSerializer _trieNodeSerializer;
     };
 }
 

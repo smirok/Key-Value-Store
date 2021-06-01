@@ -24,6 +24,7 @@ namespace kvs {
 
     private:
         std::fstream fileStream;
+        std::string _fileName;
     };
 
 }
