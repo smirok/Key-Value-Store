@@ -2,10 +2,10 @@
 #define KEYVALUESTORAGE_KEYVALUESTORE_HPP
 
 #include <optional>
-#include "KeyValue.hpp"
-#include "BloomFilter.hpp"
-#include "Log.hpp"
-#include "Storage.hpp"
+#include "model/KeyValue.hpp"
+#include "storage/BloomFilter.hpp"
+#include "storage/Log.hpp"
+#include "storage/Storage.hpp"
 
 namespace kvs {
     class KeyValueStore {

@@ -7,22 +7,22 @@ include_directories(include)
 
 add_executable(KeyValueStorage
         src/main.cpp
-        src/Key.cpp include/Key.hpp
-        src/Value.cpp include/Value.hpp
-        src/KeyValue.cpp include/KeyValue.hpp
+        src/model/Key.cpp include/model/Key.hpp
+        src/model/Value.cpp include/model/Value.hpp
+        src/model/KeyValue.cpp include/model/KeyValue.hpp
         src/KeyValueStore.cpp include/KeyValueStore.hpp
-        src/BloomFilter.cpp include/BloomFilter.hpp
+        src/storage/BloomFilter.cpp include/storage/BloomFilter.hpp
         xxHash/xxhash.h xxHash/xxhash.c
-        src/Id.cpp include/Id.hpp
-        include/LogicStorage.hpp
-        src/Log.cpp include/Log.hpp
-        include/Storage.hpp
-        src/File.cpp include/File.hpp
-        src/FileOffset.cpp include/FileOffset.hpp
-        src/TrieNode.cpp include/TrieNode.hpp
-        src/Record.cpp include/Record.hpp
-        src/TrieNodeSerializer.cpp include/TrieNodeSerializer.hpp
-        src/RecordSerializer.cpp include/RecordSerializer.hpp)
+        src/model/Id.cpp include/model/Id.hpp
+        include/storage/LogicStorage.hpp
+        src/storage/Log.cpp include/storage/Log.hpp
+        include/storage/Storage.hpp
+        src/storage/File.cpp include/storage/File.hpp
+        src/model/FileOffset.cpp include/model/FileOffset.hpp
+        src/model/TrieNode.cpp include/model/TrieNode.hpp
+        src/model/Record.cpp include/model/Record.hpp
+        src/serializer/TrieNodeSerializer.cpp include/serializer/TrieNodeSerializer.hpp
+        src/serializer/RecordSerializer.cpp include/serializer/RecordSerializer.hpp)
 
 enable_testing()
 add_subdirectory("test")

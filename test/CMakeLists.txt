@@ -17,26 +17,26 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(tests
         main.cpp test.cpp
-        BloomFilterTest.cpp
-        ../include/BloomFilter.hpp ../src/BloomFilter.cpp
-        ../include/Key.hpp ../src/Key.cpp
-        ../include/Value.hpp ../src/Value.cpp
+        storage/BloomFilterTest.cpp
+        ../include/storage/BloomFilter.hpp ../src/storage/BloomFilter.cpp
+        ../include/model/Key.hpp ../src/model/Key.cpp
+        ../include/model/Value.hpp ../src/model/Value.cpp
         ../include/KeyValueStore.hpp ../src/KeyValueStore.cpp
         ../xxHash/xxhash.h ../xxHash/xxhash.c
-        ../src/Id.cpp ../include/Id.hpp
-        ../include/LogicStorage.hpp
-        ../src/Log.cpp ../include/Log.hpp
-        LogTest.cpp
-        ../include/Storage.hpp
-        ../src/File.cpp ../include/File.hpp
-        ../src/FileOffset.cpp ../include/FileOffset.hpp
-        FileTest.cpp
-        ../src/TrieNode.cpp ../include/TrieNode.hpp
-        ../src/Record.cpp ../include/Record.hpp
-        ../src/TrieNodeSerializer.cpp ../include/TrieNodeSerializer.hpp
-        ../src/RecordSerializer.cpp ../include/RecordSerializer.hpp
-        RecordSerializerTest.cpp
-        TrieNodeSerializerTest.cpp RecordStorageTest.cpp TrieNodeStorageTest.cpp)
+        ../src/model/Id.cpp ../include/model/Id.hpp
+        ../include/storage/LogicStorage.hpp
+        ../src/storage/Log.cpp ../include/storage/Log.hpp
+        storage/LogTest.cpp
+        ../include/storage/Storage.hpp
+        ../src/storage/File.cpp ../include/storage/File.hpp
+        ../src/model/FileOffset.cpp ../include/model/FileOffset.hpp
+        storage/FileTest.cpp
+        ../src/model/TrieNode.cpp ../include/model/TrieNode.hpp
+        ../src/model/Record.cpp ../include/model/Record.hpp
+        ../src/serializer/TrieNodeSerializer.cpp ../include/serializer/TrieNodeSerializer.hpp
+        ../src/serializer/RecordSerializer.cpp ../include/serializer/RecordSerializer.hpp
+        serializer/RecordSerializerTest.cpp
+        serializer/TrieNodeSerializerTest.cpp storage/RecordStorageTest.cpp storage/TrieNodeStorageTest.cpp)
 
 target_link_libraries(tests
         PRIVATE "gtest_main"
