@@ -101,6 +101,13 @@ namespace kvs {
 
         void remove(const Id &id) = delete;
 
+        void replace(const Id &id, const TrieNode &trieNode) {
+            char *recordInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
+
+            _trieNodeFile.writeByOffset(FileOffset(256 * Id::getIdSize() *
+                                                   id.getId()), recordInBytes, 256 * Id::getIdSize());
+        }
+
         void clear() {
             _trieNodeFile.clear();
         }

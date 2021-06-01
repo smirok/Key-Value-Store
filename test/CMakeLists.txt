@@ -36,7 +36,7 @@ add_executable(tests
         ../src/serializer/TrieNodeSerializer.cpp ../include/serializer/TrieNodeSerializer.hpp
         ../src/serializer/RecordSerializer.cpp ../include/serializer/RecordSerializer.hpp
         serializer/RecordSerializerTest.cpp
-        serializer/TrieNodeSerializerTest.cpp storage/RecordStorageTest.cpp storage/TrieNodeStorageTest.cpp)
+        serializer/TrieNodeSerializerTest.cpp storage/RecordStorageTest.cpp storage/TrieNodeStorageTest.cpp ../src/storage/Trie.cpp ../include/storage/Trie.hpp TrieTest.cpp)
 
 target_link_libraries(tests
         PRIVATE "gtest_main"
