@@ -7,6 +7,10 @@ namespace kvs {
 
     }
 
+    KeyValue::KeyValue(const Key &key, const Value &value) : _key(key), _value(value) {
+
+    }
+
     Key KeyValue::getKey() const {
         return _key;
     }

@@ -21,6 +21,7 @@ add_executable(tests
         ../include/storage/BloomFilter.hpp ../src/storage/BloomFilter.cpp
         ../include/model/Key.hpp ../src/model/Key.cpp
         ../include/model/Value.hpp ../src/model/Value.cpp
+        ../include/model/KeyValue.hpp ../src/model/KeyValue.cpp
         ../include/KeyValueStore.hpp ../src/KeyValueStore.cpp
         ../xxHash/xxhash.h ../xxHash/xxhash.c
         ../src/model/Id.cpp ../include/model/Id.hpp
@@ -36,7 +37,11 @@ add_executable(tests
         ../src/serializer/TrieNodeSerializer.cpp ../include/serializer/TrieNodeSerializer.hpp
         ../src/serializer/RecordSerializer.cpp ../include/serializer/RecordSerializer.hpp
         serializer/RecordSerializerTest.cpp
-        serializer/TrieNodeSerializerTest.cpp storage/RecordStorageTest.cpp storage/TrieNodeStorageTest.cpp ../src/storage/Trie.cpp ../include/storage/Trie.hpp TrieTest.cpp)
+        serializer/TrieNodeSerializerTest.cpp
+        storage/RecordStorageTest.cpp
+        storage/TrieNodeStorageTest.cpp
+        ../src/storage/Trie.cpp ../include/storage/Trie.hpp
+        TrieTest.cpp)
 
 target_link_libraries(tests
         PRIVATE "gtest_main"

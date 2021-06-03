@@ -2,6 +2,7 @@
 #define KEYVALUESTORAGE_KEYVALUESTORE_HPP
 
 #include <optional>
+#include <storage/Trie.hpp>
 #include "model/KeyValue.hpp"
 #include "storage/BloomFilter.hpp"
 #include "storage/Log.hpp"
@@ -10,22 +11,21 @@
 namespace kvs {
     class KeyValueStore {
     public:
-        KeyValueStore(std::size_t key_size,
-                      std::size_t value_size,
-                      const BloomFilter &bloomFilter,
+        KeyValueStore(const BloomFilter &bloomFilter,
                       const Log &log,
+                      const Trie &trie,
                       const Storage<Record> &_recordStorage);
 
         void add(const KeyValue &);
 
-        std::optional<KeyValue> get(const Key &) const;
+        std::optional<KeyValue> get(const Key &);
 
         void del(const Key &);
 
         void clear();
 
     private:
-        bool shouldRemoveOutdatedParts() const;
+        bool shouldRemoveOutdatedParts();
 
         void removeOutdatedParts();
 
@@ -33,11 +33,9 @@ namespace kvs {
 
         Log _log;
 
+        Trie _trie;
+
         Storage<Record> _recordStorage;
-
-        std::size_t _key_size;
-
-        std::size_t _value_size;
     };
 }
 
