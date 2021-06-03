@@ -2,7 +2,7 @@
 #include <limits>
 
 namespace kvs {
-    // nextRecords[i] == Id(0) IFF edge is missing
+    // nextRecords[i] == Id(std::numeric_limits<std::size_t>::max()) IFF edge is missing
 
     Trie::Trie(Storage<TrieNode> &storage) : _storage(storage) {
         addRoot();
@@ -109,5 +109,30 @@ namespace kvs {
 
     void Trie::clear() {
         _storage.clear();
+    }
+
+    void Trie::merge(const InMemoryTrieNode *smallTrieRoot) {
+        merge(0, smallTrieRoot);
+    }
+
+    Id Trie::merge(const Id &trieNodeId, const InMemoryTrieNode *smallTrieNode) {
+        if (trieNodeId.getId() == std::numeric_limits<std::size_t>::max() && !smallTrieNode) {
+            return trieNodeId;
+        }
+        if (!smallTrieNode) {
+            return trieNodeId;
+        }
+        if (trieNodeId.getId() == std::numeric_limits<std::size_t>::max()) {
+            return _storage.addTrieNodeSubtree(smallTrieNode);
+        }
+        TrieNode trieNode = _storage.get(trieNodeId).value();
+        std::vector<Id> ids(256);
+        for (std::size_t i = 0; i < 256; ++i) {
+            ids[i] = merge(trieNode.getNextRecords()[i], smallTrieNode->get(i));
+        }
+
+        _storage.replace(trieNodeId, TrieNode(ids));
+
+        return trieNodeId;
     }
 }

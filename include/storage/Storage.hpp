@@ -8,6 +8,7 @@
 #include "model/TrieNode.hpp"
 #include "serializer/TrieNodeSerializer.hpp"
 #include <optional>
+#include "model/InMemoryTrieNode.hpp"
 
 namespace kvs {
 
@@ -110,6 +111,23 @@ namespace kvs {
 
         void clear() {
             _trieNodeFile.clear();
+        }
+
+        Id addTrieNodeSubtree(const InMemoryTrieNode *node) {
+            std::vector<Id> ids(256);
+
+            for (std::size_t i = 0; i < 256; ++i) {
+                if (node->get(i)) {
+                    ids[i] = addTrieNodeSubtree(node->get(i));
+                }
+            }
+
+            TrieNode trieNode(ids);
+            char *bytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
+            FileOffset trieNodeOffset = _trieNodeFile.write(bytes, 256 * Id::getIdSize());
+
+            return Id(trieNodeOffset.getOffset() /
+                      (256 * Id::getIdSize())); // TODO how should do it
         }
 
     private:

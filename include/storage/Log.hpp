@@ -3,6 +3,8 @@
 
 #include "storage/LogicStorage.hpp"
 #include <unordered_map>
+#include <model/TrieNode.hpp>
+#include <model/InMemoryTrieNode.hpp>
 
 namespace kvs {
 
@@ -10,15 +12,19 @@ namespace kvs {
     public:
         Log(std::size_t sizeLimit);
 
-        virtual void add(Key key, Id id) override;
+        virtual std::optional<Id> add(Key key, Id id) override;
 
-        virtual void remove(Key key) override;
+        virtual std::optional<Id> remove(Key key) override;
 
         virtual std::optional<Id> get(Key key) override;
 
         virtual void clear() override;
 
         bool isFull() const;
+
+        InMemoryTrieNode *toInMemoryTrieNode();
+
+        static InMemoryTrieNode *toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &);
 
     private:
         std::size_t _sizeLimit;

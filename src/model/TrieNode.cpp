@@ -10,5 +10,4 @@ namespace kvs {
     std::vector<Id> TrieNode::getNextRecords() const {
         return _nextRecords;
     }
-
 }

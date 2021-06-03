@@ -3,14 +3,19 @@
 
 #include <vector>
 #include "Id.hpp"
+#include "Key.hpp"
 
 namespace kvs {
 
     class TrieNode {
     public:
+        TrieNode();
+
         TrieNode(std::vector<Id> nextRecords);
 
         std::vector<Id> getNextRecords() const;
+
+        void add(const Key& key);
 
     private:
         std::vector<Id> _nextRecords;

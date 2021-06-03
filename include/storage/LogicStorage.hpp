@@ -9,8 +9,8 @@ namespace kvs {
 
     class LogicStorage {
     public:
-        virtual void add(Key key, Id id) = 0;
-        virtual void remove(Key key) = 0;
+        virtual std::optional<Id> add(Key key, Id id) = 0;
+        virtual std::optional<Id> remove(Key key) = 0;
         virtual std::optional<Id> get(Key key) = 0;
         virtual void clear() = 0;
 

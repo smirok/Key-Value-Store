@@ -22,7 +22,7 @@ add_executable(KeyValueStorage
         src/model/TrieNode.cpp include/model/TrieNode.hpp
         src/model/Record.cpp include/model/Record.hpp
         src/serializer/TrieNodeSerializer.cpp include/serializer/TrieNodeSerializer.hpp
-        src/serializer/RecordSerializer.cpp include/serializer/RecordSerializer.hpp src/storage/Trie.cpp include/storage/Trie.hpp)
+        src/serializer/RecordSerializer.cpp include/serializer/RecordSerializer.hpp src/storage/Trie.cpp include/storage/Trie.hpp src/model/InMemoryTrieNode.cpp include/model/InMemoryTrieNode.hpp)
 
 enable_testing()
 add_subdirectory("test")

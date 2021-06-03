@@ -4,11 +4,13 @@
 #include <model/Key.hpp>
 #include <model/Id.hpp>
 #include <model/TrieNode.hpp>
+#include <model/InMemoryTrieNode.hpp>
 #include "storage/Storage.hpp"
+#include "LogicStorage.hpp"
 
 namespace kvs {
 
-    class Trie {
+    class Trie : public LogicStorage {
     public:
         Trie(Storage<TrieNode> &_storage);
 
@@ -20,8 +22,12 @@ namespace kvs {
 
         void clear();
 
+        void merge(const InMemoryTrieNode *smallTrieRoot);
+
     private:
         void addRoot();
+
+        Id merge(const Id &trieNodeId, const InMemoryTrieNode *smallTrieRoot);
 
         std::optional<std::pair<TrieNode, Id>> traverse(Key, bool shouldCreateNode);
 
