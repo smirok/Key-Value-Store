@@ -25,9 +25,9 @@ namespace kvs {
         void clear();
 
     private:
-        bool shouldRemoveOutdatedParts();
+        bool isFull();
 
-        void removeOutdatedParts();
+        void rebuild();
 
         BloomFilter _bloomFilter;
 

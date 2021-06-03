@@ -72,24 +72,31 @@ namespace kvs {
             }
         }
 
-        if (shouldRemoveOutdatedParts()) {
-            // TODO
-            removeOutdatedParts();
+        if (_recordStorage.isFull()) {
+            _recordStorage.rebuild();
+            _trie.clear();
+
+            std::vector<std::pair<Key, Id>> records;
+            for (auto iterator = Storage<Record>::RecordStorageIterator(_recordStorage);
+                 iterator != iterator.end(); iterator++) {
+                Record record = *iterator;
+                records.emplace_back(record.getKey(), iterator.currentId());
+
+                if (records.size() == 100) {
+                    InMemoryTrieNode *trieNode = Log::toInMemoryTrieNode(records);
+                    _trie.merge(trieNode);
+                }
+            }
+
+            InMemoryTrieNode *trieNode = Log::toInMemoryTrieNode(records);
+            _trie.merge(trieNode);
         }
     }
 
     void KeyValueStore::clear() {
         _log.clear();
         _trie.clear();
-        // TODO clear filter
+        _bloomFilter = BloomFilter(_recordStorage.size() * 10);
         _recordStorage.clear();
-    }
-
-    bool KeyValueStore::shouldRemoveOutdatedParts() {
-        return false;
-    }
-
-    void KeyValueStore::removeOutdatedParts() {
-
     }
 }
