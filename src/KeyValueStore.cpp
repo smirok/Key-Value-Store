@@ -27,9 +27,12 @@ namespace kvs {
         _log.add(key, recordId);
 
         if (_log.isFull()) {
-            // TODO превращаемся в бор
-            // _trie.merge(smallTrie);
-            // добавить log в фильтр;
+            InMemoryTrieNode *smallTrie = _log.toInMemoryTrieNode();
+            _trie.merge(smallTrie);
+
+            for (auto logIterator = Log::LogIterator(_log); logIterator != logIterator.end(); ++logIterator) {
+                _bloomFilter.add(logIterator->first);
+            }
         }
     }
 
