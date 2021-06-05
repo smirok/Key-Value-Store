@@ -23,7 +23,7 @@ namespace kvs {
     }
 
     bool Key::operator==(const Key &key) const {
-        return std::strcmp(this->_key, key.getKey()) == 0;
+        return (strcmp(this->_key, key.getKey()) == 0);
     }
 
     Key &Key::operator=(const Key &key) {

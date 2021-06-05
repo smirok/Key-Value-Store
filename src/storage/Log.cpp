@@ -1,4 +1,6 @@
+#include <iostream>
 #include "storage/Log.hpp"
+#include <cstring>
 
 namespace kvs {
 

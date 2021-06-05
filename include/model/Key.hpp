@@ -3,6 +3,7 @@
 
 #include <cstddef>
 #include <functional>
+#include <string>
 
 namespace kvs {
 
@@ -10,7 +11,7 @@ namespace kvs {
     public:
         Key(const char *key, size_t size);
 
-        Key(const Key& key);
+        Key(const Key &key);
 
         Key &operator=(const Key &key);
 
@@ -34,7 +35,7 @@ namespace std {
     template<>
     struct hash<kvs::Key> {
         std::size_t operator()(kvs::Key const &s) const noexcept {
-            std::size_t h1 = std::hash<const char *>{}(s.getKey());
+            std::size_t h1 = std::hash<std::string>{}(std::string(s.getKey(), s.getSize()));
             return h1;
         }
     };
