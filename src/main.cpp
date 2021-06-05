@@ -10,18 +10,32 @@
 
 int main() {
     using namespace kvs;
-    RecordSerializer recordSerializer = RecordSerializer(3, 11);
+    BloomFilter bloomFilter(1000000);
+    Log log(10000);
+    File trieFile("trieNodes.bin");
+    File recordFile("records.bin");
+    TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
+    RecordSerializer recordSerializer(3, 8);
+    Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
+    Storage<Record> recordStorage(recordFile, recordSerializer);
 
-    std::string key = "key";
-    std::string value = "abracadabra";
-    Key keyS(key.data(), 3);
-    Value valueS(value.data(), 11);
-    Record record = Record(keyS, false, valueS);
-    char *trieNodeInBytes = recordSerializer.recordToBytes(record);
+    Trie trie(trieNodeStorage);
 
-    Record newRecord = recordSerializer.bytesToRecord(trieNodeInBytes);
-    (void)newRecord;
+    KeyValueStore keyValueStore(bloomFilter, log, trie, recordStorage);
 
-    delete[] trieNodeInBytes;
+    for (char c1 = 'a'; c1 <= 'z'; ++c1) {
+        for (char c2 = 'a'; c2 <= 'z'; ++c2) {
+            for (char c3 = 'a'; c3 <= 'z'; ++c3) {
+                std::string s;
+                s.push_back(c1);
+                s.push_back(c2);
+                s.push_back(c3);
+                keyValueStore.add(KeyValue(
+                        Key(s.data(), 3),
+                        Value("aaaaaaaa", 8)));
+            }
+        }
+    }
+
     return 0;
 }

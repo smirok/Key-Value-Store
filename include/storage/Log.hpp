@@ -63,9 +63,9 @@ namespace kvs {
 
         bool isFull() const;
 
-        InMemoryTrieNode *toInMemoryTrieNode();
+        std::shared_ptr<InMemoryTrieNode> toInMemoryTrieNode();
 
-        static InMemoryTrieNode *toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &);
+        static std::shared_ptr<InMemoryTrieNode> toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &);
 
     private:
         std::size_t _sizeLimit;

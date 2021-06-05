@@ -111,11 +111,11 @@ namespace kvs {
         _storage.clear();
     }
 
-    void Trie::merge(const InMemoryTrieNode *smallTrieRoot) {
+    void Trie::merge(std::shared_ptr<InMemoryTrieNode> smallTrieRoot) {
         merge(Id(), smallTrieRoot);
     }
 
-    Id Trie::merge(const Id &trieNodeId, const InMemoryTrieNode *smallTrieNode) {
+    Id Trie::merge(const Id &trieNodeId, std::shared_ptr<InMemoryTrieNode> smallTrieNode) {
         if (trieNodeId.getId() == std::numeric_limits<std::size_t>::max() && !smallTrieNode) {
             return trieNodeId;
         }

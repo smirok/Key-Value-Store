@@ -12,8 +12,8 @@ namespace kvs {
     }
 
     void KeyValueStore::add(const KeyValue &keyValue) {
-        const Key& key = keyValue.getKey();
-        const Value& value = keyValue.getValue();
+        const Key &key = keyValue.getKey();
+        const Value &value = keyValue.getValue();
 
         Record record(key, false, value);
 
@@ -25,7 +25,7 @@ namespace kvs {
         }
 
         if (_log.isFull()) {
-            InMemoryTrieNode *smallTrie = _log.toInMemoryTrieNode();
+            std::shared_ptr<InMemoryTrieNode> smallTrie = _log.toInMemoryTrieNode();
             _trie.merge(smallTrie);
 
             for (auto logIterator = Log::LogIterator(_log); logIterator != logIterator.end(); ++logIterator) {
@@ -82,14 +82,14 @@ namespace kvs {
                 records.emplace_back(record.getKey(), iterator.currentId());
 
                 if (records.size() == 100) {
-                    InMemoryTrieNode *trieNode = Log::toInMemoryTrieNode(records);
+                    std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
                     _trie.merge(trieNode);
                 }
 
                 records.clear();
             }
 
-            InMemoryTrieNode *trieNode = Log::toInMemoryTrieNode(records);
+            std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
             _trie.merge(trieNode);
         }
     }

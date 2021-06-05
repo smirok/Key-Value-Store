@@ -45,8 +45,8 @@ namespace kvs {
         return _logMap.size() >= _sizeLimit;
     }
 
-    InMemoryTrieNode *Log::toInMemoryTrieNode() {
-        InMemoryTrieNode *root = new InMemoryTrieNode();
+    std::shared_ptr<InMemoryTrieNode> Log::toInMemoryTrieNode() {
+        std::shared_ptr<InMemoryTrieNode> root = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
 
         for (const auto &pair : _logMap) {
             root->add(pair.first, pair.second);
@@ -55,8 +55,8 @@ namespace kvs {
         return root;
     }
 
-    InMemoryTrieNode *Log::toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &keyIdPairs) {
-        InMemoryTrieNode *root = new InMemoryTrieNode();
+    std::shared_ptr<InMemoryTrieNode> Log::toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &keyIdPairs) {
+        std::shared_ptr<InMemoryTrieNode> root = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
 
         for (const auto &pair : keyIdPairs) {
             root->add(pair.first, pair.second);

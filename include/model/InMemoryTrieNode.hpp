@@ -1,6 +1,7 @@
 #ifndef KEYVALUESTORAGE_INMEMORYTRIENODE_HPP
 #define KEYVALUESTORAGE_INMEMORYTRIENODE_HPP
 
+#include <memory>
 #include "Key.hpp"
 #include "Id.hpp"
 
@@ -10,16 +11,14 @@ namespace kvs {
     public:
         InMemoryTrieNode();
 
-        ~InMemoryTrieNode();
-
         void add(const Key &key, const Id &id);
 
-        InMemoryTrieNode *get(std::size_t index) const;
+        std::shared_ptr<InMemoryTrieNode> get(std::size_t index) const;
 
-        void set(std::size_t index, InMemoryTrieNode *trieNode);
+        void set(std::size_t index, std::shared_ptr<InMemoryTrieNode> trieNode);
 
     private:
-        InMemoryTrieNode *_children[256];
+        std::shared_ptr<InMemoryTrieNode> _children[256];
         Id _id;
     };
 

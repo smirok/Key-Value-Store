@@ -1,5 +1,7 @@
 #include "model/InMemoryTrieNode.hpp"
 
+#include <utility>
+
 namespace kvs {
 
     InMemoryTrieNode::InMemoryTrieNode() {
@@ -8,21 +10,14 @@ namespace kvs {
         }
     }
 
-    InMemoryTrieNode::~InMemoryTrieNode() {
-        for (auto &i : _children) {
-            delete i;
-        }
-        delete this;
-    }
-
     void InMemoryTrieNode::add(const Key &key, const Id &id) {
-        InMemoryTrieNode *current = this;
+        std::shared_ptr<InMemoryTrieNode> current = std::make_shared<InMemoryTrieNode>(*this);
 
         const char *bytesKey = key.getKey();
         for (std::size_t i = 0; i < key.getSize(); ++i) {
             std::size_t index = static_cast<unsigned char>(*bytesKey);
             if (_children[index] == nullptr) {
-                InMemoryTrieNode *newNode = new InMemoryTrieNode();
+                std::shared_ptr<InMemoryTrieNode> newNode = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
                 current->set(index, newNode);
                 _children[index] = newNode;
             }
@@ -33,11 +28,11 @@ namespace kvs {
         current->_id = id;
     }
 
-    InMemoryTrieNode *InMemoryTrieNode::get(std::size_t index) const {
+    std::shared_ptr<InMemoryTrieNode> InMemoryTrieNode::get(std::size_t index) const {
         return _children[index];
     }
 
-    void InMemoryTrieNode::set(std::size_t index, InMemoryTrieNode *trieNode) {
-        _children[index] = trieNode;
+    void InMemoryTrieNode::set(std::size_t index, std::shared_ptr<InMemoryTrieNode> trieNode) {
+        _children[index] = std::move(trieNode);
     }
 }

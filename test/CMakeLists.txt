@@ -36,8 +36,8 @@ add_executable(tests
         ../src/model/Record.cpp ../include/model/Record.hpp
         ../src/serializer/TrieNodeSerializer.cpp ../include/serializer/TrieNodeSerializer.hpp
         ../src/serializer/RecordSerializer.cpp ../include/serializer/RecordSerializer.hpp
-        serializer/RecordSerializerTest.cpp
         serializer/TrieNodeSerializerTest.cpp
+        serializer/RecordSerializerTest.cpp
         storage/RecordStorageTest.cpp
         storage/TrieNodeStorageTest.cpp
         ../src/storage/Trie.cpp ../include/storage/Trie.hpp

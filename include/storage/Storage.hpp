@@ -90,6 +90,8 @@ namespace kvs {
                                                       _recordSerializer.getKeySize() + 1 +
                                                       _recordSerializer.getValueSize()); // TODO
 
+            delete[] recordInBytes; // TODO
+
             countAllRecords++;
 
             return Id(recordOffset.getOffset() /
@@ -170,6 +172,8 @@ namespace kvs {
             FileOffset recordOffset = _trieNodeFile.write(recordInBytes,
                                                           256 * Id::getIdSize()); // TODO
 
+            delete[] recordInBytes; // TODO
+
             return Id(recordOffset.getOffset() /
                       (256 * Id::getIdSize())); // TODO how should do it
         }
@@ -180,6 +184,9 @@ namespace kvs {
                                                                   id.getId()));
 
             TrieNode trieNode = _trieNodeSerializer.bytesToTrieNode(trieNodeInBytes);
+
+            delete[] trieNodeInBytes; // TODO
+
             return std::make_optional(trieNode);
         }
 
@@ -190,13 +197,15 @@ namespace kvs {
 
             _trieNodeFile.writeByOffset(FileOffset(256 * Id::getIdSize() *
                                                    id.getId()), recordInBytes, 256 * Id::getIdSize());
+
+            delete[] recordInBytes; // TODO
         }
 
         void clear() {
             _trieNodeFile.clear();
         }
 
-        Id addTrieNodeSubtree(const InMemoryTrieNode *node) {
+        Id addTrieNodeSubtree(std::shared_ptr<InMemoryTrieNode> node) {
             std::vector<Id> ids(256);
 
             for (std::size_t i = 0; i < 256; ++i) {
@@ -206,8 +215,10 @@ namespace kvs {
             }
 
             TrieNode trieNode(ids);
-            char *bytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
-            FileOffset trieNodeOffset = _trieNodeFile.write(bytes, 256 * Id::getIdSize());
+            char *trieNodeInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
+            FileOffset trieNodeOffset = _trieNodeFile.write(trieNodeInBytes, 256 * Id::getIdSize());
+
+            delete[] trieNodeInBytes; // TODO
 
             return Id(trieNodeOffset.getOffset() /
                       (256 * Id::getIdSize())); // TODO how should do it

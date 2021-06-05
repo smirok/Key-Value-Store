@@ -101,8 +101,8 @@ namespace kvs {
             }
         }
 
-        /*remove("trieNodes.bin");
-        remove("records.bin");*/
+        remove("trieNodes.bin");
+        remove("records.bin");
     }
 }
 
