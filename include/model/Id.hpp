@@ -9,7 +9,7 @@ namespace kvs {
     public:
         Id();
 
-        Id(std::size_t objectIdentifier);
+        explicit Id(std::size_t objectIdentifier);
 
         std::size_t getId() const;
 

@@ -6,13 +6,15 @@ namespace kvs {
     }
 
     char *TrieNodeSerializer::trieNodeToBytes(const TrieNode &record) {
-        char *result = new char[_idSize * ALPHABET_SIZE];
+        char *result = new char[_idSize * ALPHABET_SIZE + 1];
 
         std::vector<Id> nextRecords = record.getNextRecords();
         for (auto &nextRecord : nextRecords) {
             *(reinterpret_cast<std::size_t *>(result)) = nextRecord.getId();
             result += Id::getIdSize();
         }
+
+        *result = '\0';
 
         return result - (_idSize * ALPHABET_SIZE);
     }

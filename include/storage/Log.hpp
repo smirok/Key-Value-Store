@@ -53,11 +53,11 @@ namespace kvs {
 
         Log(std::size_t sizeLimit);
 
-        virtual std::optional<Id> add(Key key, Id id) override;
+        virtual std::optional<Id> add(const Key& key, Id id) override;
 
-        virtual std::optional<Id> remove(Key key) override;
+        virtual std::optional<Id> remove(const Key& key) override;
 
-        virtual std::optional<Id> get(Key key) override;
+        virtual std::optional<Id> get(const Key& key) override;
 
         virtual void clear() override;
 

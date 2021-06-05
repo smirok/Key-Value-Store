@@ -10,15 +10,21 @@ namespace kvs {
     public:
         Key(const char *key, size_t size);
 
+        Key(const Key& key);
+
+        Key &operator=(const Key &key);
+
+        ~Key();
+
         const char *getKey() const;
 
         size_t getSize() const;
 
-        bool operator==(Key key) const;
+        bool operator==(const Key &key) const;
 
     private:
 
-        const char *_key;
+        char *_key;
         size_t _size;
     };
 

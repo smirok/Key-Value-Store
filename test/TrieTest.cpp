@@ -18,12 +18,12 @@ namespace kvs {
 
         Trie trie(storage);
         Key key("aaaa", 4);
-        std::optional<Id> emptyOldRecord = trie.add(key, 0);
+        std::optional<Id> emptyOldRecord = trie.add(key, Id(0));
 
         EXPECT_FALSE(emptyOldRecord.has_value());
 
         Key key2("bbbb", 4);
-        std::optional<Id> oldRecordId = trie.add(key2, 1);
+        std::optional<Id> oldRecordId = trie.add(key2, Id(1));
         EXPECT_FALSE(oldRecordId.has_value());
 
         EXPECT_EQ(trie.get(key2)->getId(), 1);
@@ -38,11 +38,11 @@ namespace kvs {
         Trie trie(storage);
 
         Key key("aaaa", 4);
-        std::optional<Id> emptyOldRecord = trie.add(key, 322);
+        std::optional<Id> emptyOldRecord = trie.add(key, Id(322));
 
         EXPECT_FALSE(emptyOldRecord.has_value());
 
-        std::optional<Id> oldRecordId = trie.add(key, 323);
+        std::optional<Id> oldRecordId = trie.add(key, Id(323));
         EXPECT_EQ(oldRecordId->getId(), 322);
 
         remove("data.bin");

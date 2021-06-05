@@ -12,19 +12,17 @@ namespace kvs {
     }
 
     void KeyValueStore::add(const KeyValue &keyValue) {
-        Key key = keyValue.getKey();
-        Value value = keyValue.getValue();
+        const Key& key = keyValue.getKey();
+        const Value& value = keyValue.getValue();
 
         Record record(key, false, value);
 
         Id recordId = _recordStorage.add(record);
 
-        std::optional<Id> optionalOldId = _log.get(key);
-        if (!optionalOldId.has_value()) {
+        std::optional<Id> optionalOldId = _log.add(key, recordId);
+        if (optionalOldId.has_value()) {
             _recordStorage.remove(optionalOldId.value());
         }
-
-        _log.add(key, recordId);
 
         if (_log.isFull()) {
             InMemoryTrieNode *smallTrie = _log.toInMemoryTrieNode();
@@ -33,6 +31,8 @@ namespace kvs {
             for (auto logIterator = Log::LogIterator(_log); logIterator != logIterator.end(); ++logIterator) {
                 _bloomFilter.add(logIterator->first);
             }
+
+            _log.clear();
         }
     }
 
@@ -58,11 +58,10 @@ namespace kvs {
     }
 
     void KeyValueStore::del(const Key &key) {
-        std::optional<Id> optionalRecordId = _log.get(key);
+        std::optional<Id> optionalRecordId = _log.remove(key);
 
         if (optionalRecordId.has_value()) {
             _recordStorage.remove(optionalRecordId.value());
-            _log.remove(key);
         } else {
             if (_bloomFilter.mightContains(key)) {
                 std::optional<Id> optionalOldId = _trie.remove(key);
@@ -86,6 +85,8 @@ namespace kvs {
                     InMemoryTrieNode *trieNode = Log::toInMemoryTrieNode(records);
                     _trie.merge(trieNode);
                 }
+
+                records.clear();
             }
 
             InMemoryTrieNode *trieNode = Log::toInMemoryTrieNode(records);

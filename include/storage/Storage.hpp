@@ -46,7 +46,7 @@ namespace kvs {
                                                                                    _end(storage.size()),
                                                                                    m_ptr(ptr) {}
 
-            value_type operator*() const { return _storage.get(m_ptr).value(); }
+            value_type operator*() const { return _storage.get(Id(m_ptr)).value(); }
 
             void operator++() {
                 m_ptr++;
@@ -124,7 +124,26 @@ namespace kvs {
         }
 
         void rebuild() {
+            countRemovedRecords = 0;
+            countAllRecords -= countRemovedRecords;
 
+            auto readIterator = Storage<Record>::RecordStorageIterator(*this);
+            auto writeIterator = Storage<Record>::RecordStorageIterator(*this);
+
+            for (; readIterator != readIterator.end(); readIterator++) {
+                Record record = *readIterator;
+
+                if (!record.getIsOutdated()) {
+                    _dataFile.writeByOffset(FileOffset((_recordSerializer.getKeySize() + 1 +
+                                                        _recordSerializer.getValueSize()) *
+                                                       writeIterator.currentId().getId()),
+                                            _recordSerializer.recordToBytes(record),
+                                            _recordSerializer.getKeySize() + 1 +
+                                            _recordSerializer.getValueSize());
+
+                    writeIterator++;
+                }
+            }
         }
 
         std::size_t size() const {

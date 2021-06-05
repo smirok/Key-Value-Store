@@ -8,7 +8,7 @@ namespace kvs {
         addRoot();
     }
 
-    std::optional<Id> Trie::add(Key key, Id recordId) {
+    std::optional<Id> Trie::add(const Key &key, Id recordId) {
         std::optional<std::pair<TrieNode, Id>> currentNode = traverse(key, true);
 
         std::optional<Id> oldRecordId = std::nullopt;
@@ -17,7 +17,7 @@ namespace kvs {
             oldRecordId = std::make_optional(currentNode->first.getNextRecords()[0]);
         }
 
-        std::vector<Id> leafIds(256, std::numeric_limits<std::size_t>::max());
+        std::vector<Id> leafIds(256, Id(std::numeric_limits<std::size_t>::max()));
         leafIds[0] = recordId;
 
         _storage.replace(currentNode->second, TrieNode(leafIds));
@@ -25,7 +25,7 @@ namespace kvs {
         return oldRecordId;
     }
 
-    std::optional<Id> Trie::remove(Key key) {
+    std::optional<Id> Trie::remove(const Key &key) {
         std::optional<std::pair<TrieNode, Id>> currentNode = traverse(key, false);
 
         std::optional<Id> oldRecordId = std::nullopt;
@@ -46,7 +46,7 @@ namespace kvs {
         return oldRecordId;
     }
 
-    std::optional<Id> Trie::get(Key key) {
+    std::optional<Id> Trie::get(const Key &key) {
         std::optional<std::pair<TrieNode, Id>> currentNodeOptional = traverse(key, false);
 
         if (!currentNodeOptional.has_value()) {
@@ -58,19 +58,19 @@ namespace kvs {
             return std::nullopt;
         }
 
-        return id.getId();
+        return std::make_optional(id);
     }
 
     void Trie::addRoot() {
-        std::vector<Id> rootIds(256, std::numeric_limits<std::size_t>::max());
+        std::vector<Id> rootIds(256, Id(std::numeric_limits<std::size_t>::max()));
 
         _storage.add(TrieNode(rootIds));
     }
 
     std::optional<std::pair<TrieNode, Id>> Trie::traverse(Key key, bool shouldCreateNode) {
         const char *keyBytes = key.getKey();
-        TrieNode currentNode = _storage.get(0).value();
-        Id currentNodeId = 0;
+        Id currentNodeId = Id(0);
+        TrieNode currentNode = _storage.get(currentNodeId).value();
 
         for (std::size_t i = 0; i < key.getSize(); ++i) {
             char byte = *keyBytes;
@@ -112,7 +112,7 @@ namespace kvs {
     }
 
     void Trie::merge(const InMemoryTrieNode *smallTrieRoot) {
-        merge(0, smallTrieRoot);
+        merge(Id(), smallTrieRoot);
     }
 
     Id Trie::merge(const Id &trieNodeId, const InMemoryTrieNode *smallTrieNode) {

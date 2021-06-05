@@ -14,11 +14,11 @@ namespace kvs {
     public:
         Trie(Storage<TrieNode> &_storage);
 
-        std::optional<Id> add(Key, Id); // old record id
+        std::optional<Id> add(const Key &, Id); // old record id
 
-        std::optional<Id> remove(Key);
+        std::optional<Id> remove(const Key &);
 
-        std::optional<Id> get(Key);
+        std::optional<Id> get(const Key &);
 
         void clear();
 

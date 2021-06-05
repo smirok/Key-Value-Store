@@ -10,7 +10,7 @@ namespace kvs {
     public:
         KeyValue(const char *key, size_t key_size, const char *value, size_t value_size);
 
-        KeyValue(const Key&, const Value&);
+        KeyValue(const Key &key, const Value &value);
 
         Key getKey() const;
 

@@ -10,12 +10,12 @@ namespace kvs {
                                                                                        _value_size(value_size) {
     }
 
-    char *RecordSerializer::recordToBytes(const Record &trieNode) {
-        char *result = new char[_key_size + 1 + _value_size];
+    char *RecordSerializer::recordToBytes(const Record &record) {
+        char *result = new char[_key_size + 2 + _value_size];
 
-        Key key = trieNode.getKey();
-        bool isOutdated = trieNode.getIsOutdated();
-        Value value = trieNode.getValue();
+        const Key &key = record.getKey();
+        bool isOutdated = record.getIsOutdated();
+        const Value &value = record.getValue();
 
         std::memcpy(result, key.getKey(), key.getSize());
         result += key.getSize();
@@ -26,23 +26,24 @@ namespace kvs {
         std::memcpy(result, value.getValue(), value.getSize());
         result += value.getSize();
 
-        return result - (_key_size + 1 + _value_size);
+        *result = '\0';
+        result += 1;
+
+        return result - (_key_size + 2 + _value_size);
     }
 
     Record RecordSerializer::bytesToRecord(const char *bytes) {
-        char *keyData = new char[_key_size + 1];
-        memcpy(keyData, bytes, _key_size);
+        std::string keyData(bytes, _key_size);
         bytes += _key_size;
-        keyData[_key_size] = '\0';
 
         bool isOutdated = *bytes;
         bytes += 1;
 
-        char *valueData = new char[_value_size + 1];
-        memcpy(valueData, bytes, _value_size);
-        valueData[_value_size] = '\0';
+        std::string valueData(bytes, _value_size);
 
-        return Record(Key(keyData, _key_size), isOutdated, Value(valueData, _value_size));
+        Key keyS(keyData.data(), _key_size);
+        Value valueS(valueData.data(), _value_size);
+        return Record(keyS, isOutdated, valueS);
     }
 
     std::size_t RecordSerializer::getKeySize() const {

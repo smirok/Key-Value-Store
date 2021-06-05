@@ -15,8 +15,6 @@ namespace kvs {
 
         std::vector<Id> getNextRecords() const;
 
-        void add(const Key& key);
-
     private:
         std::vector<Id> _nextRecords;
     };

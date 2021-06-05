@@ -1,10 +1,12 @@
+#include <iostream>
+#include <utility>
 #include "model/Record.hpp"
 
 namespace kvs {
 
     Record::Record(const Key &key, bool isOutdated, const Value &value) : _key(key),
-                                                                              _isOutdated(isOutdated),
-                                                                              _value(value) {
+                                                                          _isOutdated(isOutdated),
+                                                                          _value(value) {
     }
 
     Key Record::getKey() const {

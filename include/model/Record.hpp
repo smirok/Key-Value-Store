@@ -9,7 +9,7 @@ namespace kvs {
 
     class Record {
     public:
-        Record(const Key& key, bool isOutdated, const Value& value);
+        Record(const Key &key, bool isOutdated, const Value &value);
 
         Key getKey() const;
 

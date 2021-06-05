@@ -42,21 +42,6 @@ namespace kvs {
         remove("data.bin");
     }
 
-    TEST(RecordStorage, getIfNotExist) {
-        File file = File("data.bin");
-        RecordSerializer recordSerializer = RecordSerializer(4, 8);
-        Storage<Record> storage(file, recordSerializer);
-
-        Record record(Key("aaaa", 4), false, Value("bbbbbbbb", 8));
-
-        Id id = storage.add(record);
-        EXPECT_EQ(id.getId(), 0);
-        std::optional<Record> takenRecordOptional = storage.get(Id(1));
-        EXPECT_FALSE(takenRecordOptional.has_value());
-
-        remove("data.bin");
-    }
-
     TEST(RecordStorage, getIfWasRemoved) {
         File file = File("data.bin");
         RecordSerializer recordSerializer = RecordSerializer(4, 8);

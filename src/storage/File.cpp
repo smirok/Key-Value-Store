@@ -9,11 +9,13 @@ namespace kvs {
     }
 
     char *File::read(std::size_t length, FileOffset fileOffset) {
-        char *buffer = new char[length];
+        char *buffer = new char[length + 1];
 
         fileStream.seekg(fileOffset.getOffset(), std::ios_base::beg);
         fileStream.read(buffer, length);
         fileStream.seekg(0, std::ios_base::end);
+
+        buffer[length] = '\0';
 
         return buffer;
     }

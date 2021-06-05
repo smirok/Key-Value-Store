@@ -6,25 +6,19 @@ namespace kvs {
         _logMap.reserve(sizeLimit);
     }
 
-    std::optional<Id> Log::add(Key key, Id id) {
-        if (isFull()) {
-            // TODO : сбросить в бор
-            clear();
-        }
-
+    std::optional<Id> Log::add(const Key &key, Id id) {
         std::optional<Id> replacedRecordId = get(key);
 
         if (replacedRecordId.has_value()) {
-            // TODO : старая запись устарела
-            _logMap.insert({key, id});
+            _logMap[key] = id;
             return replacedRecordId;
         } else {
-            _logMap.insert({key, id});
+            _logMap[key] = id;
             return std::nullopt;
         }
     }
 
-    std::optional<Id> Log::remove(Key key) {
+    std::optional<Id> Log::remove(const Key &key) {
         std::optional<Id> recordToRemoveId = get(key);
         if (recordToRemoveId == std::nullopt) {
             return std::nullopt;
@@ -34,7 +28,7 @@ namespace kvs {
         return recordToRemoveId;
     }
 
-    std::optional<Id> Log::get(Key key) {
+    std::optional<Id> Log::get(const Key &key) {
         if (_logMap.find(key) != _logMap.end()) {
             return std::optional<Id>(_logMap.at(key));
         }

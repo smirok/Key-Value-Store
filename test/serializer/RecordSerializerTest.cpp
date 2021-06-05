@@ -5,21 +5,21 @@
 namespace kvs {
 
     TEST(TrieNodeSerializer, writeAndRead) {
-        TrieNodeSerializer recordSerializer = TrieNodeSerializer(Id::getIdSize());
+        TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(Id::getIdSize());
 
         std::vector<Id> nextIds;
         nextIds.reserve(256);
         for (std::size_t i = 0; i < 256; ++i) {
             nextIds.emplace_back(i);
         }
-        TrieNode record = TrieNode(nextIds);
-        char *recordInBytes = recordSerializer.trieNodeToBytes(record);
+        TrieNode trieNode = TrieNode(nextIds);
+        char *recordInBytes = trieNodeSerializer.trieNodeToBytes(trieNode);
 
-        TrieNode newRecord = recordSerializer.bytesToTrieNode(recordInBytes);
+        TrieNode newTrieNode = trieNodeSerializer.bytesToTrieNode(recordInBytes);
 
         delete[] recordInBytes;
 
-        std::vector<Id> newNextIds = newRecord.getNextRecords();
+        std::vector<Id> newNextIds = newTrieNode.getNextRecords();
 
         for (int i = 0; i < 256; ++i) {
             EXPECT_EQ(nextIds[i].getId(), newNextIds[i].getId());
