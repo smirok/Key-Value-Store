@@ -22,12 +22,12 @@ namespace kvs {
 
         void clear();
 
-        void merge(std::shared_ptr<InMemoryTrieNode> smallTrieRoot);
+        void merge(const std::shared_ptr<InMemoryTrieNode>& smallTrieRoot);
 
     private:
         void addRoot();
 
-        Id merge(const Id &trieNodeId, std::shared_ptr<InMemoryTrieNode> smallTrieRoot);
+        Id merge(const Id &trieNodeId, const std::shared_ptr<InMemoryTrieNode>& smallTrieRoot);
 
         std::optional<std::pair<TrieNode, Id>> traverse(Key, bool shouldCreateNode);
 

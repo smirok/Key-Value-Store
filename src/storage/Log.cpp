@@ -51,7 +51,7 @@ namespace kvs {
         std::shared_ptr<InMemoryTrieNode> root = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
 
         for (const auto &pair : _logMap) {
-            root->add(pair.first, pair.second);
+            InMemoryTrieNode::add(root, pair.first, pair.second);
         }
 
         return root;
@@ -61,7 +61,7 @@ namespace kvs {
         std::shared_ptr<InMemoryTrieNode> root = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
 
         for (const auto &pair : keyIdPairs) {
-            root->add(pair.first, pair.second);
+            InMemoryTrieNode::add(root, pair.first, pair.second);
         }
 
         return root;

@@ -1,5 +1,6 @@
 #include "storage/Trie.hpp"
 #include <limits>
+#include <utility>
 
 namespace kvs {
     // nextRecords[i] == Id(std::numeric_limits<std::size_t>::max()) IFF edge is missing
@@ -109,13 +110,14 @@ namespace kvs {
 
     void Trie::clear() {
         _storage.clear();
+        addRoot();
     }
 
-    void Trie::merge(std::shared_ptr<InMemoryTrieNode> smallTrieRoot) {
-        merge(Id(), smallTrieRoot);
+    void Trie::merge(const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot) {
+        merge(Id(0), smallTrieRoot);
     }
 
-    Id Trie::merge(const Id &trieNodeId, std::shared_ptr<InMemoryTrieNode> smallTrieNode) {
+    Id Trie::merge(const Id &trieNodeId, const std::shared_ptr<InMemoryTrieNode> &smallTrieNode) {
         if (trieNodeId.getId() == std::numeric_limits<std::size_t>::max() && !smallTrieNode) {
             return trieNodeId;
         }

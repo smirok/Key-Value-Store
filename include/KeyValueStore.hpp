@@ -25,9 +25,6 @@ namespace kvs {
         void clear();
 
     private:
-        bool isFull();
-
-        void rebuild();
 
         BloomFilter _bloomFilter;
 

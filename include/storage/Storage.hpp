@@ -8,6 +8,7 @@
 #include "model/TrieNode.hpp"
 #include "serializer/TrieNodeSerializer.hpp"
 #include <optional>
+#include <iostream>
 #include "model/InMemoryTrieNode.hpp"
 
 namespace kvs {
@@ -46,7 +47,7 @@ namespace kvs {
                                                                                    _end(storage.size()),
                                                                                    m_ptr(ptr) {}
 
-            value_type operator*() const { return _storage.get(Id(m_ptr)).value(); }
+            value_type operator*() const { return _storage.getAnyway(Id(m_ptr)).value(); }
 
             void operator++() {
                 m_ptr++;
@@ -108,6 +109,16 @@ namespace kvs {
             return record.getIsOutdated() ? std::nullopt : std::make_optional(record);
         }
 
+        std::optional<Record> getAnyway(const Id &id) {
+            char *recordInBytes = _dataFile.read(_recordSerializer.getKeySize() + 1 + _recordSerializer.getValueSize(),
+                                                 FileOffset((_recordSerializer.getKeySize() + 1 +
+                                                             _recordSerializer.getValueSize()) *
+                                                            id.getId()));
+
+            Record record = _recordSerializer.bytesToRecord(recordInBytes);
+            return record;
+        }
+
         void remove(const Id &id) {
             FileOffset bitOutdatedOffset =
                     FileOffset(id.getId() * (_recordSerializer.getKeySize() + 1 + _recordSerializer.getValueSize()) +
@@ -126,12 +137,10 @@ namespace kvs {
         }
 
         void rebuild() {
-            countRemovedRecords = 0;
-            countAllRecords -= countRemovedRecords;
-
             auto readIterator = Storage<Record>::RecordStorageIterator(*this);
             auto writeIterator = Storage<Record>::RecordStorageIterator(*this);
 
+            int cnt = 0;
             for (; readIterator != readIterator.end(); readIterator++) {
                 Record record = *readIterator;
 
@@ -144,8 +153,14 @@ namespace kvs {
                                             _recordSerializer.getValueSize());
 
                     writeIterator++;
+                    cnt++;
                 }
             }
+
+            countAllRecords -= countRemovedRecords;
+            countRemovedRecords = 0;
+
+            std::cerr << cnt << "\n";
         }
 
         std::size_t size() const {
@@ -205,13 +220,20 @@ namespace kvs {
             _trieNodeFile.clear();
         }
 
-        Id addTrieNodeSubtree(std::shared_ptr<InMemoryTrieNode> node) {
+        Id addTrieNodeSubtree(const std::shared_ptr<InMemoryTrieNode> &node) {
             std::vector<Id> ids(256);
 
             for (std::size_t i = 0; i < 256; ++i) {
                 if (node->get(i)) {
                     ids[i] = addTrieNodeSubtree(node->get(i));
                 }
+            }
+
+            if (node->getId().getId() != std::numeric_limits<std::size_t>::max()) {
+                std::vector<Id> leafIds(256, Id(std::numeric_limits<std::size_t>::max()));
+                leafIds[0] = node->getId();
+
+                return this->add(TrieNode(leafIds));
             }
 
             TrieNode trieNode(ids);

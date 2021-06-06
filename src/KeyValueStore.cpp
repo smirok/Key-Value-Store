@@ -72,25 +72,43 @@ namespace kvs {
         }
 
         if (_recordStorage.isFull()) {
+
+            std::shared_ptr<InMemoryTrieNode> smallTrie = _log.toInMemoryTrieNode();
+            _trie.merge(smallTrie);
+
+            for (auto logIterator = Log::LogIterator(_log); logIterator != logIterator.end(); ++logIterator) {
+                _bloomFilter.add(logIterator->first);
+            }
+
+            _log.clear();
+
+            std::cerr << "est full?";
+            std::cerr << _recordStorage.size() << "\n";
+
             _recordStorage.rebuild();
             _trie.clear();
+
+            std::cerr << _recordStorage.size();
 
             std::vector<std::pair<Key, Id>> records;
             for (auto iterator = Storage<Record>::RecordStorageIterator(_recordStorage);
                  iterator != iterator.end(); iterator++) {
                 Record record = *iterator;
+
                 records.emplace_back(record.getKey(), iterator.currentId());
 
-                if (records.size() == 100) {
+                if (records.size() == 5000) {
                     std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
                     _trie.merge(trieNode);
+                    records.clear();
+                    std::cerr << "drop1";
+                    _trie.add(record.getKey(), iterator.currentId());
                 }
-
-                records.clear();
             }
 
             std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
             _trie.merge(trieNode);
+            std::cerr << "drop2";
         }
     }
 
