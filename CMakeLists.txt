@@ -24,5 +24,15 @@ add_executable(KeyValueStorage
         src/serializer/TrieNodeSerializer.cpp include/serializer/TrieNodeSerializer.hpp
         src/serializer/RecordSerializer.cpp include/serializer/RecordSerializer.hpp src/storage/Trie.cpp include/storage/Trie.hpp src/model/InMemoryTrieNode.cpp include/model/InMemoryTrieNode.hpp)
 
+
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
+
+option(ENABLE_TEST_COVERAGE "Enable test coverage" OFF)
+
+if (ENABLE_TEST_COVERAGE)
+  include(CodeCoverage)
+  append_coverage_compiler_flags()
+endif()
+
 enable_testing()
 add_subdirectory("test")

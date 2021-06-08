@@ -1,0 +1,31 @@
+name: "Coverage"
+
+on: [push, pull_request]
+
+jobs:
+  job:
+    name: "Code coverage"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "Checkout code"
+      uses: actions/checkout@v2
+      with:
+          submodules: true
+
+    - name: "Install cmake"
+      uses: lukka/get-cmake@latest
+
+    - name: "Install lcov"
+      run: sudo apt-get install lcov
+
+    - name: "Configure"
+      run: cmake -B build -DCMAKE_BUILD_TYPE=Debug -DENABLE_TEST_COVERAGE=ON
+
+    - name: "Run code coverage"
+      run: |
+        cd build
+        make coverage
+        
+    - name: "Upload coverage to Codecov"
+      run: bash <(curl -s https://codecov.io/bash) -t 0d7cc543-0444-4450-90f4-c0d398211672 -f build/test/coverage.info
