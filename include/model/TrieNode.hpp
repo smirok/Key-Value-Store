@@ -15,6 +15,10 @@ namespace kvs {
 
         std::vector<Id> getNextRecords() const;
 
+        Id getNextRecord(std::size_t index) const;
+
+        void setNextRecord(std::size_t index, const Id &id);
+
     private:
         std::vector<Id> _nextRecords;
     };

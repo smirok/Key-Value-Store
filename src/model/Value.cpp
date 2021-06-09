@@ -9,16 +9,10 @@ namespace kvs {
         _value[size] = '\0';
     }
 
-    const char *Value::getValue() const {
-        return _value;
-    }
-
-    size_t Value::getSize() const {
-        return _size;
-    }
-
-    Value::~Value() {
-        delete[] _value;
+    Value::Value(const Value &value) : _size(value._size) {
+        _value = new char[_size + 1];
+        memcpy(_value, value._value, _size);
+        _value[_size] = '\0';
     }
 
     Value &Value::operator=(const Value &value) {
@@ -33,9 +27,34 @@ namespace kvs {
         return *this;
     }
 
-    Value::Value(const Value &value) : _size(value._size){
-        _value = new char[_size + 1];
-        memcpy(_value, value._value, _size);
-        _value[_size] = '\0';
+    Value::Value(Value &&value) : _value(value._value), _size(value._size) {
+        value._value = nullptr;
+    }
+
+    Value &Value::operator=(Value &&value) {
+        if (&value == this) {
+            return *this;
+        }
+
+        delete[] _value;
+
+        _value = value._value;
+        value._value = nullptr;
+
+        _size = value._size;
+
+        return *this;
+    }
+
+    Value::~Value() {
+        delete[] _value;
+    }
+
+    const char *Value::getValue() const {
+        return _value;
+    }
+
+    size_t Value::getSize() const {
+        return _size;
     }
 }

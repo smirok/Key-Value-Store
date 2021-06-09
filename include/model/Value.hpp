@@ -9,9 +9,13 @@ namespace kvs {
     public:
         Value(const char *_value, size_t _size);
 
+        Value(const Value &value);
+
         Value &operator=(const Value &value);
 
-        Value(const Value& value);
+        Value(Value &&value);
+
+        Value &operator=(Value &&value);
 
         ~Value();
 

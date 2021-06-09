@@ -4,12 +4,12 @@
 
 namespace kvs {
 
-    Record::Record(const Key &key, bool isOutdated, const Value &value) : _key(key),
-                                                                          _isOutdated(isOutdated),
-                                                                          _value(value) {
+    Record::Record(Key key, bool isOutdated, Value value) : _key(std::move(key)),
+                                                            _isOutdated(isOutdated),
+                                                            _value(std::move(value)) {
     }
 
-    Key Record::getKey() const {
+    const Key &Record::getKey() const {
         return _key;
     }
 
@@ -17,7 +17,7 @@ namespace kvs {
         return _isOutdated;
     }
 
-    Value Record::getValue() const {
+    const Value &Record::getValue() const {
         return _value;
     }
 }

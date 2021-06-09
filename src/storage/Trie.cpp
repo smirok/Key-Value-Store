@@ -14,8 +14,8 @@ namespace kvs {
 
         std::optional<Id> oldRecordId = std::nullopt;
 
-        if (currentNode->first.getNextRecords()[0].getId() != std::numeric_limits<std::size_t>::max()) {
-            oldRecordId = std::make_optional(currentNode->first.getNextRecords()[0]);
+        if (currentNode->first.getNextRecord(0).getId() != std::numeric_limits<std::size_t>::max()) {
+            oldRecordId = std::make_optional(currentNode->first.getNextRecord(0));
         }
 
         std::vector<Id> leafIds(256, Id(std::numeric_limits<std::size_t>::max()));
@@ -31,8 +31,8 @@ namespace kvs {
 
         std::optional<Id> oldRecordId = std::nullopt;
 
-        if (currentNode->first.getNextRecords()[0].getId() != std::numeric_limits<std::size_t>::max()) {
-            oldRecordId = std::make_optional(currentNode->first.getNextRecords()[0]);
+        if (currentNode->first.getNextRecord(0).getId() != std::numeric_limits<std::size_t>::max()) {
+            oldRecordId = std::make_optional(currentNode->first.getNextRecord(0));
         }
 
         std::vector<Id> leafIds;
@@ -54,7 +54,7 @@ namespace kvs {
             return std::nullopt;
         }
 
-        Id id = currentNodeOptional->first.getNextRecords()[0];
+        Id id = currentNodeOptional->first.getNextRecord(0);
         if (id.getId() == std::numeric_limits<std::size_t>::max()) {
             return std::nullopt;
         }
@@ -76,7 +76,7 @@ namespace kvs {
         for (std::size_t i = 0; i < key.getSize(); ++i) {
             char byte = *keyBytes;
 
-            Id nextNodeId = currentNode.getNextRecords()[byte]; // TODO extra copy
+            Id nextNodeId = currentNode.getNextRecord(byte); // TODO extra copy
 
             if (nextNodeId.getId() != std::numeric_limits<std::size_t>::max()) {
                 currentNode = _storage.get(nextNodeId).value();
@@ -130,7 +130,7 @@ namespace kvs {
         TrieNode trieNode = _storage.get(trieNodeId).value();
         std::vector<Id> ids(256);
         for (std::size_t i = 0; i < 256; ++i) {
-            ids[i] = merge(trieNode.getNextRecords()[i], smallTrieNode->get(i));
+            ids[i] = merge(trieNode.getNextRecord(i), smallTrieNode->get(i));
         }
 
         _storage.replace(trieNodeId, TrieNode(ids));

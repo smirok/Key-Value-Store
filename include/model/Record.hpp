@@ -9,13 +9,13 @@ namespace kvs {
 
     class Record {
     public:
-        Record(const Key &key, bool isOutdated, const Value &value);
+        Record(Key key, bool isOutdated, Value value);
 
-        Key getKey() const;
+        const Key &getKey() const;
 
         bool getIsOutdated() const;
 
-        Value getValue() const;
+        const Value &getValue() const;
 
     private:
         Key _key;

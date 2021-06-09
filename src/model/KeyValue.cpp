@@ -1,5 +1,7 @@
 #include "model/KeyValue.hpp"
 
+#include <utility>
+
 namespace kvs {
 
     KeyValue::KeyValue(const char *key, size_t key_size, const char *value, size_t value_size)
@@ -7,15 +9,15 @@ namespace kvs {
 
     }
 
-    KeyValue::KeyValue(const Key &key, const Value &value) : _key(key), _value(value) {
+    KeyValue::KeyValue(Key key, Value value) : _key(std::move(key)), _value(std::move(value)) {
 
     }
 
-    Key KeyValue::getKey() const {
+    const Key &KeyValue::getKey() const {
         return _key;
     }
 
-    Value KeyValue::getValue() const {
+    const Value &KeyValue::getValue() const {
         return _value;
     }
 }

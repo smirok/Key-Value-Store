@@ -15,6 +15,10 @@ namespace kvs {
 
         Key &operator=(const Key &key);
 
+        Key(Key&& key);
+
+        Key& operator=(Key&& key);
+
         ~Key();
 
         const char *getKey() const;
