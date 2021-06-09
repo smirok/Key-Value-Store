@@ -1,0 +1,25 @@
+name: "Documentation"
+
+on: [push]
+
+jobs:
+  job:
+    name: "Documentation"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "Checkout code"
+      uses: actions/checkout@v2
+      with:
+          submodules: true
+
+    - name: "Run doxygen"
+      uses: mattnotmitt/doxygen-action@v1.1.0
+      with:
+        working-directory: "docs/"
+
+    - name: "Publish docs"
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: "docs/html/"
