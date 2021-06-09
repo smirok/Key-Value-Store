@@ -31,10 +31,6 @@ namespace kvs {
         return _children[index];
     }
 
-    void InMemoryTrieNode::set(std::size_t index, const std::shared_ptr<InMemoryTrieNode> &trieNode) {
-        _children[index] = trieNode;
-    }
-
     Id InMemoryTrieNode::getId() const {
         return _id;
     }

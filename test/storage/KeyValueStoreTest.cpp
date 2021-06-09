@@ -72,11 +72,11 @@ namespace kvs {
 
     TEST(KeyValueStore, logOverflow) {
         BloomFilter bloomFilter(10000000);
-        Log log(100000);
+        Log log(5000);
         File trieFile("trieNodes.bin");
         File recordFile("records.bin");
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
-        RecordSerializer recordSerializer(4, 8);
+        RecordSerializer recordSerializer(3, 8);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
         Storage<Record> recordStorage(recordFile, recordSerializer);
 
@@ -87,16 +87,13 @@ namespace kvs {
         for (char c1 = 'a'; c1 <= 'z'; ++c1) {
             for (char c2 = 'a'; c2 <= 'z'; ++c2) {
                 for (char c3 = 'a'; c3 <= 'z'; ++c3) {
-                    for (char c4 = 'a'; c4 <= 'z'; ++c4) {
-                        std::string s;
-                        s.push_back(c1);
-                        s.push_back(c2);
-                        s.push_back(c3);
-                        s.push_back(c4);
-                        keyValueStore.add(KeyValue(
-                                Key(s.data(), 4),
-                                Value("aaaaaaaa", 8)));
-                    }
+                    std::string s;
+                    s.push_back(c1);
+                    s.push_back(c2);
+                    s.push_back(c3);
+                    keyValueStore.add(KeyValue(
+                            Key(s.data(), 3),
+                            Value("aaaaaaaa", 8)));
                 }
             }
         }
@@ -106,12 +103,12 @@ namespace kvs {
     }
 
     TEST(KeyValueStore, logOverflowAndGet) {
-        BloomFilter bloomFilter(10000000);
-        Log log(100000);
+        BloomFilter bloomFilter(100000);
+        Log log(5000);
         File trieFile("trieNodes.bin");
         File recordFile("records.bin");
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
-        RecordSerializer recordSerializer(4, 4);
+        RecordSerializer recordSerializer(3, 4);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
         Storage<Record> recordStorage(recordFile, recordSerializer);
 
@@ -122,16 +119,13 @@ namespace kvs {
         for (char c1 = 'a'; c1 <= 'z'; ++c1) {
             for (char c2 = 'a'; c2 <= 'z'; ++c2) {
                 for (char c3 = 'a'; c3 <= 'z'; ++c3) {
-                    for (char c4 = 'a'; c4 <= 'z'; ++c4) {
-                        std::string s;
-                        s.push_back(c1);
-                        s.push_back(c2);
-                        s.push_back(c3);
-                        s.push_back(c4);
-                        keyValueStore.add(KeyValue(
-                                Key(s.data(), 4),
-                                Value(s.data(), 4)));
-                    }
+                    std::string s;
+                    s.push_back(c1);
+                    s.push_back(c2);
+                    s.push_back(c3);
+                    keyValueStore.add(KeyValue(
+                            Key(s.data(), 3),
+                            Value(s.data(), 4)));
                 }
             }
         }
@@ -140,14 +134,11 @@ namespace kvs {
         for (char c1 = 'a'; c1 <= 'z'; ++c1) {
             for (char c2 = 'a'; c2 <= 'z'; ++c2) {
                 for (char c3 = 'a'; c3 <= 'z'; ++c3) {
-                    for (char c4 = 'a'; c4 <= 'z'; ++c4) {
-                        std::string s;
-                        s.push_back(c1);
-                        s.push_back(c2);
-                        s.push_back(c3);
-                        s.push_back(c4);
-                        EXPECT_EQ(strcmp(keyValueStore.get(Key(s.data(), 4))->getValue().getValue(), s.data()), 0);
-                    }
+                    std::string s;
+                    s.push_back(c1);
+                    s.push_back(c2);
+                    s.push_back(c3);
+                    EXPECT_EQ(strcmp(keyValueStore.get(Key(s.data(), 3))->getValue().getValue(), s.data()), 0);
                 }
             }
         }
@@ -236,5 +227,6 @@ namespace kvs {
         remove("trieNodes.bin");
         remove("records.bin");
     }
+
 }
 

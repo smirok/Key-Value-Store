@@ -15,8 +15,6 @@ namespace kvs {
 
         std::shared_ptr<InMemoryTrieNode> get(std::size_t index) const;
 
-        void set(std::size_t index, const std::shared_ptr<InMemoryTrieNode> &trieNode);
-
         Id getId() const;
 
     private:
