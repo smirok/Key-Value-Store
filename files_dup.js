@@ -5,5 +5,5 @@ var files_dup =
     [ "storage", "dir_70f20ecf11358dff00a0daf546d3147e.html", "dir_70f20ecf11358dff00a0daf546d3147e" ],
     [ "benchmark.cpp", "benchmark_8cpp.html", "benchmark_8cpp" ],
     [ "KeyValueStore.cpp", "KeyValueStore_8cpp.html", null ],
-    [ "main.cpp", "main_8cpp.html", null ]
+    [ "main.cpp", "main_8cpp.html", "main_8cpp" ]
 ];
