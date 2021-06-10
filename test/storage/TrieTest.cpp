@@ -1,18 +1,21 @@
 #include <storage/Trie.hpp>
 #include "testing.h"
 
+const std::string testFileName = "data.bin";
+
 namespace kvs {
 
     TEST(Trie, creation) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(Id::getIdSize());
         Storage<TrieNode> storage(file, trieNodeSerializer);
 
         Trie trie(storage);
+        remove(testFileName.c_str());
     }
 
     TEST(Trie, addAndGet) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(Id::getIdSize());
         Storage<TrieNode> storage(file, trieNodeSerializer);
 
@@ -27,11 +30,11 @@ namespace kvs {
         EXPECT_FALSE(oldRecordId.has_value());
 
         EXPECT_EQ(trie.get(key2)->getId(), 1);
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(Trie, addTwoValuesToOneKey) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(Id::getIdSize());
         Storage<TrieNode> storage(file, trieNodeSerializer);
 
@@ -45,11 +48,11 @@ namespace kvs {
         std::optional<Id> oldRecordId = trie.add(key, Id(323));
         EXPECT_EQ(oldRecordId->getId(), 322);
 
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(Trie, getIfNotExist) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(Id::getIdSize());
         Storage<TrieNode> storage(file, trieNodeSerializer);
 
@@ -60,11 +63,11 @@ namespace kvs {
         std::optional<Id> optionalId = trie.get(key);
         EXPECT_FALSE(optionalId.has_value());
 
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(Trie, getIfWasRemoved) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(Id::getIdSize());
         Storage<TrieNode> storage(file, trieNodeSerializer);
 
@@ -79,11 +82,11 @@ namespace kvs {
 
         EXPECT_FALSE(trie.get(key).has_value());
 
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(Trie, clear) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         TrieNodeSerializer trieNodeSerializer = TrieNodeSerializer(Id::getIdSize());
         Storage<TrieNode> storage(file, trieNodeSerializer);
 
@@ -98,5 +101,6 @@ namespace kvs {
         trie.clear();
 
         EXPECT_FALSE(trie.get(key).has_value());
+        remove(testFileName.c_str());
     }
 }

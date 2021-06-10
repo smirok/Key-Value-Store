@@ -25,6 +25,12 @@ namespace kvs {
         void merge(const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot);
 
     private:
+        std::vector<Id> _recordsToDelete;
+    public:
+        const std::vector<Id> &getRecordsToDelete() const;
+
+    private:
+
         void addRoot();
 
         Id merge(const Id &trieNodeId, const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot);

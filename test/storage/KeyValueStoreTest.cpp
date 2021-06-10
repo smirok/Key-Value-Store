@@ -2,13 +2,16 @@
 #include "KeyValueStore.hpp"
 #include <string>
 
+const std::string testTrieNodesFileName = "trieNodes.bin";
+const std::string testRecordsFileName = "records.bin";
+
 namespace kvs {
 
     TEST(KeyValueStore, creation) {
         BloomFilter bloomFilter(100);
         Log log(10000);
-        File trieFile("trieNodes.bin");
-        File recordFile("records.bin");
+        File trieFile(testTrieNodesFileName);
+        File recordFile(testRecordsFileName);
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
         RecordSerializer recordSerializer(4, 8);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
@@ -17,15 +20,15 @@ namespace kvs {
         Trie trie(trieNodeStorage);
 
         KeyValueStore keyValueStore(bloomFilter, log, trie, recordStorage);
-        remove("trieNodes.bin");
-        remove("records.bin");
+        remove(testTrieNodesFileName.c_str());
+        remove(testRecordsFileName.c_str());
     }
 
     TEST(KeyValueStore, addAndGet) {
         BloomFilter bloomFilter(100000);
         Log log(10000);
-        File trieFile("trieNodes.bin");
-        File recordFile("records.bin");
+        File trieFile(testTrieNodesFileName);
+        File recordFile(testRecordsFileName);
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
         RecordSerializer recordSerializer(4, 8);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
@@ -42,15 +45,15 @@ namespace kvs {
         KeyValue gotKeyValue(keyValueStore.get(keyValue.getKey()).value());
         EXPECT_EQ(strcmp(keyValue.getKey().getKey(), Key("aaaa", 4).getKey()), 0);
         EXPECT_EQ(strcmp(keyValue.getValue().getValue(), gotKeyValue.getValue().getValue()), 0);
-        remove("trieNodes.bin");
-        remove("records.bin");
+        remove(testTrieNodesFileName.c_str());
+        remove(testRecordsFileName.c_str());
     }
 
     TEST(KeyValueStore, addAndDel) {
         BloomFilter bloomFilter(100000);
         Log log(100);
-        File trieFile("trieNodes.bin");
-        File recordFile("records.bin");
+        File trieFile(testTrieNodesFileName);
+        File recordFile(testRecordsFileName);
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
         RecordSerializer recordSerializer(4, 8);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
@@ -66,15 +69,15 @@ namespace kvs {
         keyValueStore.del(keyValue.getKey());
 
         EXPECT_FALSE(keyValueStore.get(keyValue.getKey()).has_value());
-        remove("trieNodes.bin");
-        remove("records.bin");
+        remove(testTrieNodesFileName.c_str());
+        remove(testRecordsFileName.c_str());
     }
 
     TEST(KeyValueStore, logOverflow) {
         BloomFilter bloomFilter(10000000);
         Log log(5000);
-        File trieFile("trieNodes.bin");
-        File recordFile("records.bin");
+        File trieFile(testTrieNodesFileName);
+        File recordFile(testRecordsFileName);
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
         RecordSerializer recordSerializer(3, 8);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
@@ -98,15 +101,15 @@ namespace kvs {
             }
         }
 
-        remove("trieNodes.bin");
-        remove("records.bin");
+        remove(testTrieNodesFileName.c_str());
+        remove(testRecordsFileName.c_str());
     }
 
     TEST(KeyValueStore, logOverflowAndGet) {
         BloomFilter bloomFilter(100000);
         Log log(5000);
-        File trieFile("trieNodes.bin");
-        File recordFile("records.bin");
+        File trieFile(testTrieNodesFileName);
+        File recordFile(testRecordsFileName);
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
         RecordSerializer recordSerializer(3, 4);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
@@ -143,15 +146,15 @@ namespace kvs {
             }
         }
 
-        remove("trieNodes.bin");
-        remove("records.bin");
+        remove(testTrieNodesFileName.c_str());
+        remove(testRecordsFileName.c_str());
     }
 
     TEST(KeyValueStore, clear) {
         BloomFilter bloomFilter(100000);
         Log log(5000);
-        File trieFile("trieNodes.bin");
-        File recordFile("records.bin");
+        File trieFile(testTrieNodesFileName);
+        File recordFile(testRecordsFileName);
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
         RecordSerializer recordSerializer(3, 8);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
@@ -189,15 +192,15 @@ namespace kvs {
             }
         }
 
-        remove("trieNodes.bin");
-        remove("records.bin");
+        remove(testTrieNodesFileName.c_str());
+        remove(testRecordsFileName.c_str());
     }
 
     TEST(KeyValueStore, Stress) {
         BloomFilter bloomFilter(10000000);
         Log log(5000);
-        File trieFile("trieNodes.bin");
-        File recordFile("records.bin");
+        File trieFile(testTrieNodesFileName);
+        File recordFile(testRecordsFileName);
         TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
         RecordSerializer recordSerializer(3, 3);
         Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
@@ -270,8 +273,8 @@ namespace kvs {
             }
         }
 
-        remove("trieNodes.bin");
-        remove("records.bin");
+        remove(testTrieNodesFileName.c_str());
+        remove(testRecordsFileName.c_str());
     }
 
 }

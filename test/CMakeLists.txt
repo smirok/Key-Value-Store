@@ -15,35 +15,52 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(tests
-        main.cpp test.cpp
-        storage/BloomFilterTest.cpp
-        ../include/storage/BloomFilter.hpp ../src/storage/BloomFilter.cpp
-        ../include/model/Key.hpp ../src/model/Key.cpp
-        ../include/model/Value.hpp ../src/model/Value.cpp
-        ../include/model/KeyValue.hpp ../src/model/KeyValue.cpp
-        ../include/KeyValueStore.hpp ../src/KeyValueStore.cpp
-        ../xxHash/xxhash.h ../xxHash/xxhash.c
+set(MODELS
+        ../src/model/Key.cpp ../include/model/Key.hpp
+        ../src/model/Value.cpp ../include/model/Value.hpp
+        ../src/model/KeyValue.cpp ../include/model/KeyValue.hpp
         ../src/model/Id.cpp ../include/model/Id.hpp
-        ../include/storage/LogicStorage.hpp
-        ../src/storage/Log.cpp ../include/storage/Log.hpp
-        storage/LogTest.cpp
-        ../include/storage/Storage.hpp
         ../src/storage/File.cpp ../include/storage/File.hpp
         ../src/model/FileOffset.cpp ../include/model/FileOffset.hpp
-        storage/FileTest.cpp
         ../src/model/TrieNode.cpp ../include/model/TrieNode.hpp
         ../src/model/Record.cpp ../include/model/Record.hpp
+        ../src/model/InMemoryTrieNode.cpp ../include/model/InMemoryTrieNode.hpp)
+
+set(SERIALIZERS
         ../src/serializer/TrieNodeSerializer.cpp ../include/serializer/TrieNodeSerializer.hpp
-        ../src/serializer/RecordSerializer.cpp ../include/serializer/RecordSerializer.hpp
+        ../src/serializer/RecordSerializer.cpp ../include/serializer/RecordSerializer.hpp)
+
+set(STORAGES
+        ../include/storage/BloomFilter.hpp ../src/storage/BloomFilter.cpp
+        ../include/KeyValueStore.hpp ../src/KeyValueStore.cpp
+        ../include/storage/LogicStorage.hpp
+        ../src/storage/Log.cpp ../include/storage/Log.hpp
+        ../include/storage/Storage.hpp
+        ../src/storage/Trie.cpp ../include/storage/Trie.hpp)
+
+set(LIBRARIES
+        ../xxHash/xxhash.h ../xxHash/xxhash.c)
+
+set(MODEL_TEST
+        model/KeyTest.cpp
+        model/ValueTest.cpp
+        model/KeyValueTest.cpp)
+
+set(SERIALIZER_TEST
         serializer/TrieNodeSerializerTest.cpp
-        serializer/RecordSerializerTest.cpp
+        serializer/RecordSerializerTest.cpp)
+
+set(STORAGE_TEST
         storage/RecordStorageTest.cpp
         storage/TrieNodeStorageTest.cpp
-        ../src/storage/Trie.cpp ../include/storage/Trie.hpp
         storage/TrieTest.cpp
         storage/KeyValueStoreTest.cpp
-        ../src/model/InMemoryTrieNode.cpp ../include/model/InMemoryTrieNode.hpp model/KeyTest.cpp model/ValueTest.cpp model/KeyValueTest.cpp)
+        storage/BloomFilterTest.cpp
+        storage/LogTest.cpp
+        storage/FileTest.cpp)
+
+add_executable(tests test.cpp
+        ${MODELS} ${SERIALIZERS} ${STORAGES} ${LIBRARIES} ${MODEL_TEST} ${SERIALIZER_TEST} ${STORAGE_TEST})
 
 target_link_libraries(tests
         PRIVATE "gtest_main"

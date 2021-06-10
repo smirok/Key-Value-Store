@@ -2,17 +2,19 @@
 
 #include "storage/Storage.hpp"
 
+const std::string testFileName = "records.bin";
+
 namespace kvs {
 
     TEST(RecordStorage, creation) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         RecordSerializer recordSerializer = RecordSerializer(4, 8);
         Storage<Record>(file, recordSerializer);
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(RecordStorage, addAndGet) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         RecordSerializer recordSerializer = RecordSerializer(4, 8);
         Storage<Record> storage(file, recordSerializer);
 
@@ -24,11 +26,11 @@ namespace kvs {
         EXPECT_EQ(strcmp(record.getKey().getKey(), takenRecordOptional.value().getKey().getKey()), 0);
         EXPECT_EQ(record.getIsOutdated(), takenRecordOptional.value().getIsOutdated());
         EXPECT_EQ(strcmp(record.getValue().getValue(), takenRecordOptional.value().getValue().getValue()), 0);
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(RecordStorage, autoIncrementAdd) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         RecordSerializer recordSerializer = RecordSerializer(4, 8);
         Storage<Record> storage(file, recordSerializer);
 
@@ -39,11 +41,11 @@ namespace kvs {
             EXPECT_EQ(id.getId(), i);
         }
 
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(RecordStorage, getIfWasRemoved) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         RecordSerializer recordSerializer = RecordSerializer(4, 8);
         Storage<Record> storage(file, recordSerializer);
 
@@ -55,11 +57,11 @@ namespace kvs {
         std::optional<Record> takenRecordOptional = storage.get(Id(0));
         EXPECT_FALSE(takenRecordOptional.has_value());
 
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 
     TEST(RecordStorage, clear) {
-        File file = File("data.bin");
+        File file = File(testFileName);
         RecordSerializer recordSerializer = RecordSerializer(4, 8);
         Storage<Record> storage(file, recordSerializer);
 
@@ -73,7 +75,7 @@ namespace kvs {
         id = storage.add(record);
         EXPECT_EQ(id.getId(), 0);
 
-        remove("data.bin");
+        remove(testFileName.c_str());
     }
 }
 

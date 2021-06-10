@@ -26,6 +26,8 @@ namespace kvs {
 
     private:
 
+        void rebuild();
+
         BloomFilter &_bloomFilter;
 
         Log &_log;

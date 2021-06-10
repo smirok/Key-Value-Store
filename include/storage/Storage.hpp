@@ -112,6 +112,12 @@ namespace kvs {
             return _countAllRecords > 1000 && (_countAllRecords < 2 * _countRemovedRecords);
         }
 
+        void removeRecordsById(const std::vector<Id> &idsToRemove) {
+            for (const Id &id : idsToRemove) {
+                remove(id);
+            }
+        }
+
         void rebuild() {
             auto readIterator = Storage<Record>::RecordStorageIterator(*this);
             auto writeIterator = Storage<Record>::RecordStorageIterator(*this);
@@ -191,7 +197,7 @@ namespace kvs {
         }
 
         Id addTrieNodeSubtree(const std::shared_ptr<InMemoryTrieNode> &node) {
-            std::vector<Id> ids(UCHAR_MAX + 1);
+            std::vector<Id> ids(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max()));
 
             for (std::size_t i = 0; i <= UCHAR_MAX; ++i) {
                 if (node->get(i)) {
@@ -199,8 +205,8 @@ namespace kvs {
                 }
             }
 
-            if (node->getId().getId() != std::numeric_limits<std::size_t>::max()) {
-                std::vector<Id> leafIds(256, Id(std::numeric_limits<std::size_t>::max()));
+            if (node->getId().getId() != std::numeric_limits<std::size_t>::max()) { // leaf
+                std::vector<Id> leafIds(256, Id(std::numeric_limits<std::size_t>::max() - 1));
                 leafIds[0] = node->getId();
 
                 return this->add(TrieNode(leafIds));

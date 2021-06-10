@@ -27,12 +27,17 @@ namespace kvs {
         if (_log.isFull()) {
             std::shared_ptr<InMemoryTrieNode> smallTrie = _log.toInMemoryTrieNode();
             _trie.merge(smallTrie);
+            _recordStorage.removeRecordsById(_trie.getRecordsToDelete());
 
             for (auto logIterator = Log::LogIterator(_log); logIterator != logIterator.end(); ++logIterator) {
                 _bloomFilter.add(logIterator->first);
             }
 
             _log.clear();
+        }
+
+        if (_recordStorage.isFull()) {
+            rebuild();
         }
     }
 
@@ -72,43 +77,48 @@ namespace kvs {
         }
 
         if (_recordStorage.isFull()) {
-
-            std::shared_ptr<InMemoryTrieNode> smallTrie = _log.toInMemoryTrieNode();
-            _trie.merge(smallTrie);
-
-            for (auto logIterator = Log::LogIterator(_log); logIterator != logIterator.end(); ++logIterator) {
-                _bloomFilter.add(logIterator->first);
-            }
-
-            _log.clear();
-
-            _recordStorage.rebuild();
-            _trie.clear();
-
-            std::vector<std::pair<Key, Id>> records;
-            for (auto iterator = Storage<Record>::RecordStorageIterator(_recordStorage);
-                 iterator != iterator.end(); ++iterator) {
-                Record record = *iterator;
-
-                records.emplace_back(record.getKey(), iterator.currentId());
-
-                if (records.size() == 5000) {
-                    std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
-                    _trie.merge(trieNode);
-                    records.clear();
-                    _trie.add(record.getKey(), iterator.currentId());
-                }
-            }
-
-            std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
-            _trie.merge(trieNode);
+            rebuild();
         }
     }
 
     void KeyValueStore::clear() {
         _log.clear();
         _trie.clear();
-        _bloomFilter = BloomFilter(_recordStorage.size() * 10);
+        _bloomFilter = BloomFilter(_recordStorage.size() * 5);
         _recordStorage.clear();
+    }
+
+    void KeyValueStore::rebuild() {
+        std::shared_ptr<InMemoryTrieNode> smallTrie = _log.toInMemoryTrieNode();
+        _trie.merge(smallTrie);
+        _recordStorage.removeRecordsById(_trie.getRecordsToDelete());
+
+        for (auto logIterator = Log::LogIterator(_log); logIterator != logIterator.end(); ++logIterator) {
+            _bloomFilter.add(logIterator->first);
+        }
+
+        _log.clear();
+
+        _recordStorage.rebuild();
+        _trie.clear();
+
+        std::vector<std::pair<Key, Id>> records;
+        for (auto iterator = Storage<Record>::RecordStorageIterator(_recordStorage);
+             iterator != iterator.end(); ++iterator) {
+            Record record = *iterator;
+
+            records.emplace_back(record.getKey(), iterator.currentId());
+
+            if (records.size() == 5000) {
+                std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
+                _trie.merge(trieNode);
+                _recordStorage.removeRecordsById(_trie.getRecordsToDelete());
+                records.clear();
+            }
+        }
+
+        std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
+        _trie.merge(trieNode);
+        _recordStorage.removeRecordsById(_trie.getRecordsToDelete());
     }
 }

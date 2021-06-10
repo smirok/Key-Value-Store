@@ -4,6 +4,11 @@
 
 namespace kvs {
     // nextRecords[i] == Id(std::numeric_limits<std::size_t>::max()) IFF edge is missing
+    // nextRecords[i] == Id(std::numeric_limits<std::size_t>::max() - 1 for i >= 1 IFF currentNode is leaf
+    // EMPTY LEAF = {std::numeric_limits<std::size_t>::max() , std::numeric_limits<std::size_t>::max() -1,
+    // std::numeric_limits<std::size_t>::max() - 1, ... , std::numeric_limits<std::size_t>::max()  - 1}
+    // NOT EMPTY LEAF = {id, std::numeric_limits<std::size_t>::max() -1,
+    // std::numeric_limits<std::size_t>::max() -1, ..., std::numeric_limits<std::size_t>::max() -1}
 
     Trie::Trie(Storage<TrieNode> &storage) : _storage(storage) {
         addRoot();
@@ -18,7 +23,7 @@ namespace kvs {
             oldRecordId = std::make_optional(currentNode->first.getNextRecord(0));
         }
 
-        std::vector<Id> leafIds(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max()));
+        std::vector<Id> leafIds(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max() - 1)); // LEAF
         leafIds[0] = recordId;
 
         _storage.replace(currentNode->second, TrieNode(leafIds));
@@ -35,8 +40,7 @@ namespace kvs {
             oldRecordId = std::make_optional(currentNode->first.getNextRecord(0));
         }
 
-        std::vector<Id> leafIds;
-        leafIds.assign(256, Id(0));
+        std::vector<Id> leafIds(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max() - 1));
         leafIds[0] = Id(std::numeric_limits<std::size_t>::max());
 
         _storage.replace(currentNode->second, TrieNode(leafIds));
@@ -111,6 +115,7 @@ namespace kvs {
     }
 
     void Trie::merge(const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot) {
+        _recordsToDelete.clear();
         merge(Id(0), smallTrieRoot);
     }
 
@@ -124,7 +129,21 @@ namespace kvs {
         if (trieNodeId.getId() == std::numeric_limits<std::size_t>::max()) {
             return _storage.addTrieNodeSubtree(smallTrieNode);
         }
+
         TrieNode trieNode = _storage.get(trieNodeId).value();
+
+        if (trieNode.getNextRecord(1).getId() == std::numeric_limits<std::size_t>::max() - 1) { // trieNode == leaf
+            if (trieNode.getNextRecord(0).getId() != std::numeric_limits<std::size_t>::max()) {
+                _recordsToDelete.push_back(trieNode.getNextRecord(0));
+
+                std::vector<Id> ids(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max() - 1));
+                ids[0] = smallTrieNode->getId();
+
+                _storage.replace(trieNodeId, TrieNode(ids));
+                return trieNodeId;
+            }
+        }
+
         std::vector<Id> ids(UCHAR_MAX + 1);
         for (std::size_t i = 0; i <= UCHAR_MAX; ++i) {
             ids[i] = merge(trieNode.getNextRecord(i), smallTrieNode->get(i));
@@ -133,5 +152,9 @@ namespace kvs {
         _storage.replace(trieNodeId, TrieNode(ids));
 
         return trieNodeId;
+    }
+
+    const std::vector<Id> &Trie::getRecordsToDelete() const {
+        return _recordsToDelete;
     }
 }
