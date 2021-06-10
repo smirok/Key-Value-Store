@@ -2,10 +2,10 @@
 
 namespace kvs {
 
-    FileOffset::FileOffset(std::size_t offset) : _offset(offset) {
+    FileOffset::FileOffset(size_t offset) : _offset(static_cast<off64_t >(offset)) {
     }
 
-    std::size_t FileOffset::getOffset() const {
+    off64_t FileOffset::getOffset() const {
         return _offset;
     }
 }

@@ -28,11 +28,11 @@ namespace kvs {
         return *this;
     }
 
-    Key::Key(Key &&key) : _key(key._key), _size(key._size) {
+    Key::Key(Key &&key) noexcept: _key(key._key), _size(key._size) {
         key._key = nullptr;
     }
 
-    Key &Key::operator=(Key &&key) {
+    Key &Key::operator=(Key &&key) noexcept {
         if (&key == this) {
             return *this;
         }

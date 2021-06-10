@@ -2,8 +2,8 @@
 
 namespace kvs {
 
-    KeyValueStore::KeyValueStore(const BloomFilter &bloomFilter,
-                                 const Log &log, const Trie &trie, const Storage<Record> &recordStorage) :
+    KeyValueStore::KeyValueStore(BloomFilter &bloomFilter,
+                                 Log &log, Trie &trie, Storage<Record> &recordStorage) :
             _bloomFilter(bloomFilter),
             _log(log),
             _trie(trie),
@@ -36,7 +36,7 @@ namespace kvs {
         }
     }
 
-    std::optional<KeyValue> KeyValueStore::get(const Key &key) {
+    std::optional<KeyValue> KeyValueStore::get(const Key &key) const {
         std::optional<Id> optionalRecordId = _log.get(key);
 
         if (optionalRecordId.has_value()) {
@@ -82,17 +82,12 @@ namespace kvs {
 
             _log.clear();
 
-            std::cerr << "est full?";
-            std::cerr << _recordStorage.size() << "\n";
-
             _recordStorage.rebuild();
             _trie.clear();
 
-            std::cerr << _recordStorage.size();
-
             std::vector<std::pair<Key, Id>> records;
             for (auto iterator = Storage<Record>::RecordStorageIterator(_recordStorage);
-                 iterator != iterator.end(); iterator++) {
+                 iterator != iterator.end(); ++iterator) {
                 Record record = *iterator;
 
                 records.emplace_back(record.getKey(), iterator.currentId());
@@ -101,14 +96,12 @@ namespace kvs {
                     std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
                     _trie.merge(trieNode);
                     records.clear();
-                    std::cerr << "drop1";
                     _trie.add(record.getKey(), iterator.currentId());
                 }
             }
 
             std::shared_ptr<InMemoryTrieNode> trieNode = Log::toInMemoryTrieNode(records);
             _trie.merge(trieNode);
-            std::cerr << "drop2";
         }
     }
 

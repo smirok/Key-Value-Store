@@ -9,13 +9,13 @@ namespace kvs {
 
     class TrieNode {
     public:
-        TrieNode();
+        TrieNode() = default;
 
-        TrieNode(std::vector<Id> nextRecords);
+        explicit TrieNode(std::vector<Id> nextRecords);
 
-        const std::vector<Id> &getNextRecords() const;
+        [[nodiscard]] const std::vector<Id> &getNextRecords() const;
 
-        Id getNextRecord(std::size_t index) const;
+        [[nodiscard]] Id getNextRecord(std::size_t index) const;
 
     private:
         std::vector<Id> _nextRecords;

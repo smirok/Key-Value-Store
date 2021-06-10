@@ -27,11 +27,11 @@ namespace kvs {
         return *this;
     }
 
-    Value::Value(Value &&value) : _value(value._value), _size(value._size) {
+    Value::Value(Value &&value) noexcept: _value(value._value), _size(value._size) {
         value._value = nullptr;
     }
 
-    Value &Value::operator=(Value &&value) {
+    Value &Value::operator=(Value &&value) noexcept {
         if (&value == this) {
             return *this;
         }

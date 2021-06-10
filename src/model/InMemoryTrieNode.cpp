@@ -5,7 +5,7 @@
 namespace kvs {
 
     InMemoryTrieNode::InMemoryTrieNode() {
-        for (int i = 0; i < 256; ++i) {
+        for (int i = 0; i <= UCHAR_MAX; ++i) {
             _children[i] = nullptr;
         }
     }
@@ -16,7 +16,7 @@ namespace kvs {
         const char *bytesKey = key.getKey();
         for (std::size_t i = 0; i < key.getSize(); ++i) {
             std::size_t index = static_cast<unsigned char>(*bytesKey);
-            if (currentNode->_children[index] == nullptr) {
+            if (!currentNode->_children[index]) {
                 currentNode->_children[index] = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
             }
 

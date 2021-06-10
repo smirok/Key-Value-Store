@@ -12,24 +12,24 @@ namespace kvs {
 
     class Trie : public LogicStorage {
     public:
-        Trie(Storage<TrieNode> &_storage);
+        explicit Trie(Storage<TrieNode> &_storage);
 
-        std::optional<Id> add(const Key &, Id); // old record id
+        std::optional<Id> add(const Key &, const Id &) override;
 
-        std::optional<Id> remove(const Key &);
+        std::optional<Id> remove(const Key &) override;
 
-        std::optional<Id> get(const Key &);
+        [[nodiscard]] std::optional<Id> get(const Key &) const override;
 
-        void clear();
+        void clear() override;
 
-        void merge(const std::shared_ptr<InMemoryTrieNode>& smallTrieRoot);
+        void merge(const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot);
 
     private:
         void addRoot();
 
-        Id merge(const Id &trieNodeId, const std::shared_ptr<InMemoryTrieNode>& smallTrieRoot);
+        Id merge(const Id &trieNodeId, const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot);
 
-        std::optional<std::pair<TrieNode, Id>> traverse(Key, bool shouldCreateNode);
+        [[nodiscard]] std::optional<std::pair<TrieNode, Id>> traverse(const Key &key, bool shouldCreateNode) const;
 
         Storage<TrieNode> &_storage;
     };

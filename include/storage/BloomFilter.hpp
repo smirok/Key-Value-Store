@@ -10,11 +10,11 @@ namespace kvs {
 
     class BloomFilter {
     public:
-        BloomFilter(std::size_t size);
+        explicit BloomFilter(std::size_t size);
 
-        void add(Key key);
+        void add(const Key &key);
 
-        bool mightContains(Key key) const;
+        [[nodiscard]] bool mightContains(const Key &key) const;
 
     private:
         std::vector<bool> _store;

@@ -11,11 +11,11 @@ namespace kvs {
     public:
         Record(Key key, bool isOutdated, Value value);
 
-        const Key &getKey() const;
+        [[nodiscard]] const Key &getKey() const;
 
-        bool getIsOutdated() const;
+        [[nodiscard]] bool getIsOutdated() const;
 
-        const Value &getValue() const;
+        [[nodiscard]] const Value &getValue() const;
 
     private:
         Key _key;

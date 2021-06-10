@@ -13,15 +13,15 @@ namespace kvs {
 
         Value &operator=(const Value &value);
 
-        Value(Value &&value);
+        Value(Value &&value) noexcept ;
 
-        Value &operator=(Value &&value);
+        Value &operator=(Value &&value) noexcept ;
 
         ~Value();
 
-        const char *getValue() const;
+        [[nodiscard]] const char *getValue() const;
 
-        size_t getSize() const;
+        [[nodiscard]] size_t getSize() const;
 
     private:
         char *_value;

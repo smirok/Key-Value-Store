@@ -9,7 +9,7 @@ namespace kvs {
         addRoot();
     }
 
-    std::optional<Id> Trie::add(const Key &key, Id recordId) {
+    std::optional<Id> Trie::add(const Key &key, const Id &recordId) {
         std::optional<std::pair<TrieNode, Id>> currentNode = traverse(key, true);
 
         std::optional<Id> oldRecordId = std::nullopt;
@@ -18,7 +18,7 @@ namespace kvs {
             oldRecordId = std::make_optional(currentNode->first.getNextRecord(0));
         }
 
-        std::vector<Id> leafIds(256, Id(std::numeric_limits<std::size_t>::max()));
+        std::vector<Id> leafIds(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max()));
         leafIds[0] = recordId;
 
         _storage.replace(currentNode->second, TrieNode(leafIds));
@@ -36,18 +36,15 @@ namespace kvs {
         }
 
         std::vector<Id> leafIds;
-        leafIds.reserve(256);
-        leafIds.emplace_back(std::numeric_limits<std::size_t>::max());
-        for (int j = 1; j < 256; ++j) {
-            leafIds.emplace_back(0);
-        }
+        leafIds.assign(256, Id(0));
+        leafIds[0] = Id(std::numeric_limits<std::size_t>::max());
 
         _storage.replace(currentNode->second, TrieNode(leafIds));
 
         return oldRecordId;
     }
 
-    std::optional<Id> Trie::get(const Key &key) {
+    std::optional<Id> Trie::get(const Key &key) const {
         std::optional<std::pair<TrieNode, Id>> currentNodeOptional = traverse(key, false);
 
         if (!currentNodeOptional.has_value()) {
@@ -63,12 +60,12 @@ namespace kvs {
     }
 
     void Trie::addRoot() {
-        std::vector<Id> rootIds(256, Id(std::numeric_limits<std::size_t>::max()));
+        std::vector<Id> rootIds(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max()));
 
         _storage.add(TrieNode(rootIds));
     }
 
-    std::optional<std::pair<TrieNode, Id>> Trie::traverse(Key key, bool shouldCreateNode) {
+    std::optional<std::pair<TrieNode, Id>> Trie::traverse(const Key &key, bool shouldCreateNode) const {
         const char *keyBytes = key.getKey();
         Id currentNodeId = Id(0);
         TrieNode currentNode = _storage.get(currentNodeId).value();
@@ -76,7 +73,7 @@ namespace kvs {
         for (std::size_t i = 0; i < key.getSize(); ++i) {
             char byte = *keyBytes;
 
-            Id nextNodeId = currentNode.getNextRecord(byte); // TODO extra copy
+            Id nextNodeId = currentNode.getNextRecord(byte);
 
             if (nextNodeId.getId() != std::numeric_limits<std::size_t>::max()) {
                 currentNode = _storage.get(nextNodeId).value();
@@ -86,13 +83,13 @@ namespace kvs {
                     return std::nullopt;
                 }
 
-                std::vector<Id> nextNodeIds(256, Id(std::numeric_limits<std::size_t>::max()));
+                std::vector<Id> nextNodeIds(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max()));
 
                 TrieNode createdTrieNode = TrieNode(nextNodeIds);
                 Id createdTrieNodeId = _storage.add(createdTrieNode);
 
                 std::vector<Id> ids = currentNode.getNextRecords();
-                ids[byte] = createdTrieNodeId; // TODO extra copy
+                ids[byte] = createdTrieNodeId;
                 currentNode = TrieNode(ids);
 
                 _storage.replace(currentNodeId, currentNode);
@@ -128,8 +125,8 @@ namespace kvs {
             return _storage.addTrieNodeSubtree(smallTrieNode);
         }
         TrieNode trieNode = _storage.get(trieNodeId).value();
-        std::vector<Id> ids(256);
-        for (std::size_t i = 0; i < 256; ++i) {
+        std::vector<Id> ids(UCHAR_MAX + 1);
+        for (std::size_t i = 0; i <= UCHAR_MAX; ++i) {
             ids[i] = merge(trieNode.getNextRecord(i), smallTrieNode->get(i));
         }
 

@@ -16,36 +16,27 @@ namespace kvs {
     template<typename T>
     class Storage {
     public:
-        Id add(const T &) {
-            return Id(0);
-        }
+        virtual Id add(const T &) = 0;
 
-        std::optional<T> get(const Id &) {
-            return std::nullopt;
-        };
+        virtual std::optional<T> get(const Id &) const = 0;
 
-        void remove(const Id &) {
-        }
+        virtual void remove(const Id &) = 0;
 
-        void clear() {
-
-        }
+        virtual void clear() = 0;
     };
 
     template<>
     class Storage<Record> {
     public:
         struct RecordStorageIterator {
-            using iterator_category = std::forward_iterator_tag;
-            using difference_type = std::ptrdiff_t;
             using value_type = Record;
             using pointer = value_type *;
             using reference = value_type &;
 
-            RecordStorageIterator(Storage<Record> &storage, std::size_t ptr = 0) : _storage(storage),
-                                                                                   _begin(0),
-                                                                                   _end(storage.size()),
-                                                                                   m_ptr(ptr) {}
+            explicit RecordStorageIterator(Storage<Record> &storage, std::size_t ptr = 0) : _storage(storage),
+                                                                                            _begin(0),
+                                                                                            _end(storage.size()),
+                                                                                            m_ptr(ptr) {}
 
             value_type operator*() const { return _storage.getAnyway(Id(m_ptr)).value(); }
 
@@ -53,12 +44,7 @@ namespace kvs {
                 m_ptr++;
             }
 
-            // Postfix
-            void operator++(int) {
-                m_ptr++;
-            }
-
-            Id currentId() const { return Id(m_ptr); };
+            [[nodiscard]] Id currentId() const { return Id(m_ptr); };
 
             friend bool
             operator==(const RecordStorageIterator &a, const RecordStorageIterator &b) {
@@ -83,57 +69,47 @@ namespace kvs {
 
         Storage(File &dataFile, const RecordSerializer &recordSerializer) : _dataFile(dataFile),
                                                                             _recordSerializer(recordSerializer) {
+            _recordSize = _recordSerializer.getKeySize() + 1 + _recordSerializer.getValueSize();
         }
 
         Id add(const Record &record) {
             char *recordInBytes = _recordSerializer.recordToBytes(record);
-            FileOffset recordOffset = _dataFile.write(recordInBytes,
-                                                      _recordSerializer.getKeySize() + 1 +
-                                                      _recordSerializer.getValueSize()); // TODO
+            FileOffset recordOffset = _dataFile.write(recordInBytes, _recordSize);
 
-            delete[] recordInBytes; // TODO
+            delete[] recordInBytes;
 
-            countAllRecords++;
+            _countAllRecords++;
 
-            return Id(recordOffset.getOffset() /
-                      (_recordSerializer.getKeySize() + 1 + _recordSerializer.getValueSize())); // TODO how should do it
+            return Id(recordOffset.getOffset() / _recordSize);
         }
 
-        std::optional<Record> get(const Id &id) {
-            char *recordInBytes = _dataFile.read(_recordSerializer.getKeySize() + 1 + _recordSerializer.getValueSize(),
-                                                 FileOffset((_recordSerializer.getKeySize() + 1 +
-                                                             _recordSerializer.getValueSize()) *
-                                                            id.getId()));
+        [[nodiscard]] std::optional<Record> get(const Id &id) const {
+            char *recordInBytes = _dataFile.read(_recordSize, FileOffset(_recordSize * id.getId()));
 
             Record record = _recordSerializer.bytesToRecord(recordInBytes);
             return record.getIsOutdated() ? std::nullopt : std::make_optional(record);
         }
 
         std::optional<Record> getAnyway(const Id &id) {
-            char *recordInBytes = _dataFile.read(_recordSerializer.getKeySize() + 1 + _recordSerializer.getValueSize(),
-                                                 FileOffset((_recordSerializer.getKeySize() + 1 +
-                                                             _recordSerializer.getValueSize()) *
-                                                            id.getId()));
+            char *recordInBytes = _dataFile.read(_recordSize, FileOffset(_recordSize * id.getId()));
 
             Record record = _recordSerializer.bytesToRecord(recordInBytes);
             return record;
         }
 
         void remove(const Id &id) {
-            FileOffset bitOutdatedOffset =
-                    FileOffset(id.getId() * (_recordSerializer.getKeySize() + 1 + _recordSerializer.getValueSize()) +
-                               _recordSerializer.getKeySize());
+            auto bitOutdatedOffset = FileOffset(id.getId() * _recordSize + _recordSerializer.getKeySize());
             _dataFile.writeByOffset(bitOutdatedOffset, new char[1]{'1'}, 1);
 
-            countRemovedRecords++;
+            _countRemovedRecords++;
         }
 
         void clear() {
             _dataFile.clear();
         }
 
-        bool isFull() {
-            return countAllRecords > 1000 && (countAllRecords < 2 * countRemovedRecords);
+        [[nodiscard]] bool isFull() const {
+            return _countAllRecords > 1000 && (_countAllRecords < 2 * _countRemovedRecords);
         }
 
         void rebuild() {
@@ -141,35 +117,31 @@ namespace kvs {
             auto writeIterator = Storage<Record>::RecordStorageIterator(*this);
 
             int cnt = 0;
-            for (; readIterator != readIterator.end(); readIterator++) {
+            for (; readIterator != readIterator.end(); ++readIterator) {
                 Record record = *readIterator;
 
                 if (!record.getIsOutdated()) {
-                    _dataFile.writeByOffset(FileOffset((_recordSerializer.getKeySize() + 1 +
-                                                        _recordSerializer.getValueSize()) *
-                                                       writeIterator.currentId().getId()),
+                    _dataFile.writeByOffset(FileOffset(_recordSize * writeIterator.currentId().getId()),
                                             _recordSerializer.recordToBytes(record),
-                                            _recordSerializer.getKeySize() + 1 +
-                                            _recordSerializer.getValueSize());
+                                            _recordSize);
 
-                    writeIterator++;
+                    ++writeIterator;
                     cnt++;
                 }
             }
 
-            countAllRecords -= countRemovedRecords;
-            countRemovedRecords = 0;
-
-            std::cerr << cnt << "\n";
+            _countAllRecords -= _countRemovedRecords;
+            _countRemovedRecords = 0;
         }
 
-        std::size_t size() const {
-            return countAllRecords;
+        [[nodiscard]] std::size_t size() const {
+            return _countAllRecords;
         }
 
     private:
-        std::size_t countRemovedRecords = 0;
-        std::size_t countAllRecords = 0;
+        std::size_t _countRemovedRecords = 0;
+        std::size_t _countAllRecords = 0;
+        std::size_t _recordSize;
         File &_dataFile;
         RecordSerializer _recordSerializer;
     };
@@ -184,23 +156,20 @@ namespace kvs {
 
         Id add(const TrieNode &trieNode) {
             char *recordInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
-            FileOffset recordOffset = _trieNodeFile.write(recordInBytes,
-                                                          256 * Id::getIdSize()); // TODO
+            FileOffset recordOffset = _trieNodeFile.write(recordInBytes, _trieNodeSize);
 
-            delete[] recordInBytes; // TODO
+            delete[] recordInBytes;
 
-            return Id(recordOffset.getOffset() /
-                      (256 * Id::getIdSize())); // TODO how should do it
+            return Id(recordOffset.getOffset() / _trieNodeSize);
         }
 
-        std::optional<TrieNode> get(const Id &id) {
-            char *trieNodeInBytes = _trieNodeFile.read(256 * Id::getIdSize(),
-                                                       FileOffset(256 * Id::getIdSize() *
-                                                                  id.getId()));
+        [[nodiscard]] std::optional<TrieNode> get(const Id &id) const {
+            char *trieNodeInBytes = _trieNodeFile.read(_trieNodeSize,
+                                                       FileOffset(_trieNodeSize * id.getId()));
 
-            TrieNode trieNode = _trieNodeSerializer.bytesToTrieNode(trieNodeInBytes);
+            TrieNode trieNode = kvs::TrieNodeSerializer::bytesToTrieNode(trieNodeInBytes);
 
-            delete[] trieNodeInBytes; // TODO
+            delete[] trieNodeInBytes;
 
             return std::make_optional(trieNode);
         }
@@ -210,10 +179,11 @@ namespace kvs {
         void replace(const Id &id, const TrieNode &trieNode) {
             char *recordInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
 
-            _trieNodeFile.writeByOffset(FileOffset(256 * Id::getIdSize() *
-                                                   id.getId()), recordInBytes, 256 * Id::getIdSize());
+            _trieNodeFile.writeByOffset(FileOffset(_trieNodeSize * id.getId()),
+                                        recordInBytes,
+                                        _trieNodeSize);
 
-            delete[] recordInBytes; // TODO
+            delete[] recordInBytes;
         }
 
         void clear() {
@@ -221,9 +191,9 @@ namespace kvs {
         }
 
         Id addTrieNodeSubtree(const std::shared_ptr<InMemoryTrieNode> &node) {
-            std::vector<Id> ids(256);
+            std::vector<Id> ids(UCHAR_MAX + 1);
 
-            for (std::size_t i = 0; i < 256; ++i) {
+            for (std::size_t i = 0; i <= UCHAR_MAX; ++i) {
                 if (node->get(i)) {
                     ids[i] = addTrieNodeSubtree(node->get(i));
                 }
@@ -238,15 +208,15 @@ namespace kvs {
 
             TrieNode trieNode(ids);
             char *trieNodeInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
-            FileOffset trieNodeOffset = _trieNodeFile.write(trieNodeInBytes, 256 * Id::getIdSize());
+            FileOffset trieNodeOffset = _trieNodeFile.write(trieNodeInBytes, _trieNodeSize);
 
-            delete[] trieNodeInBytes; // TODO
+            delete[] trieNodeInBytes;
 
-            return Id(trieNodeOffset.getOffset() /
-                      (256 * Id::getIdSize())); // TODO how should do it
+            return Id(trieNodeOffset.getOffset() / _trieNodeSize);
         }
 
     private:
+        std::size_t _trieNodeSize = (UCHAR_MAX + 1) * Id::getIdSize();
         File &_trieNodeFile;
         TrieNodeSerializer _trieNodeSerializer;
     };

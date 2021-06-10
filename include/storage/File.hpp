@@ -10,7 +10,7 @@ namespace kvs {
 
     class File {
     public:
-        File(const std::string &fileName);
+        explicit File(const std::string &fileName);
 
         ~File();
 

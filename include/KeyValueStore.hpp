@@ -11,14 +11,14 @@
 namespace kvs {
     class KeyValueStore {
     public:
-        KeyValueStore(const BloomFilter &bloomFilter,
-                      const Log &log,
-                      const Trie &trie,
-                      const Storage<Record> &_recordStorage);
+        KeyValueStore(BloomFilter &bloomFilter,
+                      Log &log,
+                      Trie &trie,
+                      Storage<Record> &_recordStorage);
 
         void add(const KeyValue &);
 
-        std::optional<KeyValue> get(const Key &);
+        [[nodiscard]] std::optional<KeyValue> get(const Key &) const;
 
         void del(const Key &);
 
@@ -26,13 +26,13 @@ namespace kvs {
 
     private:
 
-        BloomFilter _bloomFilter;
+        BloomFilter &_bloomFilter;
 
-        Log _log;
+        Log &_log;
 
-        Trie _trie;
+        Trie &_trie;
 
-        Storage<Record> _recordStorage;
+        Storage<Record> &_recordStorage;
     };
 }
 

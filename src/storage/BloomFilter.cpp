@@ -8,7 +8,7 @@ namespace kvs {
         _functionsCount = static_cast<std::size_t>(ceil(log2(static_cast<double>(size))));
     }
 
-    void BloomFilter::add(Key key) {
+    void BloomFilter::add(const Key &key) {
         for (std::size_t i = 1; i <= _functionsCount; ++i) {
             std::size_t hash = XXH64(key.getKey(), key.getSize(), i);
 
@@ -16,7 +16,7 @@ namespace kvs {
         }
     }
 
-    bool BloomFilter::mightContains(Key key) const {
+    bool BloomFilter::mightContains(const Key &key) const {
         for (std::size_t i = 1; i <= _functionsCount; ++i) {
             std::size_t hash = XXH64(key.getKey(), key.getSize(), i);
 

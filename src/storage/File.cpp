@@ -12,7 +12,7 @@ namespace kvs {
         char *buffer = new char[length + 1];
 
         fileStream.seekg(fileOffset.getOffset(), std::ios_base::beg);
-        fileStream.read(buffer, length);
+        fileStream.read(buffer, static_cast<std::streamsize>(length));
         fileStream.seekg(0, std::ios_base::end);
 
         buffer[length] = '\0';
@@ -24,7 +24,7 @@ namespace kvs {
         fileStream.seekg(0, std::ios_base::end);
         FileOffset resultOffset(fileStream.tellg());
 
-        fileStream.write(data, length);
+        fileStream.write(data, static_cast<std::streamsize>(length));
         fileStream.seekg(0, std::ios_base::end);
 
         return resultOffset;
@@ -32,7 +32,7 @@ namespace kvs {
 
     void File::writeByOffset(const FileOffset &fileOffset, const char *data, std::size_t length) {
         fileStream.seekg(fileOffset.getOffset(), std::ios_base::beg);
-        fileStream.write(data, length);
+        fileStream.write(data, static_cast<std::streamsize>(length));
 
         fileStream.seekg(0, std::ios_base::end);
     }

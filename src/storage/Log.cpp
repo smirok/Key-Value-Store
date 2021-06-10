@@ -8,7 +8,7 @@ namespace kvs {
         _logMap.reserve(sizeLimit);
     }
 
-    std::optional<Id> Log::add(const Key &key, Id id) {
+    std::optional<Id> Log::add(const Key &key, const Id &id) {
         std::optional<Id> replacedRecordId = get(key);
 
         if (replacedRecordId.has_value()) {
@@ -30,7 +30,7 @@ namespace kvs {
         return recordToRemoveId;
     }
 
-    std::optional<Id> Log::get(const Key &key) {
+    std::optional<Id> Log::get(const Key &key) const {
         if (_logMap.find(key) != _logMap.end()) {
             return std::optional<Id>(_logMap.at(key));
         }
@@ -47,7 +47,7 @@ namespace kvs {
         return _logMap.size() >= _sizeLimit;
     }
 
-    std::shared_ptr<InMemoryTrieNode> Log::toInMemoryTrieNode() {
+    std::shared_ptr<InMemoryTrieNode> Log::toInMemoryTrieNode() const {
         std::shared_ptr<InMemoryTrieNode> root = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
 
         for (const auto &pair : _logMap) {

@@ -2,6 +2,7 @@
 #define KEYVALUESTORAGE_TRIENODESERIALIZER_HPP
 
 #include <vector>
+#include <climits>
 #include "model/Record.hpp"
 #include "model/TrieNode.hpp"
 
@@ -11,13 +12,13 @@ namespace kvs {
     public:
         explicit TrieNodeSerializer(std::size_t idSize);
 
-        char *trieNodeToBytes(const TrieNode &record);
+        [[nodiscard]] char *trieNodeToBytes(const TrieNode &record) const;
 
-        TrieNode bytesToTrieNode(const char *bytes);
+        static TrieNode bytesToTrieNode(const char *bytes);
 
     private:
         std::size_t _idSize;
-        static constexpr std::size_t ALPHABET_SIZE = 256;
+        static constexpr int ALPHABET_SIZE = UCHAR_MAX + 1;
     };
 
 }

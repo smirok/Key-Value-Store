@@ -2,17 +2,18 @@
 #define KEYVALUESTORAGE_FILEOFFSET_HPP
 
 #include <cstddef>
+#include <cstdlib>
 
 namespace kvs {
 
     class FileOffset {
     public:
-        explicit FileOffset(std::size_t offset);
+        explicit FileOffset(size_t offset);
 
-        std::size_t getOffset() const;
+        [[nodiscard]] off64_t getOffset() const;
 
     private:
-        std::size_t _offset;
+        off64_t _offset;
     };
 
 }

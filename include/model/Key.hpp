@@ -15,15 +15,15 @@ namespace kvs {
 
         Key &operator=(const Key &key);
 
-        Key(Key&& key);
+        Key(Key &&key) noexcept;
 
-        Key& operator=(Key&& key);
+        Key &operator=(Key &&key) noexcept;
 
         ~Key();
 
-        const char *getKey() const;
+        [[nodiscard]] const char *getKey() const;
 
-        size_t getSize() const;
+        [[nodiscard]] size_t getSize() const;
 
         bool operator==(const Key &key) const;
 

@@ -10,13 +10,13 @@ namespace kvs {
     public:
         RecordSerializer(std::size_t key_size, std::size_t value_size);
 
-        char *recordToBytes(const Record &trieNode);
+        [[nodiscard]] char *recordToBytes(const Record &trieNode) const;
 
-        Record bytesToRecord(const char *bytes);
+        Record bytesToRecord(const char *bytes) const;
 
-        std::size_t getKeySize() const;
+        [[nodiscard]] std::size_t getKeySize() const;
 
-        std::size_t getValueSize() const;
+        [[nodiscard]] std::size_t getValueSize() const;
 
     private:
         std::size_t _key_size;

@@ -147,6 +147,52 @@ namespace kvs {
         remove("records.bin");
     }
 
+    TEST(KeyValueStore, clear) {
+        BloomFilter bloomFilter(100000);
+        Log log(5000);
+        File trieFile("trieNodes.bin");
+        File recordFile("records.bin");
+        TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
+        RecordSerializer recordSerializer(3, 8);
+        Storage<TrieNode> trieNodeStorage(trieFile, trieNodeSerializer);
+        Storage<Record> recordStorage(recordFile, recordSerializer);
+
+        Trie trie(trieNodeStorage);
+
+        KeyValueStore keyValueStore(bloomFilter, log, trie, recordStorage);
+
+        for (char c1 = 'a'; c1 <= 'z'; ++c1) {
+            for (char c2 = 'a'; c2 <= 'z'; ++c2) {
+                for (char c3 = 'a'; c3 <= 'z'; ++c3) {
+                    std::string s;
+                    s.push_back(c1);
+                    s.push_back(c2);
+                    s.push_back(c3);
+                    keyValueStore.add(KeyValue(
+                            Key(s.data(), 3),
+                            Value("aaaaaaaa", 8)));
+                }
+            }
+        }
+
+        keyValueStore.clear();
+
+        for (char c1 = 'a'; c1 <= 'z'; ++c1) {
+            for (char c2 = 'a'; c2 <= 'z'; ++c2) {
+                for (char c3 = 'a'; c3 <= 'z'; ++c3) {
+                    std::string s;
+                    s.push_back(c1);
+                    s.push_back(c2);
+                    s.push_back(c3);
+                    EXPECT_FALSE(keyValueStore.get(Key(s.data(), 3)).has_value());
+                }
+            }
+        }
+
+        remove("trieNodes.bin");
+        remove("records.bin");
+    }
+
     TEST(KeyValueStore, Stress) {
         BloomFilter bloomFilter(10000000);
         Log log(5000);

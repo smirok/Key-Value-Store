@@ -12,9 +12,9 @@ namespace kvs {
 
         KeyValue(Key key, Value value);
 
-        const Key &getKey() const;
+        [[nodiscard]] const Key &getKey() const;
 
-        const Value &getValue() const;
+        [[nodiscard]] const Value &getValue() const;
 
     private:
         Key _key;
