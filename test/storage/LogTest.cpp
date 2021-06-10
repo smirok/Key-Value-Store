@@ -21,5 +21,12 @@ namespace kvs {
         log.remove(key);
         EXPECT_EQ(log.get(key), std::nullopt);
     }
+
+    TEST(Log, DoubleAdd) {
+        Log log = Log(100);
+        Key key = Key("aaa", 3);
+        EXPECT_FALSE(log.add(key, Id(2)).has_value());
+        EXPECT_EQ(log.add(key, Id(3)).value(), Id(2));
+    }
 }
 

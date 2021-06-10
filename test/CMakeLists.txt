@@ -41,9 +41,9 @@ add_executable(tests
         storage/RecordStorageTest.cpp
         storage/TrieNodeStorageTest.cpp
         ../src/storage/Trie.cpp ../include/storage/Trie.hpp
-        TrieTest.cpp
+        storage/TrieTest.cpp
         storage/KeyValueStoreTest.cpp
-        ../src/model/InMemoryTrieNode.cpp ../include/model/InMemoryTrieNode.hpp)
+        ../src/model/InMemoryTrieNode.cpp ../include/model/InMemoryTrieNode.hpp model/KeyTest.cpp model/ValueTest.cpp model/KeyValueTest.cpp)
 
 target_link_libraries(tests
         PRIVATE "gtest_main"

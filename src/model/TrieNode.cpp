@@ -11,11 +11,7 @@ namespace kvs {
         return _nextRecords[index];
     }
 
-    void TrieNode::setNextRecord(std::size_t index, const Id &id) {
-        _nextRecords[index] = id;
-    }
-
-    std::vector<Id> TrieNode::getNextRecords() const {
+    const std::vector<Id> &TrieNode::getNextRecords() const {
         return _nextRecords;
     }
 }

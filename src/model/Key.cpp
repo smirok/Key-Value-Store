@@ -6,7 +6,7 @@ namespace kvs {
 
     Key::Key(const char *key, size_t size) : _size(size) {
         _key = new char[size + 1];
-        memcpy((void *) (_key), key, size);
+        memcpy(_key, key, size);
         _key[size] = '\0';
     }
 
@@ -22,7 +22,7 @@ namespace kvs {
 
         _size = key._size;
         _key = new char[_size + 1];
-        memcpy(key._key, _key, _size);
+        memcpy(_key, key._key, _size);
         _key[_size] = '\0';
 
         return *this;

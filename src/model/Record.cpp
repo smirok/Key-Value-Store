@@ -1,4 +1,3 @@
-#include <iostream>
 #include <utility>
 #include "model/Record.hpp"
 

@@ -16,4 +16,8 @@ namespace kvs {
 
     Id::Id() : _objectIdentifier(std::numeric_limits<std::size_t>::max()) {
     }
+
+    bool Id::operator==(const Id &id) const {
+        return _objectIdentifier == id._objectIdentifier;
+    }
 }

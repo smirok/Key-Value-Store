@@ -13,7 +13,9 @@ namespace kvs {
 
         std::size_t getId() const;
 
-        static std::size_t getIdSize() ;
+        static std::size_t getIdSize();
+
+        bool operator==(const Id &id) const;
 
     private:
         std::size_t _objectIdentifier;

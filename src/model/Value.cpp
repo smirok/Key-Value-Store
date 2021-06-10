@@ -5,7 +5,7 @@ namespace kvs {
 
     Value::Value(const char *value, size_t size) : _size(size) {
         _value = new char[size + 1];
-        memcpy((void *) (_value), value, size);
+        memcpy(_value, value, size);
         _value[size] = '\0';
     }
 
@@ -21,7 +21,7 @@ namespace kvs {
 
         _size = value._size;
         _value = new char[_size + 1];
-        memcpy(value._value, _value, _size);
+        memcpy(_value, value._value, _size);
         _value[_size] = '\0';
 
         return *this;
