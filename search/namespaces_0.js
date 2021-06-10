@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kvs_18',['kvs',['../namespacekvs.html',1,'']]]
+  ['kvs_20',['kvs',['../namespacekvs.html',1,'']]]
 ];
