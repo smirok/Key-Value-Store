@@ -9,7 +9,6 @@ namespace kvs {
 
     /**
      * \brief Класс, реализующий структуру ноды бора для хранения на диске.
-     * @var TrieNode::_nextRecords список идентификаторов детей-нод.
      */
     class TrieNode {
     public:
@@ -22,6 +21,7 @@ namespace kvs {
         [[nodiscard]] Id getNextRecord(std::size_t index) const;
 
     private:
+        /** Список идентификаторов детей-нод. */
         std::vector<Id> _nextRecords;
     };
 

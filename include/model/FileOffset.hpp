@@ -13,13 +13,13 @@ namespace kvs {
     public:
         /**
          *
-         * @param offset Хранимая позиция
+         * @param offset Хранимая позиция.
          */
         explicit FileOffset(size_t offset);
 
         /**
          *
-         * @return Хранимая позиция
+         * @return Хранимая позиция.
          */
         [[nodiscard]] off64_t getOffset() const;
 

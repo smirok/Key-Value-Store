@@ -15,20 +15,20 @@ namespace kvs {
 
         /**
          *
-         * @param objectIdentifier Хранимый идентификатор
+         * @param objectIdentifier Хранимый идентификатор.
          */
         explicit Id(std::size_t objectIdentifier);
 
         /**
          *
-         * @return Хранимый идентификатор
+         * @return Хранимый идентификатор.
          */
         [[nodiscard]] std::size_t getId() const;
 
 
         /**
          *
-         * @return размер @p _objectIdentifier в байтах, sizeof(@p size_t)
+         * @return размер @p _objectIdentifier в байтах, sizeof(@p size_t).
          */
         static std::size_t getIdSize();
 

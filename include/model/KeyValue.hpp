@@ -7,7 +7,7 @@
 namespace kvs {
 
     /**
-     * \brief Класс, хранящий ключ и значение вместе
+     * \brief Класс, хранящий ключ и значение вместе.
      */
     class KeyValue {
     public:
