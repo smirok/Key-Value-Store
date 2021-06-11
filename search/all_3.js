@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['key_2ecpp_6',['Key.cpp',['../Key_8cpp.html',1,'']]],
-  ['keyvalue_2ecpp_7',['KeyValue.cpp',['../KeyValue_8cpp.html',1,'']]],
-  ['keyvaluestore_2ecpp_8',['KeyValueStore.cpp',['../KeyValueStore_8cpp.html',1,'']]],
-  ['kvs_9',['kvs',['../namespacekvs.html',1,'']]]
+  ['del_11',['del',['../classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5',1,'kvs::KeyValueStore']]]
 ];

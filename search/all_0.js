@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['benchmark_2ecpp_0',['benchmark.cpp',['../benchmark_8cpp.html',1,'']]],
-  ['bloomfilter_2ecpp_1',['BloomFilter.cpp',['../BloomFilter_8cpp.html',1,'']]]
+  ['add_0',['add',['../classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410',1,'kvs::KeyValueStore::add()'],['../classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5',1,'kvs::InMemoryTrieNode::add()'],['../classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594',1,'kvs::BloomFilter::add()'],['../classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206',1,'kvs::Log::add()'],['../classkvs_1_1LogicStorage.html#ab23efc8a17bc34b79cbf93adb213dee1',1,'kvs::LogicStorage::add()'],['../classkvs_1_1Storage.html#a2c945f0230de8653411faac6d0b1efbf',1,'kvs::Storage::add()'],['../classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28',1,'kvs::Storage&lt; Record &gt;::add()'],['../classkvs_1_1Storage_3_01TrieNode_01_4.html#a0b512d84a381c7468642c8c533fd0629',1,'kvs::Storage&lt; TrieNode &gt;::add()'],['../classkvs_1_1Trie.html#a7371ee2b89eed56a7ee1079d5993c759',1,'kvs::Trie::add()']]],
+  ['addtrienodesubtree_1',['addTrieNodeSubtree',['../classkvs_1_1Storage_3_01TrieNode_01_4.html#a404e6c32ec2a62d1ffbaa18973605a78',1,'kvs::Storage&lt; TrieNode &gt;']]]
 ];

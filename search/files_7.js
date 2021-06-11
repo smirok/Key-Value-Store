@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['trie_2ecpp_34',['Trie.cpp',['../Trie_8cpp.html',1,'']]],
-  ['trienode_2ecpp_35',['TrieNode.cpp',['../TrieNode_8cpp.html',1,'']]],
-  ['trienodeserializer_2ecpp_36',['TrieNodeSerializer.cpp',['../TrieNodeSerializer_8cpp.html',1,'']]]
+  ['storage_2ehpp_164',['Storage.hpp',['../Storage_8hpp.html',1,'']]]
 ];

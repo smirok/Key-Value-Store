@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['trie_2ecpp_16',['Trie.cpp',['../Trie_8cpp.html',1,'']]],
-  ['trienode_2ecpp_17',['TrieNode.cpp',['../TrieNode_8cpp.html',1,'']]],
-  ['trienodeserializer_2ecpp_18',['TrieNodeSerializer.cpp',['../TrieNodeSerializer_8cpp.html',1,'']]]
+  ['hash_3c_20kvs_3a_3akey_20_3e_33',['hash&lt; kvs::Key &gt;',['../structstd_1_1hash_3_01kvs_1_1Key_01_4.html',1,'std']]]
 ];

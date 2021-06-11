@@ -1,4 +1,34 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node2" href="$benchmark_8cpp.html#a7aab1b6d2a0ca5a72bd8eb4e2457eb7d" title=" " alt="" coords="104,5,201,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,525,56,551"/>
+<area shape="rect" id="node2" href="$classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,499,267,526"/>
+<area shape="rect" id="node24" href="$classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164" title=" " alt="" coords="335,106,493,133"/>
+<area shape="rect" id="node31" href="$classkvs_1_1Id.html#ac838430626842995c00215208d7fb297" title=" " alt="" coords="125,550,245,577"/>
+<area shape="rect" id="node32" href="$benchmark_8cpp.html#a7aab1b6d2a0ca5a72bd8eb4e2457eb7d" title=" " alt="" coords="137,601,234,627"/>
+<area shape="rect" id="node3" href="$classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594" title=" " alt="" coords="592,325,735,351"/>
+<area shape="rect" id="node6" href="$classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="365,274,463,301"/>
+<area shape="rect" id="node8" href="$classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28" title=" " alt="" coords="341,492,487,533"/>
+<area shape="rect" id="node10" href="$classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976" title=" " alt="" coords="361,558,467,585"/>
+<area shape="rect" id="node11" href="$structkvs_1_1Log_1_1LogIterator.html#a72d61f9b83eb2c3f0a6116613fd2f7dd" title=" " alt="" coords="331,609,497,635"/>
+<area shape="rect" id="node12" href="$classkvs_1_1KeyValue.html#a50a658dfb23cc64e377df476c9fb6216" title=" " alt="" coords="339,659,489,686"/>
+<area shape="rect" id="node13" href="$classkvs_1_1Trie.html#ac6d3fef3a15c35166240e57fa63b1445" title=" " alt="" coords="317,710,511,737"/>
+<area shape="rect" id="node14" href="$classkvs_1_1KeyValue.html#a94076e0dbce3067442f95b45a99a33fb" title=" " alt="" coords="333,761,495,787"/>
+<area shape="rect" id="node15" href="$classkvs_1_1Log.html#a3d10ec41ccd308a6d0ea0af8438e122b" title=" " alt="" coords="360,811,468,838"/>
+<area shape="rect" id="node16" href="$classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="341,863,487,904"/>
+<area shape="rect" id="node17" href="$classkvs_1_1Trie.html#a1c2ad007e0cef7d86b1c308e8f15b876" title=" " alt="" coords="357,157,471,183"/>
+<area shape="rect" id="node18" href="$classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8" title=" " alt="" coords="341,208,487,249"/>
+<area shape="rect" id="node19" href="$classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff" title=" " alt="" coords="336,427,492,468"/>
+<area shape="rect" id="node21" href="$classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="315,375,513,402"/>
+<area shape="rect" id="node4" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="844,325,961,351"/>
+<area shape="rect" id="node5" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="843,274,963,301"/>
+<area shape="rect" id="node7" href="$classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="616,274,711,301"/>
+<area shape="rect" id="node9" href="$classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="581,499,745,526"/>
+<area shape="rect" id="node20" href="$classkvs_1_1Storage.html#a7c5a9b006c45c926e634c454f1af02bf" title=" " alt="" coords="592,434,735,461"/>
+<area shape="rect" id="node22" href="$classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="570,375,757,402"/>
+<area shape="rect" id="node23" href="$classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="823,376,982,417"/>
+<area shape="rect" id="node25" href="$classkvs_1_1Storage_3_01Record_01_4.html#a59b20e4e56bff6eec4ccd2bc97fe1310" title=" " alt="" coords="590,5,737,47"/>
+<area shape="rect" id="node27" href="$classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3" title=" " alt="" coords="616,122,711,149"/>
+<area shape="rect" id="node28" href="$classkvs_1_1Record.html#a31eed0ec993d3f5418e8e47b8787530c" title=" " alt="" coords="595,173,731,199"/>
+<area shape="rect" id="node29" href="$classkvs_1_1Record.html#a11cf8ad9af0b9f3eaa2c3ec17936df61" title=" " alt="" coords="590,223,737,250"/>
+<area shape="rect" id="node30" href="$classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b" title=" " alt="" coords="561,71,765,98"/>
+<area shape="rect" id="node26" href="$classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c" title=" " alt="" coords="813,13,992,39"/>
 </map>
