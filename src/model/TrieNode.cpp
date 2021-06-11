@@ -1,5 +1,4 @@
 #include "model/TrieNode.hpp"
-
 #include <utility>
 
 namespace kvs {

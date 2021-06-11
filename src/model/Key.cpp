@@ -1,6 +1,5 @@
 #include "model/Key.hpp"
 #include <cstring>
-#include <iostream>
 
 namespace kvs {
 

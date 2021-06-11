@@ -5,8 +5,10 @@
 namespace kvs {
     // nextRecords[i] == Id(std::numeric_limits<std::size_t>::max()) IFF edge is missing
     // nextRecords[i] == Id(std::numeric_limits<std::size_t>::max() - 1 for i >= 1 IFF currentNode is leaf
+
     // EMPTY LEAF = {std::numeric_limits<std::size_t>::max() , std::numeric_limits<std::size_t>::max() -1,
     // std::numeric_limits<std::size_t>::max() - 1, ... , std::numeric_limits<std::size_t>::max()  - 1}
+
     // NOT EMPTY LEAF = {id, std::numeric_limits<std::size_t>::max() -1,
     // std::numeric_limits<std::size_t>::max() -1, ..., std::numeric_limits<std::size_t>::max() -1}
 
@@ -75,7 +77,7 @@ namespace kvs {
         TrieNode currentNode = _storage.get(currentNodeId).value();
 
         for (std::size_t i = 0; i < key.getSize(); ++i) {
-            char byte = *keyBytes;
+            unsigned char byte = (*keyBytes) + static_cast<unsigned char>(128);
 
             Id nextNodeId = currentNode.getNextRecord(byte);
 

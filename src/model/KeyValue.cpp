@@ -1,5 +1,4 @@
 #include "model/KeyValue.hpp"
-
 #include <utility>
 
 namespace kvs {

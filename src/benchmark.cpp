@@ -54,12 +54,12 @@ int main() {
         std::string keyString, valueString;
 
         for (std::size_t j = 0; j < keySize; ++j) {
-            char sym = static_cast<char>((((random_data() % 128) + 128) % 128));
+            char sym = static_cast<char>(random_data());
             keyString.push_back(sym);
         }
 
         for (std::size_t j = 0; j < valueSize; ++j) {
-            char sym = static_cast<char>((((random_data() % 128) + 128) % 128));
+            char sym = static_cast<char>(random_data());
             valueString.push_back(sym);
         }
 
@@ -88,12 +88,12 @@ int main() {
         std::string keyString, valueString;
 
         for (std::size_t j = 0; j < keySize; ++j) {
-            char sym = static_cast<char>((((random_data() % 128) + 128) % 128));
+            char sym = static_cast<char>(random_data());
             keyString.push_back(sym);
         }
 
         for (std::size_t j = 0; j < valueSize; ++j) {
-            char sym = static_cast<char>((((random_data() % 128) + 128) % 128));
+            char sym = static_cast<char>(random_data());
             valueString.push_back(sym);
         }
 
@@ -119,7 +119,7 @@ int main() {
         std::string keyString;
 
         for (std::size_t j = 0; j < keySize; ++j) {
-            char sym = static_cast<char>((((random_data() % 128) + 128) % 128));
+            char sym = static_cast<char>(random_data());
             keyString.push_back(sym);
         }
 

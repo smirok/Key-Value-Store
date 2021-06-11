@@ -2,7 +2,6 @@
 #include "model/Value.hpp"
 
 #include <cstring>
-#include <iostream>
 
 namespace kvs {
 

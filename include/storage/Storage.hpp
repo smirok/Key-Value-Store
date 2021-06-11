@@ -8,7 +8,6 @@
 #include "model/TrieNode.hpp"
 #include "serializer/TrieNodeSerializer.hpp"
 #include <optional>
-#include <iostream>
 #include "model/InMemoryTrieNode.hpp"
 
 namespace kvs {

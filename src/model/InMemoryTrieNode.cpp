@@ -15,7 +15,7 @@ namespace kvs {
 
         const char *bytesKey = key.getKey();
         for (std::size_t i = 0; i < key.getSize(); ++i) {
-            std::size_t index = static_cast<unsigned char>(*bytesKey);
+            auto index = static_cast<unsigned char>((*bytesKey) + 128);
             if (!currentNode->_children[index]) {
                 currentNode->_children[index] = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
             }
