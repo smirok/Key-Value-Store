@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('classkvs_1_1InMemoryTrieNode.html','')
 </div><!--header-->
 <div class="contents">
 
+<p>Класс, реализующий ноду бора в оперативной памяти.  
+ <a href="classkvs_1_1InMemoryTrieNode.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="InMemoryTrieNode_8hpp_source.html">InMemoryTrieNode.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -106,7 +109,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a50be73190d98567173f02dc62713f3e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add</a> (std::shared_ptr&lt; <a class="el" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> &gt; currentNode, const <a class="el" href="classkvs_1_1Key.html">Key</a> &amp;key, const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;id)</td></tr>
 <tr class="separator:a50be73190d98567173f02dc62713f3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс, реализующий ноду бора в оперативной памяти. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae83a20bd1fa9a922fe2d77911e3ab695"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae83a20bd1fa9a922fe2d77911e3ab695">&#9670;&nbsp;</a></span>InMemoryTrieNode()</h2>
 
@@ -121,7 +126,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Инициализируем детей <code>nullptr-ами</code> </p>
+<p>Инициализируем детей <code>nullptr-ами</code>. </p>
 
 <p class="reference">Referenced by <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -183,9 +188,9 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">currentNode</td><td>Нода, к которой как корню подвешивается <code>key</code> с <code>id</code> </td></tr>
-    <tr><td class="paramname">key</td><td>Ключ, который хотим добавить в дерево <code>currentNode</code> </td></tr>
-    <tr><td class="paramname">id</td><td>Идентификатор записи, соотвествующей ключу <code>key</code> </td></tr>
+    <tr><td class="paramname">currentNode</td><td>Нода, к которой как корню подвешивается <code>key</code> с <code>id</code>. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключ, который хотим добавить в дерево <code>currentNode</code>. </td></tr>
+    <tr><td class="paramname">id</td><td>Идентификатор записи, соотвествующей ключу <code>key</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -239,11 +244,11 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>Номер ребёнка ноды </td></tr>
+    <tr><td class="paramname">index</td><td>Номер ребёнка ноды. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Указатель на <code>index-ового</code> ребёнка </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Указатель на <code>index-ового</code> ребёнка. </dd></dl>
 
 </div>
 </div>
@@ -261,7 +266,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Идентификатор соответствующей ноде записи. Если ноде не соответствует запись, то <code>std::numeric_limits&lt;std::size_t&gt;::max()</code> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Идентификатор соответствующей ноде записи. Если ноде не соответствует запись, то <code>std::numeric_limits&lt;std::size_t&gt;::max()</code>. </dd></dl>
 
 </div>
 </div>

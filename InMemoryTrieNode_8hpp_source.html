@@ -95,33 +95,34 @@ $(document).ready(function(){initNavTree('InMemoryTrieNode_8hpp_source.html','')
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekvs.html">kvs</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classkvs_1_1InMemoryTrieNode.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695">InMemoryTrieNode</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add</a>(std::shared_ptr&lt;InMemoryTrieNode&gt; currentNode, <span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;key, <span class="keyword">const</span> <a class="code" href="classkvs_1_1Id.html">Id</a> &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        [[nodiscard]] std::shared_ptr&lt;InMemoryTrieNode&gt; <a class="code" href="classkvs_1_1InMemoryTrieNode.html#ad75de21e1698686a1397076af87a09b8">get</a>(std::size_t index) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        [[nodiscard]] <a class="code" href="classkvs_1_1Id.html">Id</a> <a class="code" href="classkvs_1_1InMemoryTrieNode.html#aa6490e415e022744913f26c841bbf00e">getId</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::shared_ptr&lt;InMemoryTrieNode&gt; _children[256];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classkvs_1_1Id.html">Id</a> _id = <a class="code" href="classkvs_1_1Id.html">Id</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classkvs_1_1InMemoryTrieNode.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695">InMemoryTrieNode</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add</a>(std::shared_ptr&lt;InMemoryTrieNode&gt; currentNode, <span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;key, <span class="keyword">const</span> <a class="code" href="classkvs_1_1Id.html">Id</a> &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        [[nodiscard]] std::shared_ptr&lt;InMemoryTrieNode&gt; <a class="code" href="classkvs_1_1InMemoryTrieNode.html#ad75de21e1698686a1397076af87a09b8">get</a>(std::size_t index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        [[nodiscard]] <a class="code" href="classkvs_1_1Id.html">Id</a> <a class="code" href="classkvs_1_1InMemoryTrieNode.html#aa6490e415e022744913f26c841bbf00e">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::shared_ptr&lt;InMemoryTrieNode&gt; _children[256];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classkvs_1_1Id.html">Id</a> _id = <a class="code" href="classkvs_1_1Id.html">Id</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_INMEMORYTRIENODE_HPP</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_INMEMORYTRIENODE_HPP</span></div>
 <div class="ttc" id="aId_8hpp_html"><div class="ttname"><a href="Id_8hpp.html">Id.hpp</a></div></div>
 <div class="ttc" id="aKey_8hpp_html"><div class="ttname"><a href="Key_8hpp.html">Key.hpp</a></div></div>
 <div class="ttc" id="aclasskvs_1_1Id_html"><div class="ttname"><a href="classkvs_1_1Id.html">kvs::Id</a></div><div class="ttdoc">Класс, представляющий идентификатор некоторой структуры.</div><div class="ttdef"><b>Definition:</b> Id.hpp:12</div></div>
-<div class="ttc" id="aclasskvs_1_1InMemoryTrieNode_html"><div class="ttname"><a href="classkvs_1_1InMemoryTrieNode.html">kvs::InMemoryTrieNode</a></div><div class="ttdef"><b>Definition:</b> InMemoryTrieNode.hpp:17</div></div>
+<div class="ttc" id="aclasskvs_1_1InMemoryTrieNode_html"><div class="ttname"><a href="classkvs_1_1InMemoryTrieNode.html">kvs::InMemoryTrieNode</a></div><div class="ttdoc">Класс, реализующий ноду бора в оперативной памяти.</div><div class="ttdef"><b>Definition:</b> InMemoryTrieNode.hpp:14</div></div>
 <div class="ttc" id="aclasskvs_1_1InMemoryTrieNode_html_a50be73190d98567173f02dc62713f3e5"><div class="ttname"><a href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">kvs::InMemoryTrieNode::add</a></div><div class="ttdeci">static void add(std::shared_ptr&lt; InMemoryTrieNode &gt; currentNode, const Key &amp;key, const Id &amp;id)</div><div class="ttdef"><b>Definition:</b> InMemoryTrieNode.cpp:13</div></div>
 <div class="ttc" id="aclasskvs_1_1InMemoryTrieNode_html_aa6490e415e022744913f26c841bbf00e"><div class="ttname"><a href="classkvs_1_1InMemoryTrieNode.html#aa6490e415e022744913f26c841bbf00e">kvs::InMemoryTrieNode::getId</a></div><div class="ttdeci">Id getId() const</div><div class="ttdef"><b>Definition:</b> InMemoryTrieNode.cpp:34</div></div>
 <div class="ttc" id="aclasskvs_1_1InMemoryTrieNode_html_ad75de21e1698686a1397076af87a09b8"><div class="ttname"><a href="classkvs_1_1InMemoryTrieNode.html#ad75de21e1698686a1397076af87a09b8">kvs::InMemoryTrieNode::get</a></div><div class="ttdeci">std::shared_ptr&lt; InMemoryTrieNode &gt; get(std::size_t index) const</div><div class="ttdef"><b>Definition:</b> InMemoryTrieNode.cpp:30</div></div>
 <div class="ttc" id="aclasskvs_1_1InMemoryTrieNode_html_ae83a20bd1fa9a922fe2d77911e3ab695"><div class="ttname"><a href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695">kvs::InMemoryTrieNode::InMemoryTrieNode</a></div><div class="ttdeci">InMemoryTrieNode()</div><div class="ttdef"><b>Definition:</b> InMemoryTrieNode.cpp:7</div></div>
-<div class="ttc" id="aclasskvs_1_1Key_html"><div class="ttname"><a href="classkvs_1_1Key.html">kvs::Key</a></div><div class="ttdoc">Класс, хранящий ключ и его размер</div><div class="ttdef"><b>Definition:</b> Key.hpp:13</div></div>
+<div class="ttc" id="aclasskvs_1_1Key_html"><div class="ttname"><a href="classkvs_1_1Key.html">kvs::Key</a></div><div class="ttdoc">Класс, хранящий ключ и его размер.</div><div class="ttdef"><b>Definition:</b> Key.hpp:13</div></div>
 <div class="ttc" id="anamespacekvs_html"><div class="ttname"><a href="namespacekvs.html">kvs</a></div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
