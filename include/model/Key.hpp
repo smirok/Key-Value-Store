@@ -7,6 +7,9 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, хранящий ключ и его размер
+     */
     class Key {
     public:
         Key(const char *key, size_t size);

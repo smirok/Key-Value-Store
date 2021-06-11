@@ -6,10 +6,21 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, представляющий позицию в файле.
+     */
     class FileOffset {
     public:
+        /**
+         *
+         * @param offset Хранимая позиция
+         */
         explicit FileOffset(size_t offset);
 
+        /**
+         *
+         * @return Хранимая позиция
+         */
         [[nodiscard]] off64_t getOffset() const;
 
     private:

@@ -7,6 +7,10 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, реализующий структуру ноды бора для хранения на диске.
+     * @var TrieNode::_nextRecords список идентификаторов детей-нод.
+     */
     class TrieNode {
     public:
         TrieNode() = default;

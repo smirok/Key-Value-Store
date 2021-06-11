@@ -7,8 +7,17 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, представляющий запись @p KeyValue в файле : ключ, булев флаг, значение
+     */
     class Record {
     public:
+        /**
+         *
+         * @param key Ключ
+         * @param isOutdated Является ли данная запись устаревшей
+         * @param value Значение
+         */
         Record(Key key, bool isOutdated, Value value);
 
         [[nodiscard]] const Key &getKey() const;

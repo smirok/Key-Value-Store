@@ -5,6 +5,9 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, хранящий значение и его размер
+     */
     class Value {
     public:
         Value(const char *_value, size_t _size);
@@ -13,9 +16,9 @@ namespace kvs {
 
         Value &operator=(const Value &value);
 
-        Value(Value &&value) noexcept ;
+        Value(Value &&value) noexcept;
 
-        Value &operator=(Value &&value) noexcept ;
+        Value &operator=(Value &&value) noexcept;
 
         ~Value();
 

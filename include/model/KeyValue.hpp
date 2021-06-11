@@ -6,6 +6,9 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, хранящий ключ и значение вместе
+     */
     class KeyValue {
     public:
         KeyValue(const char *key, size_t key_size, const char *value, size_t value_size);
