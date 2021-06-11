@@ -9,19 +9,45 @@
 #include "storage/Storage.hpp"
 
 namespace kvs {
+    /**
+     * \brief Главный класс, хранилище пар < @p Key, @p Value >
+     */
     class KeyValueStore {
     public:
+        /**
+         * @param bloomFilter Фильтр Блума.
+         * @param log Лог в качестве хранилища в оперативной памяти.
+         * @param trie Бор в качестве хранилища на диске.
+         * @param _recordStorage Хранилище записей @p Record на диске.
+         */
         KeyValueStore(BloomFilter &bloomFilter,
                       Log &log,
                       Trie &trie,
                       Storage<Record> &_recordStorage);
 
-        void add(const KeyValue &);
+        /**
+         * Добавить @p keyValue в хранилище.
+         * @param keyValue пара @p Key, @p Value.
+         */
+        void add(const KeyValue &keyValue);
 
-        [[nodiscard]] std::optional<KeyValue> get(const Key &) const;
+        /**
+         * Получить пару @p KeyValue по ключу @p key.
+         * @param key Ключ.
+         * @return @p KeyValue обернутый в @p std::optional, если в @p KeyValueStore есть @p Value по ключу @p key;
+         * пустой @p std::optional иначе.
+         */
+        [[nodiscard]] std::optional<KeyValue> get(const Key &key) const;
 
-        void del(const Key &);
+        /**
+         * Удалить пару @p Key, @p Value по ключу @p key.
+         * @param key Ключ.
+         */
+        void del(const Key &key);
 
+        /**
+         * Очистить @p KeyValueStore.
+         */
         void clear();
 
     private:

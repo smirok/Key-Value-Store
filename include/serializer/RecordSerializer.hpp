@@ -5,13 +5,30 @@
 #include "model/Record.hpp"
 
 namespace kvs {
-
+    /**
+     * \brief Класс, отвечающий за сериализацию @p Record.
+     */
     class RecordSerializer {
     public:
+        /**
+         *
+         * @param key_size Размер ключа в байтах.
+         * @param value_size Размер значения в байтах.
+         */
         RecordSerializer(std::size_t key_size, std::size_t value_size);
 
-        [[nodiscard]] char *recordToBytes(const Record &trieNode) const;
+        /**
+         * Преобразовывает @p Record в байты.
+         * @param record Преобразуемая запись.
+         * @return Массив байт после преобразования.
+         */
+        [[nodiscard]] char *recordToBytes(const Record &record) const;
 
+        /**
+         * Преобразовывает байты в @p Record.
+         * @param bytes Массив байт, представляющий @p Record.
+         * @return Сама запись.
+         */
         Record bytesToRecord(const char *bytes) const;
 
         [[nodiscard]] std::size_t getKeySize() const;

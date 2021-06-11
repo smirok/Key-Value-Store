@@ -27,6 +27,13 @@ namespace kvs {
         static void add(std::shared_ptr<InMemoryTrieNode> currentNode, const Key &key, const Id &id);
 
         /**
+         * Превращение @p Log-а в бор, хранящийся в оперативной памяти.
+         * @param keyIdPairs Массив пар < @p Key, @p Id - идентификатор @p Record-a>, из которого будет строиться бор.
+         * @return Указатель на корень получившегося бора.
+         */
+        static std::shared_ptr<InMemoryTrieNode> toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &keyIdPairs);
+
+        /**
          *
          * @param index Номер ребёнка ноды.
          * @return Указатель на @p index-ового ребёнка.

@@ -8,13 +8,30 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, отвечающий за сериализацию @p TrieNode.
+     */
     class TrieNodeSerializer {
     public:
+        /**
+         *
+         * @param idSize Размер @p Id в байтах.
+         */
         explicit TrieNodeSerializer(std::size_t idSize);
 
-        [[nodiscard]] char *trieNodeToBytes(const TrieNode &record) const;
+        /**
+         * Преобразовывает @p TrieNode в байты.
+         * @param trieNode Преобразуемая нода.
+         * @return Массив байт после преобразования.
+         */
+        [[nodiscard]] char *trieNodeToBytes(const TrieNode &trieNode) const;
 
-        static TrieNode bytesToTrieNode(const char *bytes);
+        /**
+         * Преобразовывает байты в @p TrieNode.
+         * @param bytes Массив байт, представляющий @p TrieNode.
+         * @return Сама запись.
+         */
+        TrieNode bytesToTrieNode(const char *bytes) const;
 
     private:
         std::size_t _idSize;

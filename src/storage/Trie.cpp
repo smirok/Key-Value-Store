@@ -114,9 +114,10 @@ namespace kvs {
         addRoot();
     }
 
-    void Trie::merge(const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot) {
+    const std::vector<Id> &Trie::merge(const std::shared_ptr<InMemoryTrieNode> &smallTrieRoot) {
         _recordsToDelete.clear();
         merge(Id(0), smallTrieRoot);
+        return _recordsToDelete;
     }
 
     Id Trie::merge(const Id &trieNodeId, const std::shared_ptr<InMemoryTrieNode> &smallTrieNode) {
@@ -152,9 +153,5 @@ namespace kvs {
         _storage.replace(trieNodeId, TrieNode(ids));
 
         return trieNodeId;
-    }
-
-    const std::vector<Id> &Trie::getRecordsToDelete() const {
-        return _recordsToDelete;
     }
 }

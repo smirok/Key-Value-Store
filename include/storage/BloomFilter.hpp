@@ -8,12 +8,28 @@
 
 namespace kvs {
 
+    /**
+     * \brief Класс, реализующий фильтр Блума.
+     */
     class BloomFilter {
     public:
+        /**
+         *
+         * @param size Размер фильтр блума.
+         */
         explicit BloomFilter(std::size_t size);
 
+        /**
+         *
+         * @param key Ключ, добавляемый в фильтр.
+         */
         void add(const Key &key);
 
+        /**
+         *
+         * @param key Ключ, наличие которого в фильтр проверяем.
+         * @return @p true, если ключ может содержаться в фильтре; @p false, если ключа точно нет в фильтре.
+         */
         [[nodiscard]] bool mightContains(const Key &key) const;
 
     private:

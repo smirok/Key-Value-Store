@@ -56,14 +56,4 @@ namespace kvs {
 
         return root;
     }
-
-    std::shared_ptr<InMemoryTrieNode> Log::toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &keyIdPairs) {
-        std::shared_ptr<InMemoryTrieNode> root = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
-
-        for (const auto &pair : keyIdPairs) {
-            InMemoryTrieNode::add(root, pair.first, pair.second);
-        }
-
-        return root;
-    }
 }

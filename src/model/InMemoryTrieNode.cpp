@@ -27,6 +27,17 @@ namespace kvs {
         currentNode->_id = id;
     }
 
+    std::shared_ptr<InMemoryTrieNode>
+    InMemoryTrieNode::toInMemoryTrieNode(std::vector<std::pair<Key, Id>> &keyIdPairs) {
+        std::shared_ptr<InMemoryTrieNode> root = std::make_shared<InMemoryTrieNode>(InMemoryTrieNode());
+
+        for (const auto &pair : keyIdPairs) {
+            InMemoryTrieNode::add(root, pair.first, pair.second);
+        }
+
+        return root;
+    }
+
     std::shared_ptr<InMemoryTrieNode> InMemoryTrieNode::get(std::size_t index) const {
         return _children[index];
     }
