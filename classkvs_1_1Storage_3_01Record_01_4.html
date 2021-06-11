@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('classkvs_1_1Storage_3_01Record_01_4.ht
 </div><!--header-->
 <div class="contents">
 
+<p>Класс для хранения <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> на диске.  
+ <a href="classkvs_1_1Storage_3_01Record_01_4.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Storage_8hpp_source.html">Storage.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -120,7 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0d255888f229b5bb018fb1df087b433e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a0d255888f229b5bb018fb1df087b433e">size</a> () const</td></tr>
 <tr class="separator:a0d255888f229b5bb018fb1df087b433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс для хранения <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> на диске. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa584c10901a1b21a09803c4204f09740"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa584c10901a1b21a09803c4204f09740">&#9670;&nbsp;</a></span>Storage()</h2>
 
@@ -154,6 +159,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataFile</td><td>Файл для записи <code>Record-ов</code>. </td></tr>
+    <tr><td class="paramname">recordSerializer</td><td>Класс, сериализующий <code>Record-ы</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -181,10 +193,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Добавить <code>record</code> в хранилище и присвоить ему идентификатор внутри хранилища. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">record</td><td>Добавляемая запись. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Присвоенный идентификатор. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58">kvs::FileOffset::getOffset()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -204,7 +223,7 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Storage_3_01Record_01_4_a256a3efa2c5df41f202fdf92c7686c28_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01Record_01_4_a256a3efa2c5df41f202fdf92c7686c28_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01Record_01_4_a256a3efa2c5df41f202fdf92c7686c28_icgraph" id="aclasskvs_1_1Storage_3_01Record_01_4_a256a3efa2c5df41f202fdf92c7686c28_icgraph">
 <area shape="rect" title=" " alt="" coords="315,5,461,47"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,13,267,39"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,13,267,39"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>
@@ -233,6 +252,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Очищает хранилище. </p>
 
 <p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">kvs::KeyValueStore::clear()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -272,10 +292,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Получить <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> по <code>id</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор объекта. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> обернутый в <code>std::optional</code>, если в <code><a class="el" href="classkvs_1_1Storage.html" title="Интерфейс хранилища пар &lt; T, Id&gt;. Прослойка между хранилищем-логикой и записью на диск.">Storage</a></code> есть какой-то объект с <code>id</code>; пустой <code>std::optional</code> иначе. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c">kvs::Record::getIsOutdated()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164">kvs::KeyValueStore::get()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38">kvs::KeyValueStore::get()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -295,7 +322,7 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Storage_3_01Record_01_4_a59b20e4e56bff6eec4ccd2bc97fe1310_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01Record_01_4_a59b20e4e56bff6eec4ccd2bc97fe1310_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01Record_01_4_a59b20e4e56bff6eec4ccd2bc97fe1310_icgraph" id="aclasskvs_1_1Storage_3_01Record_01_4_a59b20e4e56bff6eec4ccd2bc97fe1310_icgraph">
 <area shape="rect" title=" " alt="" coords="311,5,457,47"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164" title=" " alt="" coords="104,13,263,39"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38" title=" " alt="" coords="104,13,263,39"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>
@@ -325,6 +352,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Получить <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> по <code>id</code>. Контракт : объект с таким <code>id</code> всегда существует, но возможно он устарел. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор объекта. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> обернутый в <code>std::optional</code>. </dd></dl>
 
 </div>
 </div>
@@ -350,8 +384,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Проверяет, заполнено ли хранилище. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code>, если заполнено; <code>false</code> иначе. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5">kvs::KeyValueStore::del()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b">kvs::KeyValueStore::del()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -360,8 +395,8 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Storage_3_01Record_01_4_abb6419182a92e9763656f19ed87e269f_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01Record_01_4_abb6419182a92e9763656f19ed87e269f_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01Record_01_4_abb6419182a92e9763656f19ed87e269f_icgraph" id="aclasskvs_1_1Storage_3_01Record_01_4_abb6419182a92e9763656f19ed87e269f_icgraph">
 <area shape="rect" title=" " alt="" coords="315,23,461,65"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5" title=" " alt="" coords="106,56,265,83"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="106,56,265,83"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -390,6 +425,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Перестраивает хранилище, удаляя устаревшие записи и оставляя остальные. </p>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c">kvs::Record::getIsOutdated()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -429,8 +465,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Удаляет объект с <code>id</code>. Если объекта нет, ничего не делает. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор удаляемого объекта. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5">kvs::KeyValueStore::del()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b">kvs::KeyValueStore::del()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -439,8 +481,8 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Storage_3_01Record_01_4_a45deb0d6b6d44a0805e34d033d5c39a8_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01Record_01_4_a45deb0d6b6d44a0805e34d033d5c39a8_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01Record_01_4_a45deb0d6b6d44a0805e34d033d5c39a8_icgraph" id="aclasskvs_1_1Storage_3_01Record_01_4_a45deb0d6b6d44a0805e34d033d5c39a8_icgraph">
 <area shape="rect" title=" " alt="" coords="315,23,461,65"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5" title=" " alt="" coords="106,56,265,83"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="106,56,265,83"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -470,10 +512,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Удаляет из хранилища все записи с переданными <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idsToRemove</td><td>Массив <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code>, по которым надо удалить записи. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="classkvs_1_1Storage.html#a7c5a9b006c45c926e634c454f1af02bf">kvs::Storage&lt; T &gt;::remove()</a>.</p>
+<p class="reference">References <a class="el" href="classkvs_1_1Storage.html#a1215b40ee6b66b126e59874e784b6215">kvs::Storage&lt; T &gt;::remove()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -482,7 +530,7 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_cgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_cgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_cgraph" id="aclasskvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,161,47"/>
-<area shape="rect" href="classkvs_1_1Storage.html#a7c5a9b006c45c926e634c454f1af02bf" title=" " alt="" coords="209,13,352,39"/>
+<area shape="rect" href="classkvs_1_1Storage.html#a1215b40ee6b66b126e59874e784b6215" title=" " alt="" coords="209,13,352,39"/>
 </map>
 </div>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -493,7 +541,7 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_icgraph" id="aclasskvs_1_1Storage_3_01Record_01_4_a81b803ddd33a57e8c1c85ccdfcd597ff_icgraph">
 <area shape="rect" title=" " alt="" coords="315,5,471,47"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,13,267,39"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,13,267,39"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>
@@ -522,6 +570,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Размер хранилища. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">kvs::KeyValueStore::clear()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

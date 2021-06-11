@@ -95,31 +95,31 @@ $(document).ready(function(){initNavTree('File_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekvs.html">kvs</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classkvs_1_1File.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1File.html">File</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classkvs_1_1File.html#adf14344eb7c0b898ba9a8e34fb0b2b2d">File</a>(<span class="keyword">const</span> std::string &amp;fileName);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classkvs_1_1File.html#ad651e443ae37315a7ad095913826117d">~File</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">char</span> *<a class="code" href="classkvs_1_1File.html#a232e33307094be414348f0b3036a93dd">read</a>(std::size_t length, <a class="code" href="classkvs_1_1FileOffset.html">FileOffset</a> fileOffset);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classkvs_1_1FileOffset.html">FileOffset</a> <a class="code" href="classkvs_1_1File.html#aed48bfa82468011d286ee282266f4c2e">write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, std::size_t length);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1File.html#affa5efe1c490e2f223d41a172f9bcc8c">writeByOffset</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1FileOffset.html">FileOffset</a> &amp;fileOffset, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, std::size_t length);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1File.html#a179c4c782ecc342bcb35301a3d65d19e">clear</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::fstream fileStream;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::string _fileName;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    };</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_FILE_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classkvs_1_1File.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1File.html">File</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classkvs_1_1File.html#adf14344eb7c0b898ba9a8e34fb0b2b2d">File</a>(<span class="keyword">const</span> std::string &amp;fileName);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classkvs_1_1File.html#ad651e443ae37315a7ad095913826117d">~File</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">char</span> *<a class="code" href="classkvs_1_1File.html#a232e33307094be414348f0b3036a93dd">read</a>(std::size_t length, <a class="code" href="classkvs_1_1FileOffset.html">FileOffset</a> fileOffset);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classkvs_1_1FileOffset.html">FileOffset</a> <a class="code" href="classkvs_1_1File.html#aed48bfa82468011d286ee282266f4c2e">write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, std::size_t length);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1File.html#affa5efe1c490e2f223d41a172f9bcc8c">writeByOffset</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1FileOffset.html">FileOffset</a> &amp;fileOffset, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, std::size_t length);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1File.html#a179c4c782ecc342bcb35301a3d65d19e">clear</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::fstream fileStream;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::string _fileName;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_FILE_HPP</span></div>
 <div class="ttc" id="aFileOffset_8hpp_html"><div class="ttname"><a href="FileOffset_8hpp.html">FileOffset.hpp</a></div></div>
 <div class="ttc" id="aclasskvs_1_1FileOffset_html"><div class="ttname"><a href="classkvs_1_1FileOffset.html">kvs::FileOffset</a></div><div class="ttdoc">Класс, представляющий позицию в файле.</div><div class="ttdef"><b>Definition:</b> FileOffset.hpp:12</div></div>
-<div class="ttc" id="aclasskvs_1_1File_html"><div class="ttname"><a href="classkvs_1_1File.html">kvs::File</a></div><div class="ttdef"><b>Definition:</b> File.hpp:11</div></div>
+<div class="ttc" id="aclasskvs_1_1File_html"><div class="ttname"><a href="classkvs_1_1File.html">kvs::File</a></div><div class="ttdoc">Класс, отвечающий за запись и чтение в файл.</div><div class="ttdef"><b>Definition:</b> File.hpp:14</div></div>
 <div class="ttc" id="aclasskvs_1_1File_html_a179c4c782ecc342bcb35301a3d65d19e"><div class="ttname"><a href="classkvs_1_1File.html#a179c4c782ecc342bcb35301a3d65d19e">kvs::File::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> File.cpp:44</div></div>
 <div class="ttc" id="aclasskvs_1_1File_html_a232e33307094be414348f0b3036a93dd"><div class="ttname"><a href="classkvs_1_1File.html#a232e33307094be414348f0b3036a93dd">kvs::File::read</a></div><div class="ttdeci">char * read(std::size_t length, FileOffset fileOffset)</div><div class="ttdef"><b>Definition:</b> File.cpp:11</div></div>
 <div class="ttc" id="aclasskvs_1_1File_html_ad651e443ae37315a7ad095913826117d"><div class="ttname"><a href="classkvs_1_1File.html#ad651e443ae37315a7ad095913826117d">kvs::File::~File</a></div><div class="ttdeci">~File()</div><div class="ttdef"><b>Definition:</b> File.cpp:40</div></div>

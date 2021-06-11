@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('classkvs_1_1LogicStorage.html',''); in
 </div><!--header-->
 <div class="contents">
 
+<p>Интерфейс хранилища, отвечающего только за логику.  
+ <a href="classkvs_1_1LogicStorage.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="LogicStorage_8hpp_source.html">LogicStorage.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for kvs::LogicStorage:</div>
@@ -97,9 +100,9 @@ $(document).ready(function(){initNavTree('classkvs_1_1LogicStorage.html',''); in
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classkvs_1_1LogicStorage__inherit__graph.png" border="0" usemap="#akvs_1_1LogicStorage_inherit__map" alt="Inheritance graph"/></div>
 <map name="akvs_1_1LogicStorage_inherit__map" id="akvs_1_1LogicStorage_inherit__map">
-<area shape="rect" title=" " alt="" coords="24,5,151,32"/>
-<area shape="rect" href="classkvs_1_1Log.html" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" href="classkvs_1_1Trie.html" title=" " alt="" coords="100,80,171,107"/>
+<area shape="rect" title="Интерфейс хранилища, отвечающего только за логику." alt="" coords="24,5,151,32"/>
+<area shape="rect" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня..." alt="" coords="5,80,76,107"/>
+<area shape="rect" href="classkvs_1_1Trie.html" title="Класс, представляющий хранилище данных бор на диске и хранящий пары &lt; Key, Id&gt;." alt="" coords="100,80,171,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -116,7 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a82c98bf5b28a5fca5c481002c6b52007"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1LogicStorage.html#a82c98bf5b28a5fca5c481002c6b52007">~LogicStorage</a> ()=default</td></tr>
 <tr class="separator:a82c98bf5b28a5fca5c481002c6b52007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Интерфейс хранилища, отвечающего только за логику. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a82c98bf5b28a5fca5c481002c6b52007"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82c98bf5b28a5fca5c481002c6b52007">&#9670;&nbsp;</a></span>~LogicStorage()</h2>
 
@@ -176,6 +181,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Добавление в <code><a class="el" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику.">LogicStorage</a></code> по ключу <code>key</code> значение <code>id</code>. Если ранее в <code><a class="el" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику.">LogicStorage</a></code> уже был какой-то идентификатор по ключу <code>key</code>, то его <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обновляется </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+    <tr><td class="paramname">id</td><td>Идентификатор. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обернутый в <code>std::optional</code>, если ранее в реализации <code><a class="el" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику.">LogicStorage</a></code> уже был какой-то идентификатор по ключу <code>key</code>; пустой <code>std::optional</code> иначе </dd></dl>
 
 <p>Implemented in <a class="el" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206">kvs::Log</a>, and <a class="el" href="classkvs_1_1Trie.html#a7371ee2b89eed56a7ee1079d5993c759">kvs::Trie</a>.</p>
 
@@ -203,6 +216,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Очищает <code><a class="el" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику.">LogicStorage</a></code>. </p>
 
 <p>Implemented in <a class="el" href="classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c">kvs::Trie</a>, and <a class="el" href="classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976">kvs::Log</a>.</p>
 
@@ -231,6 +245,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Получить <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> по ключу <code>key</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обернутый в <code>std::optional</code>, если в реализации <code><a class="el" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику.">LogicStorage</a></code> есть какой-то идентификатор по ключу <code>key</code>; пустой <code>std::optional</code> иначе. </dd></dl>
 
 <p>Implemented in <a class="el" href="classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9">kvs::Log</a>, and <a class="el" href="classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3">kvs::Trie</a>.</p>
 
@@ -259,6 +280,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Удаление пары c ключом <code>key</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обернутый в <code>std::optional</code>, если ранее в реализации <code><a class="el" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику.">LogicStorage</a></code> уже был какой-то идентификатор по ключу <code>key</code>; пустой <code>std::optional</code> иначе. </dd></dl>
 
 <p>Implemented in <a class="el" href="classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b">kvs::Log</a>, and <a class="el" href="classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431">kvs::Trie</a>.</p>
 

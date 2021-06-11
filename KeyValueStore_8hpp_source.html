@@ -96,53 +96,53 @@ $(document).ready(function(){initNavTree('KeyValueStore_8hpp_source.html',''); i
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Storage_8hpp.html">storage/Storage.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekvs.html">kvs</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classkvs_1_1KeyValueStore.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1KeyValueStore.html">KeyValueStore</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classkvs_1_1KeyValueStore.html#addb27da8d3aac4447f39d1882a684a0c">KeyValueStore</a>(<a class="code" href="classkvs_1_1BloomFilter.html">BloomFilter</a> &amp;bloomFilter,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                      <a class="code" href="classkvs_1_1Log.html">Log</a> &amp;log,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                      <a class="code" href="classkvs_1_1Trie.html">Trie</a> &amp;trie,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                      <a class="code" href="classkvs_1_1Storage_3_01Record_01_4.html">Storage&lt;Record&gt;</a> &amp;_recordStorage);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">add</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1KeyValue.html">KeyValue</a> &amp;);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        [[nodiscard]] std::optional&lt;KeyValue&gt; <a class="code" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164">get</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5">del</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">clear</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> rebuild();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classkvs_1_1BloomFilter.html">BloomFilter</a> &amp;_bloomFilter;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classkvs_1_1Log.html">Log</a> &amp;_log;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classkvs_1_1Trie.html">Trie</a> &amp;_trie;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classkvs_1_1Storage_3_01Record_01_4.html">Storage&lt;Record&gt;</a> &amp;_recordStorage;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_KEYVALUESTORE_HPP</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classkvs_1_1KeyValueStore.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1KeyValueStore.html">KeyValueStore</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classkvs_1_1KeyValueStore.html#addb27da8d3aac4447f39d1882a684a0c">KeyValueStore</a>(<a class="code" href="classkvs_1_1BloomFilter.html">BloomFilter</a> &amp;bloomFilter,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                      <a class="code" href="classkvs_1_1Log.html">Log</a> &amp;log,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                      <a class="code" href="classkvs_1_1Trie.html">Trie</a> &amp;trie,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                      <a class="code" href="classkvs_1_1Storage_3_01Record_01_4.html">Storage&lt;Record&gt;</a> &amp;_recordStorage);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">add</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1KeyValue.html">KeyValue</a> &amp;keyValue);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        [[nodiscard]] std::optional&lt;KeyValue&gt; <a class="code" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38">get</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;key) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b">del</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;key);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">clear</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> rebuild();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classkvs_1_1BloomFilter.html">BloomFilter</a> &amp;_bloomFilter;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classkvs_1_1Log.html">Log</a> &amp;_log;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classkvs_1_1Trie.html">Trie</a> &amp;_trie;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classkvs_1_1Storage_3_01Record_01_4.html">Storage&lt;Record&gt;</a> &amp;_recordStorage;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_KEYVALUESTORE_HPP</span></div>
 <div class="ttc" id="aBloomFilter_8hpp_html"><div class="ttname"><a href="BloomFilter_8hpp.html">BloomFilter.hpp</a></div></div>
 <div class="ttc" id="aKeyValue_8hpp_html"><div class="ttname"><a href="KeyValue_8hpp.html">KeyValue.hpp</a></div></div>
 <div class="ttc" id="aLog_8hpp_html"><div class="ttname"><a href="Log_8hpp.html">Log.hpp</a></div></div>
 <div class="ttc" id="aStorage_8hpp_html"><div class="ttname"><a href="Storage_8hpp.html">Storage.hpp</a></div></div>
 <div class="ttc" id="aTrie_8hpp_html"><div class="ttname"><a href="Trie_8hpp.html">Trie.hpp</a></div></div>
-<div class="ttc" id="aclasskvs_1_1BloomFilter_html"><div class="ttname"><a href="classkvs_1_1BloomFilter.html">kvs::BloomFilter</a></div><div class="ttdef"><b>Definition:</b> BloomFilter.hpp:11</div></div>
-<div class="ttc" id="aclasskvs_1_1KeyValueStore_html"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html">kvs::KeyValueStore</a></div><div class="ttdef"><b>Definition:</b> KeyValueStore.hpp:12</div></div>
-<div class="ttc" id="aclasskvs_1_1KeyValueStore_html_a035ddc837d62a18137165c2023b6f5a5"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5">kvs::KeyValueStore::del</a></div><div class="ttdeci">void del(const Key &amp;)</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:65</div></div>
+<div class="ttc" id="aclasskvs_1_1BloomFilter_html"><div class="ttname"><a href="classkvs_1_1BloomFilter.html">kvs::BloomFilter</a></div><div class="ttdoc">Класс, реализующий фильтр Блума.</div><div class="ttdef"><b>Definition:</b> BloomFilter.hpp:14</div></div>
+<div class="ttc" id="aclasskvs_1_1KeyValueStore_html"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html">kvs::KeyValueStore</a></div><div class="ttdoc">Главный класс, хранилище пар &lt; Key, Value &gt;</div><div class="ttdef"><b>Definition:</b> KeyValueStore.hpp:15</div></div>
+<div class="ttc" id="aclasskvs_1_1KeyValueStore_html_a1eac158e451ee7b6b93faa7aed2940bd"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add</a></div><div class="ttdeci">void add(const KeyValue &amp;keyValue)</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:14</div></div>
 <div class="ttc" id="aclasskvs_1_1KeyValueStore_html_a27b3add3097eb1e598589193e2365204"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">kvs::KeyValueStore::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:84</div></div>
-<div class="ttc" id="aclasskvs_1_1KeyValueStore_html_a9be4f8aa93e08374c8c83208879bc164"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164">kvs::KeyValueStore::get</a></div><div class="ttdeci">std::optional&lt; KeyValue &gt; get(const Key &amp;) const</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:44</div></div>
-<div class="ttc" id="aclasskvs_1_1KeyValueStore_html_aa822b34894c932e17a42f58885c37410"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add</a></div><div class="ttdeci">void add(const KeyValue &amp;)</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:14</div></div>
+<div class="ttc" id="aclasskvs_1_1KeyValueStore_html_a8921917d7543c5d4c9d8d94ef33e351b"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b">kvs::KeyValueStore::del</a></div><div class="ttdeci">void del(const Key &amp;key)</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:65</div></div>
+<div class="ttc" id="aclasskvs_1_1KeyValueStore_html_a97e3fbd169afac040b11b32e0a3d0e38"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38">kvs::KeyValueStore::get</a></div><div class="ttdeci">std::optional&lt; KeyValue &gt; get(const Key &amp;key) const</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:44</div></div>
 <div class="ttc" id="aclasskvs_1_1KeyValueStore_html_addb27da8d3aac4447f39d1882a684a0c"><div class="ttname"><a href="classkvs_1_1KeyValueStore.html#addb27da8d3aac4447f39d1882a684a0c">kvs::KeyValueStore::KeyValueStore</a></div><div class="ttdeci">KeyValueStore(BloomFilter &amp;bloomFilter, Log &amp;log, Trie &amp;trie, Storage&lt; Record &gt; &amp;_recordStorage)</div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:5</div></div>
 <div class="ttc" id="aclasskvs_1_1KeyValue_html"><div class="ttname"><a href="classkvs_1_1KeyValue.html">kvs::KeyValue</a></div><div class="ttdoc">Класс, хранящий ключ и значение вместе.</div><div class="ttdef"><b>Definition:</b> KeyValue.hpp:12</div></div>
 <div class="ttc" id="aclasskvs_1_1Key_html"><div class="ttname"><a href="classkvs_1_1Key.html">kvs::Key</a></div><div class="ttdoc">Класс, хранящий ключ и его размер.</div><div class="ttdef"><b>Definition:</b> Key.hpp:13</div></div>
-<div class="ttc" id="aclasskvs_1_1Log_html"><div class="ttname"><a href="classkvs_1_1Log.html">kvs::Log</a></div><div class="ttdef"><b>Definition:</b> Log.hpp:11</div></div>
-<div class="ttc" id="aclasskvs_1_1Storage_3_01Record_01_4_html"><div class="ttname"><a href="classkvs_1_1Storage_3_01Record_01_4.html">kvs::Storage&lt; Record &gt;</a></div><div class="ttdef"><b>Definition:</b> Storage.hpp:29</div></div>
-<div class="ttc" id="aclasskvs_1_1Trie_html"><div class="ttname"><a href="classkvs_1_1Trie.html">kvs::Trie</a></div><div class="ttdef"><b>Definition:</b> Trie.hpp:13</div></div>
+<div class="ttc" id="aclasskvs_1_1Log_html"><div class="ttname"><a href="classkvs_1_1Log.html">kvs::Log</a></div><div class="ttdoc">Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...</div><div class="ttdef"><b>Definition:</b> Log.hpp:15</div></div>
+<div class="ttc" id="aclasskvs_1_1Storage_3_01Record_01_4_html"><div class="ttname"><a href="classkvs_1_1Storage_3_01Record_01_4.html">kvs::Storage&lt; Record &gt;</a></div><div class="ttdoc">Класс для хранения Record на диске.</div><div class="ttdef"><b>Definition:</b> Storage.hpp:54</div></div>
+<div class="ttc" id="aclasskvs_1_1Trie_html"><div class="ttname"><a href="classkvs_1_1Trie.html">kvs::Trie</a></div><div class="ttdoc">Класс, представляющий хранилище данных бор на диске и хранящий пары &lt; Key, Id&gt;.</div><div class="ttdef"><b>Definition:</b> Trie.hpp:16</div></div>
 <div class="ttc" id="anamespacekvs_html"><div class="ttname"><a href="namespacekvs.html">kvs</a></div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

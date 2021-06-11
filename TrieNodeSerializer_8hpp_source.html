@@ -95,28 +95,28 @@ $(document).ready(function(){initNavTree('TrieNodeSerializer_8hpp_source.html','
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekvs.html">kvs</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classkvs_1_1TrieNodeSerializer.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1TrieNodeSerializer.html">TrieNodeSerializer</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classkvs_1_1TrieNodeSerializer.html#a826f80fe4d524fc44dcbb8f63bfadcf5">TrieNodeSerializer</a>(std::size_t idSize);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        [[nodiscard]] <span class="keywordtype">char</span> *<a class="code" href="classkvs_1_1TrieNodeSerializer.html#a834799a1d65d4455bf1c11d5087ed027">trieNodeToBytes</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1TrieNode.html">TrieNode</a> &amp;record) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">static</span> <a class="code" href="classkvs_1_1TrieNode.html">TrieNode</a> <a class="code" href="classkvs_1_1TrieNodeSerializer.html#ab04884277f4a2b5b47ce9efae12a53b3">bytesToTrieNode</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *bytes);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::size_t _idSize;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> ALPHABET_SIZE = UCHAR_MAX + 1;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    };</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_TRIENODESERIALIZER_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classkvs_1_1TrieNodeSerializer.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1TrieNodeSerializer.html">TrieNodeSerializer</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classkvs_1_1TrieNodeSerializer.html#a826f80fe4d524fc44dcbb8f63bfadcf5">TrieNodeSerializer</a>(std::size_t idSize);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        [[nodiscard]] <span class="keywordtype">char</span> *<a class="code" href="classkvs_1_1TrieNodeSerializer.html#a1876f4080f015660cde216ed1be90821">trieNodeToBytes</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1TrieNode.html">TrieNode</a> &amp;trieNode) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classkvs_1_1TrieNode.html">TrieNode</a> <a class="code" href="classkvs_1_1TrieNodeSerializer.html#ae4b5a8e9d579587910b0167aae1edd74">bytesToTrieNode</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *bytes) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::size_t _idSize;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> ALPHABET_SIZE = UCHAR_MAX + 1;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_TRIENODESERIALIZER_HPP</span></div>
 <div class="ttc" id="aRecord_8hpp_html"><div class="ttname"><a href="Record_8hpp.html">Record.hpp</a></div></div>
 <div class="ttc" id="aTrieNode_8hpp_html"><div class="ttname"><a href="TrieNode_8hpp.html">TrieNode.hpp</a></div></div>
-<div class="ttc" id="aclasskvs_1_1TrieNodeSerializer_html"><div class="ttname"><a href="classkvs_1_1TrieNodeSerializer.html">kvs::TrieNodeSerializer</a></div><div class="ttdef"><b>Definition:</b> TrieNodeSerializer.hpp:11</div></div>
+<div class="ttc" id="aclasskvs_1_1TrieNodeSerializer_html"><div class="ttname"><a href="classkvs_1_1TrieNodeSerializer.html">kvs::TrieNodeSerializer</a></div><div class="ttdoc">Класс, отвечающий за сериализацию TrieNode.</div><div class="ttdef"><b>Definition:</b> TrieNodeSerializer.hpp:14</div></div>
+<div class="ttc" id="aclasskvs_1_1TrieNodeSerializer_html_a1876f4080f015660cde216ed1be90821"><div class="ttname"><a href="classkvs_1_1TrieNodeSerializer.html#a1876f4080f015660cde216ed1be90821">kvs::TrieNodeSerializer::trieNodeToBytes</a></div><div class="ttdeci">char * trieNodeToBytes(const TrieNode &amp;trieNode) const</div><div class="ttdef"><b>Definition:</b> TrieNodeSerializer.cpp:9</div></div>
 <div class="ttc" id="aclasskvs_1_1TrieNodeSerializer_html_a826f80fe4d524fc44dcbb8f63bfadcf5"><div class="ttname"><a href="classkvs_1_1TrieNodeSerializer.html#a826f80fe4d524fc44dcbb8f63bfadcf5">kvs::TrieNodeSerializer::TrieNodeSerializer</a></div><div class="ttdeci">TrieNodeSerializer(std::size_t idSize)</div><div class="ttdef"><b>Definition:</b> TrieNodeSerializer.cpp:6</div></div>
-<div class="ttc" id="aclasskvs_1_1TrieNodeSerializer_html_a834799a1d65d4455bf1c11d5087ed027"><div class="ttname"><a href="classkvs_1_1TrieNodeSerializer.html#a834799a1d65d4455bf1c11d5087ed027">kvs::TrieNodeSerializer::trieNodeToBytes</a></div><div class="ttdeci">char * trieNodeToBytes(const TrieNode &amp;record) const</div><div class="ttdef"><b>Definition:</b> TrieNodeSerializer.cpp:9</div></div>
-<div class="ttc" id="aclasskvs_1_1TrieNodeSerializer_html_ab04884277f4a2b5b47ce9efae12a53b3"><div class="ttname"><a href="classkvs_1_1TrieNodeSerializer.html#ab04884277f4a2b5b47ce9efae12a53b3">kvs::TrieNodeSerializer::bytesToTrieNode</a></div><div class="ttdeci">static TrieNode bytesToTrieNode(const char *bytes)</div><div class="ttdef"><b>Definition:</b> TrieNodeSerializer.cpp:23</div></div>
+<div class="ttc" id="aclasskvs_1_1TrieNodeSerializer_html_ae4b5a8e9d579587910b0167aae1edd74"><div class="ttname"><a href="classkvs_1_1TrieNodeSerializer.html#ae4b5a8e9d579587910b0167aae1edd74">kvs::TrieNodeSerializer::bytesToTrieNode</a></div><div class="ttdeci">TrieNode bytesToTrieNode(const char *bytes) const</div><div class="ttdef"><b>Definition:</b> TrieNodeSerializer.cpp:23</div></div>
 <div class="ttc" id="aclasskvs_1_1TrieNode_html"><div class="ttname"><a href="classkvs_1_1TrieNode.html">kvs::TrieNode</a></div><div class="ttdoc">Класс, реализующий структуру ноды бора для хранения на диске.</div><div class="ttdef"><b>Definition:</b> TrieNode.hpp:13</div></div>
 <div class="ttc" id="anamespacekvs_html"><div class="ttname"><a href="namespacekvs.html">kvs</a></div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->

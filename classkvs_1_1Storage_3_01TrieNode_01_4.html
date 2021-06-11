@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('classkvs_1_1Storage_3_01TrieNode_01_4.
 </div><!--header-->
 <div class="contents">
 
+<p>Класс для хранения <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> на диске.  
+ <a href="classkvs_1_1Storage_3_01TrieNode_01_4.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Storage_8hpp_source.html">Storage.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -108,7 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a404e6c32ec2a62d1ffbaa18973605a78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkvs_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage_3_01TrieNode_01_4.html#a404e6c32ec2a62d1ffbaa18973605a78">addTrieNodeSubtree</a> (const std::shared_ptr&lt; <a class="el" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> &gt; &amp;node)</td></tr>
 <tr class="separator:a404e6c32ec2a62d1ffbaa18973605a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс для хранения <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> на диске. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a855ee9aa671817d396aae72988ac7407"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a855ee9aa671817d396aae72988ac7407">&#9670;&nbsp;</a></span>Storage()</h2>
 
@@ -142,6 +147,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trieNodeFile</td><td>Файл для записи <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code>. </td></tr>
+    <tr><td class="paramname">trieNodeSerializer</td><td>Класс, сериализующий <code>TrieNode-ы</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -169,6 +181,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Добавить <code>trieNode</code> в хранилище и присвоить ей идентификатор внутри хранилища. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trieNode</td><td>Добавляемая нода. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Присвоенный идентификатор. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58">kvs::FileOffset::getOffset()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -208,8 +227,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Добавляет все ноды переданного бора в хранилище </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Корень переданного бора. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Идентификатор корня <code>node</code> в хранилище. </dd></dl>
 
-<p class="reference">References <a class="el" href="classkvs_1_1Storage.html#a2c945f0230de8653411faac6d0b1efbf">kvs::Storage&lt; T &gt;::add()</a>, and <a class="el" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58">kvs::FileOffset::getOffset()</a>.</p>
+<p class="reference">References <a class="el" href="classkvs_1_1Storage.html#a406442852f792df1b643005dbfbb3012">kvs::Storage&lt; T &gt;::add()</a>, and <a class="el" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58">kvs::FileOffset::getOffset()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -218,7 +244,7 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Storage_3_01TrieNode_01_4_a404e6c32ec2a62d1ffbaa18973605a78_cgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01TrieNode_01_4_a404e6c32ec2a62d1ffbaa18973605a78_cgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01TrieNode_01_4_a404e6c32ec2a62d1ffbaa18973605a78_cgraph" id="aclasskvs_1_1Storage_3_01TrieNode_01_4_a404e6c32ec2a62d1ffbaa18973605a78_cgraph">
 <area shape="rect" title=" " alt="" coords="5,23,164,65"/>
-<area shape="rect" href="classkvs_1_1Storage.html#a2c945f0230de8653411faac6d0b1efbf" title=" " alt="" coords="233,5,355,32"/>
+<area shape="rect" href="classkvs_1_1Storage.html#a406442852f792df1b643005dbfbb3012" title=" " alt="" coords="233,5,355,32"/>
 <area shape="rect" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="212,56,376,83"/>
 </map>
 </div>
@@ -247,6 +273,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Очищает хранилище. </p>
 
 <p class="reference">Referenced by <a class="el" href="classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c">kvs::Trie::clear()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -287,20 +314,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="reference">References <a class="el" href="classkvs_1_1TrieNodeSerializer.html#ab04884277f4a2b5b47ce9efae12a53b3">kvs::TrieNodeSerializer::bytesToTrieNode()</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1Storage_3_01TrieNode_01_4_acc0b9dc101172c781dd691c2b4f671b0_cgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01TrieNode_01_4_acc0b9dc101172c781dd691c2b4f671b0_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1Storage_3_01TrieNode_01_4_acc0b9dc101172c781dd691c2b4f671b0_cgraph" id="aclasskvs_1_1Storage_3_01TrieNode_01_4_acc0b9dc101172c781dd691c2b4f671b0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,164,47"/>
-<area shape="rect" href="classkvs_1_1TrieNodeSerializer.html#ab04884277f4a2b5b47ce9efae12a53b3" title=" " alt="" coords="212,5,367,47"/>
-<area shape="rect" href="classkvs_1_1Id.html#ac838430626842995c00215208d7fb297" title=" " alt="" coords="415,13,535,39"/>
-</map>
-</div>
+<p>Получить <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code> по <code>id</code>. Контракт : по <code>id</code> всегда есть <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор объекта. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code> обернутый в <code>std::optional</code>. </dd></dl>
 
 </div>
 </div>
@@ -363,19 +383,26 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Записать по <code>id</code> новую <code>trieNode</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор. </td></tr>
+    <tr><td class="paramname">trieNode</td><td>Нода. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="classkvs_1_1Trie.html#a7371ee2b89eed56a7ee1079d5993c759">kvs::Trie::add()</a>, and <a class="el" href="classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431">kvs::Trie::remove()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classkvs_1_1Storage_3_01TrieNode_01_4_a0bc5f631f53bf751fc4c458a06bf4f82_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_3_01TrieNode_01_4_a0bc5f631f53bf751fc4c458a06bf4f82_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Storage_3_01TrieNode_01_4_a0bc5f631f53bf751fc4c458a06bf4f82_icgraph" id="aclasskvs_1_1Storage_3_01TrieNode_01_4_a0bc5f631f53bf751fc4c458a06bf4f82_icgraph">
 <area shape="rect" title=" " alt="" coords="380,23,539,65"/>
 <area shape="rect" href="classkvs_1_1Trie.html#a7371ee2b89eed56a7ee1079d5993c759" title=" " alt="" coords="223,5,321,32"/>
 <area shape="rect" href="classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431" title=" " alt="" coords="212,56,332,83"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="5,56,164,83"/>
 </map>
 </div>
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['del_11',['del',['../classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5',1,'kvs::KeyValueStore']]]
+  ['del_11',['del',['../classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b',1,'kvs::KeyValueStore']]]
 ];

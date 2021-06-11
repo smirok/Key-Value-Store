@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('classkvs_1_1File.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 
+<p>Класс, отвечающий за запись и чтение в файл.  
+ <a href="classkvs_1_1File.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="File_8hpp_source.html">File.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -106,7 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a179c4c782ecc342bcb35301a3d65d19e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1File.html#a179c4c782ecc342bcb35301a3d65d19e">clear</a> ()</td></tr>
 <tr class="separator:a179c4c782ecc342bcb35301a3d65d19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс, отвечающий за запись и чтение в файл. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adf14344eb7c0b898ba9a8e34fb0b2b2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf14344eb7c0b898ba9a8e34fb0b2b2d">&#9670;&nbsp;</a></span>File()</h2>
 
@@ -130,6 +135,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Название оборачиваемого файла. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -147,6 +158,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Закрываем файл. </p>
 
 </div>
 </div>
@@ -165,6 +177,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Очищает файл. </p>
 
 </div>
 </div>
@@ -193,6 +206,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">length</td><td>Количество читаемых байт. </td></tr>
+    <tr><td class="paramname">fileOffset</td><td>Позиция в файле, с которой начинается чтение. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Массив прочитанных байт. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58">kvs::FileOffset::getOffset()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -234,6 +255,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Массив записываемых байт. </td></tr>
+    <tr><td class="paramname">length</td><td>Количество записываемых байт. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Позиция в файле на только что записанные данные. </dd></dl>
 
 </div>
 </div>
@@ -268,6 +297,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileOffset</td><td>Позиция в файле, начиная с которой произойдет запись. </td></tr>
+    <tr><td class="paramname">data</td><td>Массив записываемых байт. </td></tr>
+    <tr><td class="paramname">length</td><td>Количество записываемых байт. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58">kvs::FileOffset::getOffset()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

@@ -6,5 +6,5 @@ var searchData=
   ['bloomfilter_2ecpp_5',['BloomFilter.cpp',['../BloomFilter_8cpp.html',1,'']]],
   ['bloomfilter_2ehpp_6',['BloomFilter.hpp',['../BloomFilter_8hpp.html',1,'']]],
   ['bytestorecord_7',['bytesToRecord',['../classkvs_1_1RecordSerializer.html#acf1d55f6a7be568d539e61173ff36de1',1,'kvs::RecordSerializer']]],
-  ['bytestotrienode_8',['bytesToTrieNode',['../classkvs_1_1TrieNodeSerializer.html#ab04884277f4a2b5b47ce9efae12a53b3',1,'kvs::TrieNodeSerializer']]]
+  ['bytestotrienode_8',['bytesToTrieNode',['../classkvs_1_1TrieNodeSerializer.html#ae4b5a8e9d579587910b0167aae1edd74',1,'kvs::TrieNodeSerializer']]]
 ];

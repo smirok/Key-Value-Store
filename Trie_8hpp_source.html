@@ -97,38 +97,34 @@ $(document).ready(function(){initNavTree('Trie_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekvs.html">kvs</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classkvs_1_1Trie.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1Trie.html">Trie</a> : <span class="keyword">public</span> <a class="code" href="classkvs_1_1LogicStorage.html">LogicStorage</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classkvs_1_1Trie.html#a4d608cb8ff6914743b67699531b1d24b">Trie</a>(<a class="code" href="classkvs_1_1Storage_3_01TrieNode_01_4.html">Storage&lt;TrieNode&gt;</a> &amp;_storage);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::optional&lt;Id&gt; <a class="code" href="classkvs_1_1Trie.html#a7371ee2b89eed56a7ee1079d5993c759">add</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;, <span class="keyword">const</span> <a class="code" href="classkvs_1_1Id.html">Id</a> &amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::optional&lt;Id&gt; <a class="code" href="classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431">remove</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        [[nodiscard]] std::optional&lt;Id&gt; <a class="code" href="classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3">get</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c">clear</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1Trie.html#a1c2ad007e0cef7d86b1c308e8f15b876">merge</a>(<span class="keyword">const</span> std::shared_ptr&lt;InMemoryTrieNode&gt; &amp;smallTrieRoot);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::vector&lt;Id&gt; _recordsToDelete;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">const</span> std::vector&lt;Id&gt; &amp;<a class="code" href="classkvs_1_1Trie.html#ac6d3fef3a15c35166240e57fa63b1445">getRecordsToDelete</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classkvs_1_1Trie.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1Trie.html">Trie</a> : <span class="keyword">public</span> <a class="code" href="classkvs_1_1LogicStorage.html">LogicStorage</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classkvs_1_1Trie.html#a4d608cb8ff6914743b67699531b1d24b">Trie</a>(<a class="code" href="classkvs_1_1Storage_3_01TrieNode_01_4.html">Storage&lt;TrieNode&gt;</a> &amp;_storage);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::optional&lt;Id&gt; <a class="code" href="classkvs_1_1Trie.html#a7371ee2b89eed56a7ee1079d5993c759">add</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;, <span class="keyword">const</span> <a class="code" href="classkvs_1_1Id.html">Id</a> &amp;) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> addRoot();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classkvs_1_1Id.html">Id</a> <a class="code" href="classkvs_1_1Trie.html#a1c2ad007e0cef7d86b1c308e8f15b876">merge</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Id.html">Id</a> &amp;trieNodeId, <span class="keyword">const</span> std::shared_ptr&lt;InMemoryTrieNode&gt; &amp;smallTrieRoot);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        [[nodiscard]] std::optional&lt;std::pair&lt;TrieNode, Id&gt;&gt; traverse(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;key, <span class="keywordtype">bool</span> shouldCreateNode) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classkvs_1_1Storage_3_01TrieNode_01_4.html">Storage&lt;TrieNode&gt;</a> &amp;_storage;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_TRIE_HPP</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::optional&lt;Id&gt; <a class="code" href="classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431">remove</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        [[nodiscard]] std::optional&lt;Id&gt; <a class="code" href="classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3">get</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c">clear</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">const</span> std::vector&lt;Id&gt; &amp;<a class="code" href="classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622">merge</a>(<span class="keyword">const</span> std::shared_ptr&lt;InMemoryTrieNode&gt; &amp;smallTrieRoot);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::vector&lt;Id&gt; _recordsToDelete;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> addRoot();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classkvs_1_1Id.html">Id</a> <a class="code" href="classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622">merge</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Id.html">Id</a> &amp;trieNodeId, <span class="keyword">const</span> std::shared_ptr&lt;InMemoryTrieNode&gt; &amp;smallTrieRoot);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        [[nodiscard]] std::optional&lt;std::pair&lt;TrieNode, Id&gt;&gt; traverse(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Key.html">Key</a> &amp;key, <span class="keywordtype">bool</span> shouldCreateNode) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classkvs_1_1Storage_3_01TrieNode_01_4.html">Storage&lt;TrieNode&gt;</a> &amp;_storage;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_TRIE_HPP</span></div>
 <div class="ttc" id="aId_8hpp_html"><div class="ttname"><a href="Id_8hpp.html">Id.hpp</a></div></div>
 <div class="ttc" id="aInMemoryTrieNode_8hpp_html"><div class="ttname"><a href="InMemoryTrieNode_8hpp.html">InMemoryTrieNode.hpp</a></div></div>
 <div class="ttc" id="aKey_8hpp_html"><div class="ttname"><a href="Key_8hpp.html">Key.hpp</a></div></div>
@@ -137,15 +133,14 @@ $(document).ready(function(){initNavTree('Trie_8hpp_source.html',''); initResiza
 <div class="ttc" id="aTrieNode_8hpp_html"><div class="ttname"><a href="TrieNode_8hpp.html">TrieNode.hpp</a></div></div>
 <div class="ttc" id="aclasskvs_1_1Id_html"><div class="ttname"><a href="classkvs_1_1Id.html">kvs::Id</a></div><div class="ttdoc">Класс, представляющий идентификатор некоторой структуры.</div><div class="ttdef"><b>Definition:</b> Id.hpp:12</div></div>
 <div class="ttc" id="aclasskvs_1_1Key_html"><div class="ttname"><a href="classkvs_1_1Key.html">kvs::Key</a></div><div class="ttdoc">Класс, хранящий ключ и его размер.</div><div class="ttdef"><b>Definition:</b> Key.hpp:13</div></div>
-<div class="ttc" id="aclasskvs_1_1LogicStorage_html"><div class="ttname"><a href="classkvs_1_1LogicStorage.html">kvs::LogicStorage</a></div><div class="ttdef"><b>Definition:</b> LogicStorage.hpp:10</div></div>
-<div class="ttc" id="aclasskvs_1_1Storage_3_01TrieNode_01_4_html"><div class="ttname"><a href="classkvs_1_1Storage_3_01TrieNode_01_4.html">kvs::Storage&lt; TrieNode &gt;</a></div><div class="ttdef"><b>Definition:</b> Storage.hpp:156</div></div>
-<div class="ttc" id="aclasskvs_1_1Trie_html"><div class="ttname"><a href="classkvs_1_1Trie.html">kvs::Trie</a></div><div class="ttdef"><b>Definition:</b> Trie.hpp:13</div></div>
-<div class="ttc" id="aclasskvs_1_1Trie_html_a1c2ad007e0cef7d86b1c308e8f15b876"><div class="ttname"><a href="classkvs_1_1Trie.html#a1c2ad007e0cef7d86b1c308e8f15b876">kvs::Trie::merge</a></div><div class="ttdeci">void merge(const std::shared_ptr&lt; InMemoryTrieNode &gt; &amp;smallTrieRoot)</div><div class="ttdef"><b>Definition:</b> Trie.cpp:117</div></div>
+<div class="ttc" id="aclasskvs_1_1LogicStorage_html"><div class="ttname"><a href="classkvs_1_1LogicStorage.html">kvs::LogicStorage</a></div><div class="ttdoc">Интерфейс хранилища, отвечающего только за логику.</div><div class="ttdef"><b>Definition:</b> LogicStorage.hpp:13</div></div>
+<div class="ttc" id="aclasskvs_1_1Storage_3_01TrieNode_01_4_html"><div class="ttname"><a href="classkvs_1_1Storage_3_01TrieNode_01_4.html">kvs::Storage&lt; TrieNode &gt;</a></div><div class="ttdoc">Класс для хранения Record на диске.</div><div class="ttdef"><b>Definition:</b> Storage.hpp:230</div></div>
+<div class="ttc" id="aclasskvs_1_1Trie_html"><div class="ttname"><a href="classkvs_1_1Trie.html">kvs::Trie</a></div><div class="ttdoc">Класс, представляющий хранилище данных бор на диске и хранящий пары &lt; Key, Id&gt;.</div><div class="ttdef"><b>Definition:</b> Trie.hpp:16</div></div>
 <div class="ttc" id="aclasskvs_1_1Trie_html_a2034ef9c1148083f39f1698444a6cd6c"><div class="ttname"><a href="classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c">kvs::Trie::clear</a></div><div class="ttdeci">void clear() override</div><div class="ttdef"><b>Definition:</b> Trie.cpp:112</div></div>
 <div class="ttc" id="aclasskvs_1_1Trie_html_a416ee19e818d0b3fb375ac84ef0cd431"><div class="ttname"><a href="classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431">kvs::Trie::remove</a></div><div class="ttdeci">std::optional&lt; Id &gt; remove(const Key &amp;) override</div><div class="ttdef"><b>Definition:</b> Trie.cpp:34</div></div>
 <div class="ttc" id="aclasskvs_1_1Trie_html_a4d608cb8ff6914743b67699531b1d24b"><div class="ttname"><a href="classkvs_1_1Trie.html#a4d608cb8ff6914743b67699531b1d24b">kvs::Trie::Trie</a></div><div class="ttdeci">Trie(Storage&lt; TrieNode &gt; &amp;_storage)</div><div class="ttdef"><b>Definition:</b> Trie.cpp:13</div></div>
 <div class="ttc" id="aclasskvs_1_1Trie_html_a7371ee2b89eed56a7ee1079d5993c759"><div class="ttname"><a href="classkvs_1_1Trie.html#a7371ee2b89eed56a7ee1079d5993c759">kvs::Trie::add</a></div><div class="ttdeci">std::optional&lt; Id &gt; add(const Key &amp;, const Id &amp;) override</div><div class="ttdef"><b>Definition:</b> Trie.cpp:17</div></div>
-<div class="ttc" id="aclasskvs_1_1Trie_html_ac6d3fef3a15c35166240e57fa63b1445"><div class="ttname"><a href="classkvs_1_1Trie.html#ac6d3fef3a15c35166240e57fa63b1445">kvs::Trie::getRecordsToDelete</a></div><div class="ttdeci">const std::vector&lt; Id &gt; &amp; getRecordsToDelete() const</div><div class="ttdef"><b>Definition:</b> Trie.cpp:157</div></div>
+<div class="ttc" id="aclasskvs_1_1Trie_html_afc8436a751d830455586efb4bb21f622"><div class="ttname"><a href="classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622">kvs::Trie::merge</a></div><div class="ttdeci">const std::vector&lt; Id &gt; &amp; merge(const std::shared_ptr&lt; InMemoryTrieNode &gt; &amp;smallTrieRoot)</div><div class="ttdef"><b>Definition:</b> Trie.cpp:117</div></div>
 <div class="ttc" id="aclasskvs_1_1Trie_html_aff80131d09f7cc8e3040ef028a4eadc3"><div class="ttname"><a href="classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3">kvs::Trie::get</a></div><div class="ttdeci">std::optional&lt; Id &gt; get(const Key &amp;) const override</div><div class="ttdef"><b>Definition:</b> Trie.cpp:51</div></div>
 <div class="ttc" id="anamespacekvs_html"><div class="ttname"><a href="namespacekvs.html">kvs</a></div><div class="ttdef"><b>Definition:</b> KeyValueStore.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -84,12 +84,14 @@ $(document).ready(function(){initNavTree('classkvs_1_1Log.html',''); initResizab
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classkvs_1_1Log-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">kvs::Log Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Класс, представляющий хранилище данных в оперативной памяти, оборачивающий <code>std::unordered_map</code> и хранящий пары &lt; <code><a class="el" href="classkvs_1_1Key.html" title="Класс, хранящий ключ и его размер.">Key</a></code>, <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a>&gt;</code> .  
+ <a href="classkvs_1_1Log.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Log_8hpp_source.html">Log.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -99,8 +101,8 @@ $(document).ready(function(){initNavTree('classkvs_1_1Log.html',''); initResizab
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classkvs_1_1Log__inherit__graph.png" border="0" usemap="#akvs_1_1Log_inherit__map" alt="Inheritance graph"/></div>
 <map name="akvs_1_1Log_inherit__map" id="akvs_1_1Log_inherit__map">
-<area shape="rect" title=" " alt="" coords="33,80,104,107"/>
-<area shape="rect" href="classkvs_1_1LogicStorage.html" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня..." alt="" coords="33,80,104,107"/>
+<area shape="rect" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику." alt="" coords="5,5,132,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -110,14 +112,15 @@ $(document).ready(function(){initNavTree('classkvs_1_1Log.html',''); initResizab
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classkvs_1_1Log__coll__graph.png" border="0" usemap="#akvs_1_1Log_coll__map" alt="Collaboration graph"/></div>
 <map name="akvs_1_1Log_coll__map" id="akvs_1_1Log_coll__map">
-<area shape="rect" title=" " alt="" coords="33,80,104,107"/>
-<area shape="rect" href="classkvs_1_1LogicStorage.html" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня..." alt="" coords="33,80,104,107"/>
+<area shape="rect" href="classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику." alt="" coords="5,5,132,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkvs_1_1Log_1_1LogIterator.html">LogIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Итератор <code>Log-а</code> по <code>_logMap</code>.  <a href="structkvs_1_1Log_1_1LogIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -139,13 +142,10 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_classkvs_1_1LogicStorage"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classkvs_1_1LogicStorage')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classkvs_1_1LogicStorage.html">kvs::LogicStorage</a></td></tr>
 <tr class="memitem:a82c98bf5b28a5fca5c481002c6b52007 inherit pub_methods_classkvs_1_1LogicStorage"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1LogicStorage.html#a82c98bf5b28a5fca5c481002c6b52007">~LogicStorage</a> ()=default</td></tr>
 <tr class="separator:a82c98bf5b28a5fca5c481002c6b52007 inherit pub_methods_classkvs_1_1LogicStorage"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9e58a0b16be8ad150687b32b3d6bc6b"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Log.html#ad9e58a0b16be8ad150687b32b3d6bc6b">toInMemoryTrieNode</a> (std::vector&lt; std::pair&lt; <a class="el" href="classkvs_1_1Key.html">Key</a>, <a class="el" href="classkvs_1_1Id.html">Id</a> &gt;&gt; &amp;)</td></tr>
-<tr class="separator:ad9e58a0b16be8ad150687b32b3d6bc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс, представляющий хранилище данных в оперативной памяти, оборачивающий <code>std::unordered_map</code> и хранящий пары &lt; <code><a class="el" href="classkvs_1_1Key.html" title="Класс, хранящий ключ и его размер.">Key</a></code>, <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a>&gt;</code> . </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aae4793609211f5c4c35e64bcca72520e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae4793609211f5c4c35e64bcca72520e">&#9670;&nbsp;</a></span>Log()</h2>
 
@@ -169,6 +169,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sizeLimit</td><td>Максимальный размер хранилища. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -206,12 +212,20 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Добавление в <code><a class="el" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...">Log</a></code> по ключу <code>key</code> значение <code>id</code>. Если ранее в <code><a class="el" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...">Log</a></code> уже был какой-то идентификатор по ключу <code>key</code>, то его <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обновляется </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+    <tr><td class="paramname">id</td><td>Идентификатор. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обернутый в <code>std::optional</code>, если ранее в <code><a class="el" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...">Log</a></code> уже был какой-то идентификатор по ключу <code>key</code>; пустой <code>std::optional</code> иначе </dd></dl>
 
 <p>Implements <a class="el" href="classkvs_1_1LogicStorage.html#ab23efc8a17bc34b79cbf93adb213dee1">kvs::LogicStorage</a>.</p>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9">get()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -231,7 +245,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Log_a00698ac912f4db4b1974cdfac3872206_icgraph.png" border="0" usemap="#aclasskvs_1_1Log_a00698ac912f4db4b1974cdfac3872206_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Log_a00698ac912f4db4b1974cdfac3872206_icgraph" id="aclasskvs_1_1Log_a00698ac912f4db4b1974cdfac3872206_icgraph">
 <area shape="rect" title=" " alt="" coords="315,5,413,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -260,10 +274,11 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Очищает <code><a class="el" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...">Log</a></code>. </p>
 
 <p>Implements <a class="el" href="classkvs_1_1LogicStorage.html#af98b4c85ed530a1f306eb7b696bdacd8">kvs::LogicStorage</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">kvs::KeyValueStore::clear()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">kvs::KeyValueStore::clear()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -272,7 +287,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Log_a3d95bd6f153f609c749ef1d8590e3976_icgraph.png" border="0" usemap="#aclasskvs_1_1Log_a3d95bd6f153f609c749ef1d8590e3976_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Log_a3d95bd6f153f609c749ef1d8590e3976_icgraph" id="aclasskvs_1_1Log_a3d95bd6f153f609c749ef1d8590e3976_icgraph">
 <area shape="rect" title=" " alt="" coords="315,35,420,61"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204" title=" " alt="" coords="118,57,253,98"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
@@ -303,10 +318,17 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Получить <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> по ключу <code>key</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обернутый в <code>std::optional</code>, если в <code><a class="el" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...">Log</a></code> есть какой-то идентификатор по ключу <code>key</code>; пустой <code>std::optional</code> иначе. </dd></dl>
 
 <p>Implements <a class="el" href="classkvs_1_1LogicStorage.html#a8aaf92408345bd31975666e7bb0d61cd">kvs::LogicStorage</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206">add()</a>, <a class="el" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164">kvs::KeyValueStore::get()</a>, and <a class="el" href="classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b">remove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206">add()</a>, <a class="el" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38">kvs::KeyValueStore::get()</a>, and <a class="el" href="classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b">remove()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -316,11 +338,11 @@ Static Public Member Functions</h2></td></tr>
 <map name="aclasskvs_1_1Log_a211c9a5c54588d6710fc2b155009dcf9_icgraph" id="aclasskvs_1_1Log_a211c9a5c54588d6710fc2b155009dcf9_icgraph">
 <area shape="rect" title=" " alt="" coords="483,56,577,83"/>
 <area shape="rect" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="325,5,424,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164" title=" " alt="" coords="106,56,265,83"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38" title=" " alt="" coords="106,56,265,83"/>
 <area shape="rect" href="classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b" title=" " alt="" coords="315,107,435,133"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,56,57"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5" title=" " alt="" coords="106,107,265,133"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="106,107,265,133"/>
 </map>
 </div>
 
@@ -340,8 +362,9 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Проверяет, переполнен ли <code><a class="el" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...">Log</a></code>. </p><dl class="section return"><dt>Returns</dt><dd>true, если переполнен; false иначе. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -350,7 +373,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Log_a3d10ec41ccd308a6d0ea0af8438e122b_icgraph.png" border="0" usemap="#aclasskvs_1_1Log_a3d10ec41ccd308a6d0ea0af8438e122b_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Log_a3d10ec41ccd308a6d0ea0af8438e122b_icgraph" id="aclasskvs_1_1Log_a3d10ec41ccd308a6d0ea0af8438e122b_icgraph">
 <area shape="rect" title=" " alt="" coords="315,5,423,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -380,12 +403,19 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Удаление пары c ключом <code>key</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> обернутый в <code>std::optional</code>, если ранее в <code><a class="el" href="classkvs_1_1Log.html" title="Класс, представляющий хранилище данных в оперативной памяти, оборачивающий std::unordered_map и храня...">Log</a></code> уже был какой-то идентификатор по ключу <code>key</code>; пустой <code>std::optional</code> иначе. </dd></dl>
 
 <p>Implements <a class="el" href="classkvs_1_1LogicStorage.html#a2e64cca055ef0fc810cabe0fdfde3fd0">kvs::LogicStorage</a>.</p>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9">get()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5">kvs::KeyValueStore::del()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b">kvs::KeyValueStore::del()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -405,14 +435,14 @@ Static Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Log_a8e7f0326c820e0c9ed35d67b46dbd72b_icgraph.png" border="0" usemap="#aclasskvs_1_1Log_a8e7f0326c820e0c9ed35d67b46dbd72b_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Log_a8e7f0326c820e0c9ed35d67b46dbd72b_icgraph" id="aclasskvs_1_1Log_a8e7f0326c820e0c9ed35d67b46dbd72b_icgraph">
 <area shape="rect" title=" " alt="" coords="212,5,332,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="5,5,164,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="aa5ce85dbbbce86e4e8928574c11df402"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5ce85dbbbce86e4e8928574c11df402">&#9670;&nbsp;</a></span>toInMemoryTrieNode() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ce85dbbbce86e4e8928574c11df402">&#9670;&nbsp;</a></span>toInMemoryTrieNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,10 +455,11 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Превращение <code>Log-а</code> в бор, хранящийся в оперативной памяти. </p><dl class="section return"><dt>Returns</dt><dd>Указатель на корень получившегося бора. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">kvs::InMemoryTrieNode::add()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -451,50 +482,8 @@ Static Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1Log_aa5ce85dbbbce86e4e8928574c11df402_icgraph.png" border="0" usemap="#aclasskvs_1_1Log_aa5ce85dbbbce86e4e8928574c11df402_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1Log_aa5ce85dbbbce86e4e8928574c11df402_icgraph" id="aclasskvs_1_1Log_aa5ce85dbbbce86e4e8928574c11df402_icgraph">
 <area shape="rect" title=" " alt="" coords="315,5,513,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ad9e58a0b16be8ad150687b32b3d6bc6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9e58a0b16be8ad150687b32b3d6bc6b">&#9670;&nbsp;</a></span>toInMemoryTrieNode() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> &gt; kvs::Log::toInMemoryTrieNode </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; std::pair&lt; <a class="el" href="classkvs_1_1Key.html">Key</a>, <a class="el" href="classkvs_1_1Id.html">Id</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>keyIdPairs</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="reference">References <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">kvs::InMemoryTrieNode::add()</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1Log_ad9e58a0b16be8ad150687b32b3d6bc6b_cgraph.png" border="0" usemap="#aclasskvs_1_1Log_ad9e58a0b16be8ad150687b32b3d6bc6b_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1Log_ad9e58a0b16be8ad150687b32b3d6bc6b_cgraph" id="aclasskvs_1_1Log_ad9e58a0b16be8ad150687b32b3d6bc6b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,56,204,83"/>
-<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="252,56,439,83"/>
-<area shape="rect" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="507,5,625,32"/>
-<area shape="rect" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="506,56,626,83"/>
-<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="487,107,645,149"/>
 </map>
 </div>
 

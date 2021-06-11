@@ -83,12 +83,14 @@ $(document).ready(function(){initNavTree('classkvs_1_1TrieNodeSerializer.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classkvs_1_1TrieNodeSerializer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">kvs::TrieNodeSerializer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Класс, отвечающий за сериализацию <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code>.  
+ <a href="classkvs_1_1TrieNodeSerializer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="TrieNodeSerializer_8hpp_source.html">TrieNodeSerializer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -96,15 +98,14 @@ $(document).ready(function(){initNavTree('classkvs_1_1TrieNodeSerializer.html','
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a826f80fe4d524fc44dcbb8f63bfadcf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1TrieNodeSerializer.html#a826f80fe4d524fc44dcbb8f63bfadcf5">TrieNodeSerializer</a> (std::size_t idSize)</td></tr>
 <tr class="separator:a826f80fe4d524fc44dcbb8f63bfadcf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a834799a1d65d4455bf1c11d5087ed027"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1TrieNodeSerializer.html#a834799a1d65d4455bf1c11d5087ed027">trieNodeToBytes</a> (const <a class="el" href="classkvs_1_1TrieNode.html">TrieNode</a> &amp;record) const</td></tr>
-<tr class="separator:a834799a1d65d4455bf1c11d5087ed027"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab04884277f4a2b5b47ce9efae12a53b3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classkvs_1_1TrieNode.html">TrieNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1TrieNodeSerializer.html#ab04884277f4a2b5b47ce9efae12a53b3">bytesToTrieNode</a> (const char *bytes)</td></tr>
-<tr class="separator:ab04884277f4a2b5b47ce9efae12a53b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1876f4080f015660cde216ed1be90821"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1TrieNodeSerializer.html#a1876f4080f015660cde216ed1be90821">trieNodeToBytes</a> (const <a class="el" href="classkvs_1_1TrieNode.html">TrieNode</a> &amp;trieNode) const</td></tr>
+<tr class="separator:a1876f4080f015660cde216ed1be90821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4b5a8e9d579587910b0167aae1edd74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkvs_1_1TrieNode.html">TrieNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1TrieNodeSerializer.html#ae4b5a8e9d579587910b0167aae1edd74">bytesToTrieNode</a> (const char *bytes) const</td></tr>
+<tr class="separator:ae4b5a8e9d579587910b0167aae1edd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс, отвечающий за сериализацию <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a826f80fe4d524fc44dcbb8f63bfadcf5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a826f80fe4d524fc44dcbb8f63bfadcf5">&#9670;&nbsp;</a></span>TrieNodeSerializer()</h2>
 
@@ -128,64 +129,56 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idSize</td><td>Размер <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> в байтах. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab04884277f4a2b5b47ce9efae12a53b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab04884277f4a2b5b47ce9efae12a53b3">&#9670;&nbsp;</a></span>bytesToTrieNode()</h2>
+<a id="ae4b5a8e9d579587910b0167aae1edd74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b5a8e9d579587910b0167aae1edd74">&#9670;&nbsp;</a></span>bytesToTrieNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classkvs_1_1TrieNode.html">TrieNode</a> kvs::TrieNodeSerializer::bytesToTrieNode </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>bytes</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p>Преобразовывает байты в <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytes</td><td>Массив байт, представляющий <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Сама запись. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Id.html#ac838430626842995c00215208d7fb297">kvs::Id::getIdSize()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1Storage_3_01TrieNode_01_4.html#acc0b9dc101172c781dd691c2b4f671b0">kvs::Storage&lt; TrieNode &gt;::get()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_cgraph.png" border="0" usemap="#aclasskvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_cgraph" id="aclasskvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_cgraph">
+<div class="center"><img src="classkvs_1_1TrieNodeSerializer_ae4b5a8e9d579587910b0167aae1edd74_cgraph.png" border="0" usemap="#aclasskvs_1_1TrieNodeSerializer_ae4b5a8e9d579587910b0167aae1edd74_cgraph" alt=""/></div>
+<map name="aclasskvs_1_1TrieNodeSerializer_ae4b5a8e9d579587910b0167aae1edd74_cgraph" id="aclasskvs_1_1TrieNodeSerializer_ae4b5a8e9d579587910b0167aae1edd74_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,160,47"/>
 <area shape="rect" href="classkvs_1_1Id.html#ac838430626842995c00215208d7fb297" title=" " alt="" coords="208,13,328,39"/>
-</map>
-</div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_icgraph.png" border="0" usemap="#aclasskvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_icgraph" alt=""/></div>
-<map name="aclasskvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_icgraph" id="aclasskvs_1_1TrieNodeSerializer_ab04884277f4a2b5b47ce9efae12a53b3_icgraph">
-<area shape="rect" title=" " alt="" coords="212,5,367,47"/>
-<area shape="rect" href="classkvs_1_1Storage_3_01TrieNode_01_4.html#acc0b9dc101172c781dd691c2b4f671b0" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a834799a1d65d4455bf1c11d5087ed027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a834799a1d65d4455bf1c11d5087ed027">&#9670;&nbsp;</a></span>trieNodeToBytes()</h2>
+<a id="a1876f4080f015660cde216ed1be90821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1876f4080f015660cde216ed1be90821">&#9670;&nbsp;</a></span>trieNodeToBytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,20 +187,27 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">char * kvs::TrieNodeSerializer::trieNodeToBytes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classkvs_1_1TrieNode.html">TrieNode</a> &amp;&#160;</td>
-          <td class="paramname"><em>record</em></td><td>)</td>
+          <td class="paramname"><em>trieNode</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Преобразовывает <code><a class="el" href="classkvs_1_1TrieNode.html" title="Класс, реализующий структуру ноды бора для хранения на диске.">TrieNode</a></code> в байты. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trieNode</td><td>Преобразуемая нода. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Массив байт после преобразования. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Id.html#ac838430626842995c00215208d7fb297">kvs::Id::getIdSize()</a>, and <a class="el" href="classkvs_1_1TrieNode.html#af617c2a85077c38b358fa7adde21d6e8">kvs::TrieNode::getNextRecords()</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1TrieNodeSerializer_a834799a1d65d4455bf1c11d5087ed027_cgraph.png" border="0" usemap="#aclasskvs_1_1TrieNodeSerializer_a834799a1d65d4455bf1c11d5087ed027_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1TrieNodeSerializer_a834799a1d65d4455bf1c11d5087ed027_cgraph" id="aclasskvs_1_1TrieNodeSerializer_a834799a1d65d4455bf1c11d5087ed027_cgraph">
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classkvs_1_1TrieNodeSerializer_a1876f4080f015660cde216ed1be90821_cgraph.png" border="0" usemap="#aclasskvs_1_1TrieNodeSerializer_a1876f4080f015660cde216ed1be90821_cgraph" alt=""/></div>
+<map name="aclasskvs_1_1TrieNodeSerializer_a1876f4080f015660cde216ed1be90821_cgraph" id="aclasskvs_1_1TrieNodeSerializer_a1876f4080f015660cde216ed1be90821_cgraph">
 <area shape="rect" title=" " alt="" coords="5,23,160,65"/>
 <area shape="rect" href="classkvs_1_1Id.html#ac838430626842995c00215208d7fb297" title=" " alt="" coords="249,5,369,32"/>
 <area shape="rect" href="classkvs_1_1TrieNode.html#af617c2a85077c38b358fa7adde21d6e8" title=" " alt="" coords="208,56,409,83"/>

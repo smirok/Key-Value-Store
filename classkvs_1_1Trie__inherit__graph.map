@@ -1,4 +1,4 @@
 <map id="kvs::Trie" name="kvs::Trie">
-<area shape="rect" id="node1" title=" " alt="" coords="33,80,104,107"/>
-<area shape="rect" id="node2" href="$classkvs_1_1LogicStorage.html" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node1" title="Класс, представляющий хранилище данных бор на диске и хранящий пары &lt; Key, Id&gt;." alt="" coords="33,80,104,107"/>
+<area shape="rect" id="node2" href="$classkvs_1_1LogicStorage.html" title="Интерфейс хранилища, отвечающего только за логику." alt="" coords="5,5,132,32"/>
 </map>

@@ -89,22 +89,27 @@ $(document).ready(function(){initNavTree('classkvs_1_1KeyValueStore.html',''); i
 </div><!--header-->
 <div class="contents">
 
+<p>Главный класс, хранилище пар &lt; <code><a class="el" href="classkvs_1_1Key.html" title="Класс, хранящий ключ и его размер.">Key</a></code>, <code><a class="el" href="classkvs_1_1Value.html" title="Класс, хранящий значение и его размер.">Value</a></code> &gt;  
+ <a href="classkvs_1_1KeyValueStore.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="KeyValueStore_8hpp_source.html">KeyValueStore.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:addb27da8d3aac4447f39d1882a684a0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#addb27da8d3aac4447f39d1882a684a0c">KeyValueStore</a> (<a class="el" href="classkvs_1_1BloomFilter.html">BloomFilter</a> &amp;bloomFilter, <a class="el" href="classkvs_1_1Log.html">Log</a> &amp;log, <a class="el" href="classkvs_1_1Trie.html">Trie</a> &amp;trie, <a class="el" href="classkvs_1_1Storage.html">Storage</a>&lt; <a class="el" href="classkvs_1_1Record.html">Record</a> &gt; &amp;_recordStorage)</td></tr>
 <tr class="separator:addb27da8d3aac4447f39d1882a684a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa822b34894c932e17a42f58885c37410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">add</a> (const <a class="el" href="classkvs_1_1KeyValue.html">KeyValue</a> &amp;)</td></tr>
-<tr class="separator:aa822b34894c932e17a42f58885c37410"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9be4f8aa93e08374c8c83208879bc164"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classkvs_1_1KeyValue.html">KeyValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164">get</a> (const <a class="el" href="classkvs_1_1Key.html">Key</a> &amp;) const</td></tr>
-<tr class="separator:a9be4f8aa93e08374c8c83208879bc164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a035ddc837d62a18137165c2023b6f5a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5">del</a> (const <a class="el" href="classkvs_1_1Key.html">Key</a> &amp;)</td></tr>
-<tr class="separator:a035ddc837d62a18137165c2023b6f5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eac158e451ee7b6b93faa7aed2940bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">add</a> (const <a class="el" href="classkvs_1_1KeyValue.html">KeyValue</a> &amp;keyValue)</td></tr>
+<tr class="separator:a1eac158e451ee7b6b93faa7aed2940bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e3fbd169afac040b11b32e0a3d0e38"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classkvs_1_1KeyValue.html">KeyValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38">get</a> (const <a class="el" href="classkvs_1_1Key.html">Key</a> &amp;key) const</td></tr>
+<tr class="separator:a97e3fbd169afac040b11b32e0a3d0e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8921917d7543c5d4c9d8d94ef33e351b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b">del</a> (const <a class="el" href="classkvs_1_1Key.html">Key</a> &amp;key)</td></tr>
+<tr class="separator:a8921917d7543c5d4c9d8d94ef33e351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27b3add3097eb1e598589193e2365204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204">clear</a> ()</td></tr>
 <tr class="separator:a27b3add3097eb1e598589193e2365204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Главный класс, хранилище пар &lt; <code><a class="el" href="classkvs_1_1Key.html" title="Класс, хранящий ключ и его размер.">Key</a></code>, <code><a class="el" href="classkvs_1_1Value.html" title="Класс, хранящий значение и его размер.">Value</a></code> &gt; </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="addb27da8d3aac4447f39d1882a684a0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#addb27da8d3aac4447f39d1882a684a0c">&#9670;&nbsp;</a></span>KeyValueStore()</h2>
 
@@ -142,12 +147,21 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bloomFilter</td><td>Фильтр Блума. </td></tr>
+    <tr><td class="paramname">log</td><td>Лог в качестве хранилища в оперативной памяти. </td></tr>
+    <tr><td class="paramname">trie</td><td>Бор в качестве хранилища на диске. </td></tr>
+    <tr><td class="paramname">_recordStorage</td><td>Хранилище записей <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> на диске. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa822b34894c932e17a42f58885c37410"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa822b34894c932e17a42f58885c37410">&#9670;&nbsp;</a></span>add()</h2>
+<a id="a1eac158e451ee7b6b93faa7aed2940bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eac158e451ee7b6b93faa7aed2940bd">&#9670;&nbsp;</a></span>add()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,8 +175,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Добавить <code>keyValue</code> в хранилище. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyValue</td><td>пара <code><a class="el" href="classkvs_1_1Key.html" title="Класс, хранящий ключ и его размер.">Key</a></code>, <code><a class="el" href="classkvs_1_1Value.html" title="Класс, хранящий значение и его размер.">Value</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594">kvs::BloomFilter::add()</a>, <a class="el" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206">kvs::Log::add()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28">kvs::Storage&lt; Record &gt;::add()</a>, <a class="el" href="classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976">kvs::Log::clear()</a>, <a class="el" href="structkvs_1_1Log_1_1LogIterator.html#a72d61f9b83eb2c3f0a6116613fd2f7dd">kvs::Log::LogIterator::end()</a>, <a class="el" href="classkvs_1_1KeyValue.html#a50a658dfb23cc64e377df476c9fb6216">kvs::KeyValue::getKey()</a>, <a class="el" href="classkvs_1_1Trie.html#ac6d3fef3a15c35166240e57fa63b1445">kvs::Trie::getRecordsToDelete()</a>, <a class="el" href="classkvs_1_1KeyValue.html#a94076e0dbce3067442f95b45a99a33fb">kvs::KeyValue::getValue()</a>, <a class="el" href="classkvs_1_1Log.html#a3d10ec41ccd308a6d0ea0af8438e122b">kvs::Log::isFull()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f">kvs::Storage&lt; Record &gt;::isFull()</a>, <a class="el" href="classkvs_1_1Trie.html#a1c2ad007e0cef7d86b1c308e8f15b876">kvs::Trie::merge()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8">kvs::Storage&lt; Record &gt;::remove()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff">kvs::Storage&lt; Record &gt;::removeRecordsById()</a>, and <a class="el" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402">kvs::Log::toInMemoryTrieNode()</a>.</p>
+<p class="reference">References <a class="el" href="classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594">kvs::BloomFilter::add()</a>, <a class="el" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206">kvs::Log::add()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28">kvs::Storage&lt; Record &gt;::add()</a>, <a class="el" href="classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976">kvs::Log::clear()</a>, <a class="el" href="structkvs_1_1Log_1_1LogIterator.html#a72d61f9b83eb2c3f0a6116613fd2f7dd">kvs::Log::LogIterator::end()</a>, <a class="el" href="classkvs_1_1KeyValue.html#a50a658dfb23cc64e377df476c9fb6216">kvs::KeyValue::getKey()</a>, <a class="el" href="classkvs_1_1KeyValue.html#a94076e0dbce3067442f95b45a99a33fb">kvs::KeyValue::getValue()</a>, <a class="el" href="classkvs_1_1Log.html#a3d10ec41ccd308a6d0ea0af8438e122b">kvs::Log::isFull()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f">kvs::Storage&lt; Record &gt;::isFull()</a>, <a class="el" href="classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622">kvs::Trie::merge()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8">kvs::Storage&lt; Record &gt;::remove()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff">kvs::Storage&lt; Record &gt;::removeRecordsById()</a>, and <a class="el" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402">kvs::Log::toInMemoryTrieNode()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -170,30 +190,29 @@ Public Member Functions</h2></td></tr>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_cgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_cgraph" id="aclasskvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_cgraph">
-<area shape="rect" title=" " alt="" coords="5,360,168,387"/>
-<area shape="rect" href="classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594" title=" " alt="" coords="485,15,627,41"/>
-<area shape="rect" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="266,116,365,143"/>
-<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28" title=" " alt="" coords="242,167,389,209"/>
-<area shape="rect" href="classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976" title=" " alt="" coords="263,233,368,260"/>
-<area shape="rect" href="structkvs_1_1Log_1_1LogIterator.html#a72d61f9b83eb2c3f0a6116613fd2f7dd" title=" " alt="" coords="232,284,399,311"/>
-<area shape="rect" href="classkvs_1_1KeyValue.html#a50a658dfb23cc64e377df476c9fb6216" title=" " alt="" coords="240,335,391,361"/>
-<area shape="rect" href="classkvs_1_1Trie.html#ac6d3fef3a15c35166240e57fa63b1445" title=" " alt="" coords="218,385,413,412"/>
-<area shape="rect" href="classkvs_1_1KeyValue.html#a94076e0dbce3067442f95b45a99a33fb" title=" " alt="" coords="235,436,396,463"/>
-<area shape="rect" href="classkvs_1_1Log.html#a3d10ec41ccd308a6d0ea0af8438e122b" title=" " alt="" coords="261,487,369,513"/>
-<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="242,538,389,579"/>
-<area shape="rect" href="classkvs_1_1Trie.html#a1c2ad007e0cef7d86b1c308e8f15b876" title=" " alt="" coords="259,604,372,631"/>
-<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8" title=" " alt="" coords="242,655,389,697"/>
-<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff" title=" " alt="" coords="237,721,393,762"/>
-<area shape="rect" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="216,65,415,92"/>
-<area shape="rect" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="718,65,835,92"/>
-<area shape="rect" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="717,15,837,41"/>
-<area shape="rect" href="classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="509,116,603,143"/>
-<area shape="rect" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="474,175,638,201"/>
-<area shape="rect" href="classkvs_1_1Storage.html#a7c5a9b006c45c926e634c454f1af02bf" title=" " alt="" coords="485,728,627,755"/>
-<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="463,65,649,92"/>
-<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="697,117,856,158"/>
+<div class="center"><img src="classkvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_cgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_cgraph" alt=""/></div>
+<map name="aclasskvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_cgraph" id="aclasskvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,334,168,360"/>
+<area shape="rect" href="classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594" title=" " alt="" coords="485,14,627,40"/>
+<area shape="rect" href="classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="266,115,365,142"/>
+<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28" title=" " alt="" coords="242,166,389,208"/>
+<area shape="rect" href="classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976" title=" " alt="" coords="263,232,368,259"/>
+<area shape="rect" href="structkvs_1_1Log_1_1LogIterator.html#a72d61f9b83eb2c3f0a6116613fd2f7dd" title=" " alt="" coords="232,283,399,310"/>
+<area shape="rect" href="classkvs_1_1KeyValue.html#a50a658dfb23cc64e377df476c9fb6216" title=" " alt="" coords="240,334,391,360"/>
+<area shape="rect" href="classkvs_1_1KeyValue.html#a94076e0dbce3067442f95b45a99a33fb" title=" " alt="" coords="235,384,396,411"/>
+<area shape="rect" href="classkvs_1_1Log.html#a3d10ec41ccd308a6d0ea0af8438e122b" title=" " alt="" coords="261,435,369,462"/>
+<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="242,486,389,528"/>
+<area shape="rect" href="classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622" title=" " alt="" coords="259,552,372,579"/>
+<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8" title=" " alt="" coords="242,604,389,645"/>
+<area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff" title=" " alt="" coords="237,669,393,710"/>
+<area shape="rect" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="216,64,415,91"/>
+<area shape="rect" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="718,64,835,91"/>
+<area shape="rect" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="717,14,837,40"/>
+<area shape="rect" href="classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="509,115,603,142"/>
+<area shape="rect" href="classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="474,174,638,200"/>
+<area shape="rect" href="classkvs_1_1Storage.html#a1215b40ee6b66b126e59874e784b6215" title=" " alt="" coords="485,676,627,703"/>
+<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="463,64,649,91"/>
+<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="697,116,856,157"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -201,8 +220,8 @@ Public Member Functions</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_icgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_icgraph" alt=""/></div>
-<map name="aclasskvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_icgraph" id="aclasskvs_1_1KeyValueStore_aa822b34894c932e17a42f58885c37410_icgraph">
+<div class="center"><img src="classkvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_icgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_icgraph" alt=""/></div>
+<map name="aclasskvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_icgraph" id="aclasskvs_1_1KeyValueStore_a1eac158e451ee7b6b93faa7aed2940bd_icgraph">
 <area shape="rect" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
@@ -224,6 +243,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Очистить <code><a class="el" href="classkvs_1_1KeyValueStore.html" title="Главный класс, хранилище пар &lt; Key, Value &gt;">KeyValueStore</a></code>. </p>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#ae87b927c83324cb3a658947247408f99">kvs::Storage&lt; Record &gt;::clear()</a>, <a class="el" href="classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976">kvs::Log::clear()</a>, <a class="el" href="classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c">kvs::Trie::clear()</a>, and <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a0d255888f229b5bb018fb1df087b433e">kvs::Storage&lt; Record &gt;::size()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -244,8 +264,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a035ddc837d62a18137165c2023b6f5a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a035ddc837d62a18137165c2023b6f5a5">&#9670;&nbsp;</a></span>del()</h2>
+<a id="a8921917d7543c5d4c9d8d94ef33e351b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8921917d7543c5d4c9d8d94ef33e351b">&#9670;&nbsp;</a></span>del()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,6 +279,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Удалить пару <code><a class="el" href="classkvs_1_1Key.html" title="Класс, хранящий ключ и его размер.">Key</a></code>, <code><a class="el" href="classkvs_1_1Value.html" title="Класс, хранящий значение и его размер.">Value</a></code> по ключу <code>key</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f">kvs::Storage&lt; Record &gt;::isFull()</a>, <a class="el" href="classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b">kvs::BloomFilter::mightContains()</a>, <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8">kvs::Storage&lt; Record &gt;::remove()</a>, <a class="el" href="classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431">kvs::Trie::remove()</a>, and <a class="el" href="classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b">kvs::Log::remove()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -266,8 +292,8 @@ Public Member Functions</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1KeyValueStore_a035ddc837d62a18137165c2023b6f5a5_cgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a035ddc837d62a18137165c2023b6f5a5_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1KeyValueStore_a035ddc837d62a18137165c2023b6f5a5_cgraph" id="aclasskvs_1_1KeyValueStore_a035ddc837d62a18137165c2023b6f5a5_cgraph">
+<div class="center"><img src="classkvs_1_1KeyValueStore_a8921917d7543c5d4c9d8d94ef33e351b_cgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a8921917d7543c5d4c9d8d94ef33e351b_cgraph" alt=""/></div>
+<map name="aclasskvs_1_1KeyValueStore_a8921917d7543c5d4c9d8d94ef33e351b_cgraph" id="aclasskvs_1_1KeyValueStore_a8921917d7543c5d4c9d8d94ef33e351b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,130,164,157"/>
 <area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="241,5,387,47"/>
 <area shape="rect" href="classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b" title=" " alt="" coords="212,71,416,98"/>
@@ -283,8 +309,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9be4f8aa93e08374c8c83208879bc164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9be4f8aa93e08374c8c83208879bc164">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a97e3fbd169afac040b11b32e0a3d0e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e3fbd169afac040b11b32e0a3d0e38">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,6 +324,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Получить пару <code><a class="el" href="classkvs_1_1KeyValue.html" title="Класс, хранящий ключ и значение вместе.">KeyValue</a></code> по ключу <code>key</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classkvs_1_1KeyValue.html" title="Класс, хранящий ключ и значение вместе.">KeyValue</a></code> обернутый в <code>std::optional</code>, если в <code><a class="el" href="classkvs_1_1KeyValueStore.html" title="Главный класс, хранилище пар &lt; Key, Value &gt;">KeyValueStore</a></code> есть <code><a class="el" href="classkvs_1_1Value.html" title="Класс, хранящий значение и его размер.">Value</a></code> по ключу <code>key</code>; пустой <code>std::optional</code> иначе. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a59b20e4e56bff6eec4ccd2bc97fe1310">kvs::Storage&lt; Record &gt;::get()</a>, <a class="el" href="classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3">kvs::Trie::get()</a>, <a class="el" href="classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9">kvs::Log::get()</a>, <a class="el" href="classkvs_1_1Record.html#a31eed0ec993d3f5418e8e47b8787530c">kvs::Record::getKey()</a>, <a class="el" href="classkvs_1_1Record.html#a11cf8ad9af0b9f3eaa2c3ec17936df61">kvs::Record::getValue()</a>, and <a class="el" href="classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b">kvs::BloomFilter::mightContains()</a>.</p>
 
@@ -307,8 +340,8 @@ Public Member Functions</h2></td></tr>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_cgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_cgraph" id="aclasskvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_cgraph">
+<div class="center"><img src="classkvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_cgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_cgraph" alt=""/></div>
+<map name="aclasskvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_cgraph" id="aclasskvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_cgraph">
 <area shape="rect" title=" " alt="" coords="5,147,164,174"/>
 <area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a59b20e4e56bff6eec4ccd2bc97fe1310" title=" " alt="" coords="241,5,387,47"/>
 <area shape="rect" href="classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3" title=" " alt="" coords="267,71,361,98"/>
@@ -326,8 +359,8 @@ Public Member Functions</h2></td></tr>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_icgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_icgraph" alt=""/></div>
-<map name="aclasskvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_icgraph" id="aclasskvs_1_1KeyValueStore_a9be4f8aa93e08374c8c83208879bc164_icgraph">
+<div class="center"><img src="classkvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_icgraph.png" border="0" usemap="#aclasskvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_icgraph" alt=""/></div>
+<map name="aclasskvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_icgraph" id="aclasskvs_1_1KeyValueStore_a97e3fbd169afac040b11b32e0a3d0e38_icgraph">
 <area shape="rect" title=" " alt="" coords="104,5,263,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>

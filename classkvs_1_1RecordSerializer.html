@@ -89,14 +89,17 @@ $(document).ready(function(){initNavTree('classkvs_1_1RecordSerializer.html','')
 </div><!--header-->
 <div class="contents">
 
+<p>Класс, отвечающий за сериализацию <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code>.  
+ <a href="classkvs_1_1RecordSerializer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="RecordSerializer_8hpp_source.html">RecordSerializer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a10de45fb699c80ef03cebf29c7834ad5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1RecordSerializer.html#a10de45fb699c80ef03cebf29c7834ad5">RecordSerializer</a> (std::size_t key_size, std::size_t value_size)</td></tr>
 <tr class="separator:a10de45fb699c80ef03cebf29c7834ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d20cecc2c2d8b3b008fa7963354e97"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1RecordSerializer.html#ab6d20cecc2c2d8b3b008fa7963354e97">recordToBytes</a> (const <a class="el" href="classkvs_1_1Record.html">Record</a> &amp;trieNode) const</td></tr>
-<tr class="separator:ab6d20cecc2c2d8b3b008fa7963354e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f404e330a0db3c5caedc870c281b2d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1RecordSerializer.html#a15f404e330a0db3c5caedc870c281b2d">recordToBytes</a> (const <a class="el" href="classkvs_1_1Record.html">Record</a> &amp;record) const</td></tr>
+<tr class="separator:a15f404e330a0db3c5caedc870c281b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf1d55f6a7be568d539e61173ff36de1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkvs_1_1Record.html">Record</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1RecordSerializer.html#acf1d55f6a7be568d539e61173ff36de1">bytesToRecord</a> (const char *bytes) const</td></tr>
 <tr class="separator:acf1d55f6a7be568d539e61173ff36de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bcc3e729db833c92b315a52c97f7dc0"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1RecordSerializer.html#a7bcc3e729db833c92b315a52c97f7dc0">getKeySize</a> () const</td></tr>
@@ -104,7 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:add502e1e32b5a25eef237cd4cba9206c"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1RecordSerializer.html#add502e1e32b5a25eef237cd4cba9206c">getValueSize</a> () const</td></tr>
 <tr class="separator:add502e1e32b5a25eef237cd4cba9206c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс, отвечающий за сериализацию <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a10de45fb699c80ef03cebf29c7834ad5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10de45fb699c80ef03cebf29c7834ad5">&#9670;&nbsp;</a></span>RecordSerializer()</h2>
 
@@ -130,6 +135,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key_size</td><td>Размер ключа в байтах. </td></tr>
+    <tr><td class="paramname">value_size</td><td>Размер значения в байтах. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -149,6 +161,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Преобразовывает байты в <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytes</td><td>Массив байт, представляющий <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Сама запись. </dd></dl>
 
 </div>
 </div>
@@ -186,8 +205,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab6d20cecc2c2d8b3b008fa7963354e97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d20cecc2c2d8b3b008fa7963354e97">&#9670;&nbsp;</a></span>recordToBytes()</h2>
+<a id="a15f404e330a0db3c5caedc870c281b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f404e330a0db3c5caedc870c281b2d">&#9670;&nbsp;</a></span>recordToBytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,11 +215,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">char * kvs::RecordSerializer::recordToBytes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classkvs_1_1Record.html">Record</a> &amp;&#160;</td>
-          <td class="paramname"><em>trieNode</em></td><td>)</td>
+          <td class="paramname"><em>record</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Преобразовывает <code><a class="el" href="classkvs_1_1Record.html" title="Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.">Record</a></code> в байты. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">record</td><td>Преобразуемая запись. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Массив байт после преобразования. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c">kvs::Record::getIsOutdated()</a>, <a class="el" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c">kvs::Key::getKey()</a>, <a class="el" href="classkvs_1_1Record.html#a31eed0ec993d3f5418e8e47b8787530c">kvs::Record::getKey()</a>, <a class="el" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d">kvs::Key::getSize()</a>, <a class="el" href="classkvs_1_1Value.html#a94c4873778be40e277dc2e24c5a307ea">kvs::Value::getSize()</a>, <a class="el" href="classkvs_1_1Record.html#a11cf8ad9af0b9f3eaa2c3ec17936df61">kvs::Record::getValue()</a>, and <a class="el" href="classkvs_1_1Value.html#a7a70c8637e16b3c1459a28b2b998ab5f">kvs::Value::getValue()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -208,8 +234,8 @@ Public Member Functions</h2></td></tr>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1RecordSerializer_ab6d20cecc2c2d8b3b008fa7963354e97_cgraph.png" border="0" usemap="#aclasskvs_1_1RecordSerializer_ab6d20cecc2c2d8b3b008fa7963354e97_cgraph" alt=""/></div>
-<map name="aclasskvs_1_1RecordSerializer_ab6d20cecc2c2d8b3b008fa7963354e97_cgraph" id="aclasskvs_1_1RecordSerializer_ab6d20cecc2c2d8b3b008fa7963354e97_cgraph">
+<div class="center"><img src="classkvs_1_1RecordSerializer_a15f404e330a0db3c5caedc870c281b2d_cgraph.png" border="0" usemap="#aclasskvs_1_1RecordSerializer_a15f404e330a0db3c5caedc870c281b2d_cgraph" alt=""/></div>
+<map name="aclasskvs_1_1RecordSerializer_a15f404e330a0db3c5caedc870c281b2d_cgraph" id="aclasskvs_1_1RecordSerializer_a15f404e330a0db3c5caedc870c281b2d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,150,148,191"/>
 <area shape="rect" href="classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c" title=" " alt="" coords="196,5,375,32"/>
 <area shape="rect" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="227,56,344,83"/>

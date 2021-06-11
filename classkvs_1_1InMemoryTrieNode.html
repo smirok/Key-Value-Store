@@ -108,6 +108,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a50be73190d98567173f02dc62713f3e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add</a> (std::shared_ptr&lt; <a class="el" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> &gt; currentNode, const <a class="el" href="classkvs_1_1Key.html">Key</a> &amp;key, const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;id)</td></tr>
 <tr class="separator:a50be73190d98567173f02dc62713f3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc218cd3908655d3d81a509679a3e43"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1InMemoryTrieNode.html#a3bc218cd3908655d3d81a509679a3e43">toInMemoryTrieNode</a> (std::vector&lt; std::pair&lt; <a class="el" href="classkvs_1_1Key.html">Key</a>, <a class="el" href="classkvs_1_1Id.html">Id</a> &gt;&gt; &amp;keyIdPairs)</td></tr>
+<tr class="separator:a3bc218cd3908655d3d81a509679a3e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Класс, реализующий ноду бора в оперативной памяти. </p>
@@ -128,7 +130,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Инициализируем детей <code>nullptr-ами</code>. </p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add()</a>, and <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a3bc218cd3908655d3d81a509679a3e43">toInMemoryTrieNode()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -136,11 +138,12 @@ Static Public Member Functions</h2></td></tr>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classkvs_1_1InMemoryTrieNode_ae83a20bd1fa9a922fe2d77911e3ab695_icgraph.png" border="0" usemap="#aclasskvs_1_1InMemoryTrieNode_ae83a20bd1fa9a922fe2d77911e3ab695_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1InMemoryTrieNode_ae83a20bd1fa9a922fe2d77911e3ab695_icgraph" id="aclasskvs_1_1InMemoryTrieNode_ae83a20bd1fa9a922fe2d77911e3ab695_icgraph">
-<area shape="rect" title=" " alt="" coords="796,5,955,47"/>
-<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="561,13,748,39"/>
-<area shape="rect" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="315,13,513,39"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,13,267,39"/>
-<area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title=" " alt="" coords="796,31,955,73"/>
+<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="561,13,748,40"/>
+<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a3bc218cd3908655d3d81a509679a3e43" title=" " alt="" coords="335,57,493,98"/>
+<area shape="rect" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="315,5,513,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -197,7 +200,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c">kvs::Key::getKey()</a>, <a class="el" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d">kvs::Key::getSize()</a>, and <a class="el" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695">InMemoryTrieNode()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402">kvs::Log::toInMemoryTrieNode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402">kvs::Log::toInMemoryTrieNode()</a>, and <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a3bc218cd3908655d3d81a509679a3e43">toInMemoryTrieNode()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -218,9 +221,10 @@ Static Public Member Functions</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classkvs_1_1InMemoryTrieNode_a50be73190d98567173f02dc62713f3e5_icgraph.png" border="0" usemap="#aclasskvs_1_1InMemoryTrieNode_a50be73190d98567173f02dc62713f3e5_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1InMemoryTrieNode_a50be73190d98567173f02dc62713f3e5_icgraph" id="aclasskvs_1_1InMemoryTrieNode_a50be73190d98567173f02dc62713f3e5_icgraph">
-<area shape="rect" title=" " alt="" coords="561,5,748,32"/>
+<area shape="rect" title=" " alt="" coords="561,35,748,61"/>
 <area shape="rect" href="classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="315,5,513,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a3bc218cd3908655d3d81a509679a3e43" title=" " alt="" coords="335,57,493,98"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -267,6 +271,55 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Идентификатор соответствующей ноде записи. Если ноде не соответствует запись, то <code>std::numeric_limits&lt;std::size_t&gt;::max()</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a3bc218cd3908655d3d81a509679a3e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc218cd3908655d3d81a509679a3e43">&#9670;&nbsp;</a></span>toInMemoryTrieNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classkvs_1_1InMemoryTrieNode.html">InMemoryTrieNode</a> &gt; kvs::InMemoryTrieNode::toInMemoryTrieNode </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; <a class="el" href="classkvs_1_1Key.html">Key</a>, <a class="el" href="classkvs_1_1Id.html">Id</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>keyIdPairs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Превращение <code>Log-а</code> в бор, хранящийся в оперативной памяти. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyIdPairs</td><td>Массив пар &lt; <code><a class="el" href="classkvs_1_1Key.html" title="Класс, хранящий ключ и его размер.">Key</a></code>, <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a></code> - идентификатор <code>Record-a&gt;</code>, из которого будет строиться бор. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Указатель на корень получившегося бора. </dd></dl>
+
+<p class="reference">References <a class="el" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5">add()</a>, and <a class="el" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695">InMemoryTrieNode()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classkvs_1_1InMemoryTrieNode_a3bc218cd3908655d3d81a509679a3e43_cgraph.png" border="0" usemap="#aclasskvs_1_1InMemoryTrieNode_a3bc218cd3908655d3d81a509679a3e43_cgraph" alt=""/></div>
+<map name="aclasskvs_1_1InMemoryTrieNode_a3bc218cd3908655d3d81a509679a3e43_cgraph" id="aclasskvs_1_1InMemoryTrieNode_a3bc218cd3908655d3d81a509679a3e43_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,164,119"/>
+<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="212,59,399,85"/>
+<area shape="rect" href="classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="447,107,605,149"/>
+<area shape="rect" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="467,5,585,32"/>
+<area shape="rect" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="466,56,586,83"/>
+</map>
+</div>
 
 </div>
 </div>

@@ -92,32 +92,31 @@ $(document).ready(function(){initNavTree('RecordSerializer_8hpp_source.html','')
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Record_8hpp.html">model/Record.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekvs.html">kvs</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classkvs_1_1RecordSerializer.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1RecordSerializer.html">RecordSerializer</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classkvs_1_1RecordSerializer.html#a10de45fb699c80ef03cebf29c7834ad5">RecordSerializer</a>(std::size_t key_size, std::size_t value_size);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        [[nodiscard]] <span class="keywordtype">char</span> *<a class="code" href="classkvs_1_1RecordSerializer.html#ab6d20cecc2c2d8b3b008fa7963354e97">recordToBytes</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Record.html">Record</a> &amp;trieNode) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classkvs_1_1Record.html">Record</a> <a class="code" href="classkvs_1_1RecordSerializer.html#acf1d55f6a7be568d539e61173ff36de1">bytesToRecord</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *bytes) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        [[nodiscard]] std::size_t <a class="code" href="classkvs_1_1RecordSerializer.html#a7bcc3e729db833c92b315a52c97f7dc0">getKeySize</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        [[nodiscard]] std::size_t <a class="code" href="classkvs_1_1RecordSerializer.html#add502e1e32b5a25eef237cd4cba9206c">getValueSize</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::size_t _key_size;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::size_t _value_size;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    };</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_RECORDSERIALIZER_HPP</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classkvs_1_1RecordSerializer.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classkvs_1_1RecordSerializer.html">RecordSerializer</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classkvs_1_1RecordSerializer.html#a10de45fb699c80ef03cebf29c7834ad5">RecordSerializer</a>(std::size_t key_size, std::size_t value_size);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        [[nodiscard]] <span class="keywordtype">char</span> *<a class="code" href="classkvs_1_1RecordSerializer.html#a15f404e330a0db3c5caedc870c281b2d">recordToBytes</a>(<span class="keyword">const</span> <a class="code" href="classkvs_1_1Record.html">Record</a> &amp;record) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classkvs_1_1Record.html">Record</a> <a class="code" href="classkvs_1_1RecordSerializer.html#acf1d55f6a7be568d539e61173ff36de1">bytesToRecord</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *bytes) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        [[nodiscard]] std::size_t <a class="code" href="classkvs_1_1RecordSerializer.html#a7bcc3e729db833c92b315a52c97f7dc0">getKeySize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        [[nodiscard]] std::size_t <a class="code" href="classkvs_1_1RecordSerializer.html#add502e1e32b5a25eef237cd4cba9206c">getValueSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::size_t _key_size;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::size_t _value_size;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//KEYVALUESTORAGE_RECORDSERIALIZER_HPP</span></div>
 <div class="ttc" id="aRecord_8hpp_html"><div class="ttname"><a href="Record_8hpp.html">Record.hpp</a></div></div>
-<div class="ttc" id="aclasskvs_1_1RecordSerializer_html"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html">kvs::RecordSerializer</a></div><div class="ttdef"><b>Definition:</b> RecordSerializer.hpp:9</div></div>
+<div class="ttc" id="aclasskvs_1_1RecordSerializer_html"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html">kvs::RecordSerializer</a></div><div class="ttdoc">Класс, отвечающий за сериализацию Record.</div><div class="ttdef"><b>Definition:</b> RecordSerializer.hpp:11</div></div>
 <div class="ttc" id="aclasskvs_1_1RecordSerializer_html_a10de45fb699c80ef03cebf29c7834ad5"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html#a10de45fb699c80ef03cebf29c7834ad5">kvs::RecordSerializer::RecordSerializer</a></div><div class="ttdeci">RecordSerializer(std::size_t key_size, std::size_t value_size)</div><div class="ttdef"><b>Definition:</b> RecordSerializer.cpp:9</div></div>
+<div class="ttc" id="aclasskvs_1_1RecordSerializer_html_a15f404e330a0db3c5caedc870c281b2d"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html#a15f404e330a0db3c5caedc870c281b2d">kvs::RecordSerializer::recordToBytes</a></div><div class="ttdeci">char * recordToBytes(const Record &amp;record) const</div><div class="ttdef"><b>Definition:</b> RecordSerializer.cpp:13</div></div>
 <div class="ttc" id="aclasskvs_1_1RecordSerializer_html_a7bcc3e729db833c92b315a52c97f7dc0"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html#a7bcc3e729db833c92b315a52c97f7dc0">kvs::RecordSerializer::getKeySize</a></div><div class="ttdeci">std::size_t getKeySize() const</div><div class="ttdef"><b>Definition:</b> RecordSerializer.cpp:51</div></div>
-<div class="ttc" id="aclasskvs_1_1RecordSerializer_html_ab6d20cecc2c2d8b3b008fa7963354e97"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html#ab6d20cecc2c2d8b3b008fa7963354e97">kvs::RecordSerializer::recordToBytes</a></div><div class="ttdeci">char * recordToBytes(const Record &amp;trieNode) const</div><div class="ttdef"><b>Definition:</b> RecordSerializer.cpp:13</div></div>
 <div class="ttc" id="aclasskvs_1_1RecordSerializer_html_acf1d55f6a7be568d539e61173ff36de1"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html#acf1d55f6a7be568d539e61173ff36de1">kvs::RecordSerializer::bytesToRecord</a></div><div class="ttdeci">Record bytesToRecord(const char *bytes) const</div><div class="ttdef"><b>Definition:</b> RecordSerializer.cpp:37</div></div>
 <div class="ttc" id="aclasskvs_1_1RecordSerializer_html_add502e1e32b5a25eef237cd4cba9206c"><div class="ttname"><a href="classkvs_1_1RecordSerializer.html#add502e1e32b5a25eef237cd4cba9206c">kvs::RecordSerializer::getValueSize</a></div><div class="ttdeci">std::size_t getValueSize() const</div><div class="ttdef"><b>Definition:</b> RecordSerializer.cpp:55</div></div>
 <div class="ttc" id="aclasskvs_1_1Record_html"><div class="ttname"><a href="classkvs_1_1Record.html">kvs::Record</a></div><div class="ttdoc">Класс, представляющий запись KeyValue в файле : ключ, булев флаг, значение.</div><div class="ttdef"><b>Definition:</b> Record.hpp:13</div></div>

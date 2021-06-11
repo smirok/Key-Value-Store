@@ -89,22 +89,36 @@ $(document).ready(function(){initNavTree('classkvs_1_1Storage.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
+<p>Интерфейс хранилища пар &lt; <code>T</code>, <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a>&gt;</code>. Прослойка между хранилищем-логикой и записью на диск.  
+ <a href="classkvs_1_1Storage.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Storage_8hpp_source.html">Storage.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2c945f0230de8653411faac6d0b1efbf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classkvs_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage.html#a2c945f0230de8653411faac6d0b1efbf">add</a> (const T &amp;)=0</td></tr>
-<tr class="separator:a2c945f0230de8653411faac6d0b1efbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a877536ea696f7ecfde34a3b8d4f5ef4c"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage.html#a877536ea696f7ecfde34a3b8d4f5ef4c">get</a> (const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;) const =0</td></tr>
-<tr class="separator:a877536ea696f7ecfde34a3b8d4f5ef4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c5a9b006c45c926e634c454f1af02bf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage.html#a7c5a9b006c45c926e634c454f1af02bf">remove</a> (const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;)=0</td></tr>
-<tr class="separator:a7c5a9b006c45c926e634c454f1af02bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406442852f792df1b643005dbfbb3012"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classkvs_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage.html#a406442852f792df1b643005dbfbb3012">add</a> (const T &amp;obj)=0</td></tr>
+<tr class="separator:a406442852f792df1b643005dbfbb3012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee0ce8b9a7a5e805b6340b7a0b484c7"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage.html#a7ee0ce8b9a7a5e805b6340b7a0b484c7">get</a> (const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;id) const =0</td></tr>
+<tr class="separator:a7ee0ce8b9a7a5e805b6340b7a0b484c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1215b40ee6b66b126e59874e784b6215"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage.html#a1215b40ee6b66b126e59874e784b6215">remove</a> (const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;id)=0</td></tr>
+<tr class="separator:a1215b40ee6b66b126e59874e784b6215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6436582a4ff8aa8b1d6614f9830a8c5a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1Storage.html#a6436582a4ff8aa8b1d6614f9830a8c5a">clear</a> ()=0</td></tr>
 <tr class="separator:a6436582a4ff8aa8b1d6614f9830a8c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2c945f0230de8653411faac6d0b1efbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c945f0230de8653411faac6d0b1efbf">&#9670;&nbsp;</a></span>add()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class kvs::Storage&lt; T &gt;</h3>
+
+<p>Интерфейс хранилища пар &lt; <code>T</code>, <code><a class="el" href="classkvs_1_1Id.html" title="Класс, представляющий идентификатор некоторой структуры.">Id</a>&gt;</code>. Прослойка между хранилищем-логикой и записью на диск. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Тип хранимых объектов. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a406442852f792df1b643005dbfbb3012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406442852f792df1b643005dbfbb3012">&#9670;&nbsp;</a></span>add()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -118,7 +132,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">virtual <a class="el" href="classkvs_1_1Id.html">Id</a> <a class="el" href="classkvs_1_1Storage.html">kvs::Storage</a>&lt; T &gt;::add </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -128,6 +142,13 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Добавить <code>obj</code> в хранилище и присвоить ему идентификатор внутри хранилища. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Добавляемый объект. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Присвоенный идентификатор. </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="classkvs_1_1Storage_3_01TrieNode_01_4.html#a404e6c32ec2a62d1ffbaa18973605a78">kvs::Storage&lt; TrieNode &gt;::addTrieNodeSubtree()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -135,8 +156,8 @@ template&lt;typename T &gt; </div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1Storage_a2c945f0230de8653411faac6d0b1efbf_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_a2c945f0230de8653411faac6d0b1efbf_icgraph" alt=""/></div>
-<map name="aclasskvs_1_1Storage_a2c945f0230de8653411faac6d0b1efbf_icgraph" id="aclasskvs_1_1Storage_a2c945f0230de8653411faac6d0b1efbf_icgraph">
+<div class="center"><img src="classkvs_1_1Storage_a406442852f792df1b643005dbfbb3012_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_a406442852f792df1b643005dbfbb3012_icgraph" alt=""/></div>
+<map name="aclasskvs_1_1Storage_a406442852f792df1b643005dbfbb3012_icgraph" id="aclasskvs_1_1Storage_a406442852f792df1b643005dbfbb3012_icgraph">
 <area shape="rect" title=" " alt="" coords="212,13,333,39"/>
 <area shape="rect" href="classkvs_1_1Storage_3_01TrieNode_01_4.html#a404e6c32ec2a62d1ffbaa18973605a78" title=" " alt="" coords="5,5,164,47"/>
 </map>
@@ -168,11 +189,12 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Очищает хранилище. </p>
 
 </div>
 </div>
-<a id="a877536ea696f7ecfde34a3b8d4f5ef4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a877536ea696f7ecfde34a3b8d4f5ef4c">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a7ee0ce8b9a7a5e805b6340b7a0b484c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee0ce8b9a7a5e805b6340b7a0b484c7">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +208,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">virtual std::optional&lt;T&gt; <a class="el" href="classkvs_1_1Storage.html">kvs::Storage</a>&lt; T &gt;::get </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -196,11 +218,18 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Получить объект по <code>id</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор объекта. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>T</code> обернутый в <code>std::optional</code>, если в <code><a class="el" href="classkvs_1_1Storage.html" title="Интерфейс хранилища пар &lt; T, Id&gt;. Прослойка между хранилищем-логикой и записью на диск.">Storage</a></code> есть какой-то объект с <code>id</code>; пустой <code>std::optional</code> иначе. </dd></dl>
 
 </div>
 </div>
-<a id="a7c5a9b006c45c926e634c454f1af02bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c5a9b006c45c926e634c454f1af02bf">&#9670;&nbsp;</a></span>remove()</h2>
+<a id="a1215b40ee6b66b126e59874e784b6215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1215b40ee6b66b126e59874e784b6215">&#9670;&nbsp;</a></span>remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +243,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">virtual void <a class="el" href="classkvs_1_1Storage.html">kvs::Storage</a>&lt; T &gt;::remove </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classkvs_1_1Id.html">Id</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -224,6 +253,12 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Удаляет объект с <code>id</code>. Если объекта нет, ничего не делает. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Идентификатор удаляемого объекта. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff">kvs::Storage&lt; Record &gt;::removeRecordsById()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -231,11 +266,11 @@ template&lt;typename T &gt; </div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classkvs_1_1Storage_a7c5a9b006c45c926e634c454f1af02bf_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_a7c5a9b006c45c926e634c454f1af02bf_icgraph" alt=""/></div>
-<map name="aclasskvs_1_1Storage_a7c5a9b006c45c926e634c454f1af02bf_icgraph" id="aclasskvs_1_1Storage_a7c5a9b006c45c926e634c454f1af02bf_icgraph">
+<div class="center"><img src="classkvs_1_1Storage_a1215b40ee6b66b126e59874e784b6215_icgraph.png" border="0" usemap="#aclasskvs_1_1Storage_a1215b40ee6b66b126e59874e784b6215_icgraph" alt=""/></div>
+<map name="aclasskvs_1_1Storage_a1215b40ee6b66b126e59874e784b6215_icgraph" id="aclasskvs_1_1Storage_a1215b40ee6b66b126e59874e784b6215_icgraph">
 <area shape="rect" title=" " alt="" coords="519,13,661,39"/>
 <area shape="rect" href="classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff" title=" " alt="" coords="315,5,471,47"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,13,267,39"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,13,267,39"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>

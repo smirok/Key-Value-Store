@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('classkvs_1_1BloomFilter.html',''); ini
 </div><!--header-->
 <div class="contents">
 
+<p>Класс, реализующий фильтр Блума.  
+ <a href="classkvs_1_1BloomFilter.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="BloomFilter_8hpp_source.html">BloomFilter.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -100,7 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab28d6094cf26f8f42a9bf2fd8cfc6a4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b">mightContains</a> (const <a class="el" href="classkvs_1_1Key.html">Key</a> &amp;key) const</td></tr>
 <tr class="separator:ab28d6094cf26f8f42a9bf2fd8cfc6a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Класс, реализующий фильтр Блума. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a37dd061661add40bf62993d8d0c098a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37dd061661add40bf62993d8d0c098a6">&#9670;&nbsp;</a></span>BloomFilter()</h2>
 
@@ -124,6 +129,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>Размер фильтр блума. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -143,10 +154,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ, добавляемый в фильтр. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c">kvs::Key::getKey()</a>, and <a class="el" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d">kvs::Key::getSize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410">kvs::KeyValueStore::add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd">kvs::KeyValueStore::add()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -167,7 +184,7 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1BloomFilter_a68024326483fff59e4bb0e9e88bb7594_icgraph.png" border="0" usemap="#aclasskvs_1_1BloomFilter_a68024326483fff59e4bb0e9e88bb7594_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1BloomFilter_a68024326483fff59e4bb0e9e88bb7594_icgraph" id="aclasskvs_1_1BloomFilter_a68024326483fff59e4bb0e9e88bb7594_icgraph">
 <area shape="rect" title=" " alt="" coords="315,5,457,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#aa822b34894c932e17a42f58885c37410" title=" " alt="" coords="104,5,267,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -189,10 +206,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Ключ, наличие которого в фильтр проверяем. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code>, если ключ может содержаться в фильтре; <code>false</code>, если ключа точно нет в фильтре. </dd></dl>
 
 <p class="reference">References <a class="el" href="classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c">kvs::Key::getKey()</a>, and <a class="el" href="classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d">kvs::Key::getSize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5">kvs::KeyValueStore::del()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164">kvs::KeyValueStore::get()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b">kvs::KeyValueStore::del()</a>, and <a class="el" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38">kvs::KeyValueStore::get()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -213,8 +237,8 @@ Public Member Functions</h2></td></tr>
 <div class="center"><img src="classkvs_1_1BloomFilter_ab28d6094cf26f8f42a9bf2fd8cfc6a4b_icgraph.png" border="0" usemap="#aclasskvs_1_1BloomFilter_ab28d6094cf26f8f42a9bf2fd8cfc6a4b_icgraph" alt=""/></div>
 <map name="aclasskvs_1_1BloomFilter_ab28d6094cf26f8f42a9bf2fd8cfc6a4b_icgraph" id="aclasskvs_1_1BloomFilter_ab28d6094cf26f8f42a9bf2fd8cfc6a4b_icgraph">
 <area shape="rect" title=" " alt="" coords="311,31,515,57"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a035ddc837d62a18137165c2023b6f5a5" title=" " alt="" coords="104,5,263,32"/>
-<area shape="rect" href="classkvs_1_1KeyValueStore.html#a9be4f8aa93e08374c8c83208879bc164" title=" " alt="" coords="104,56,263,83"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="104,5,263,32"/>
+<area shape="rect" href="classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38" title=" " alt="" coords="104,56,263,83"/>
 <area shape="rect" href="benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
 </map>
 </div>
