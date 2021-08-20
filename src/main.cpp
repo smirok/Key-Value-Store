@@ -26,8 +26,8 @@ int main() {
     BloomFilter bloomFilter(10000000);
     Log log(100000);
 
-    File trieFile("data/trieNodes.bin");
-    File recordFile("data/records.bin");
+    File trieFile("trieNodes.bin");
+    File recordFile("records.bin");
 
     TrieNodeSerializer trieNodeSerializer(Id::getIdSize());
     RecordSerializer recordSerializer(keySize, valueSize);
@@ -45,6 +45,8 @@ int main() {
         std::cin >> command;
 
         if (command == "exit") {
+            remove("trieNodes.bin");
+            remove("records.bin");
             return 0;
         } else if (command == "add") {
             std::string key, value;
@@ -87,6 +89,4 @@ int main() {
             std::cout << "Unknown command\n";
         }
     }
-
-    return 0;
 }
