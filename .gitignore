@@ -34,3 +34,4 @@
 # CMake
 .idea/
 cmake-build-*/
+build/

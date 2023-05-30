@@ -39,7 +39,7 @@ set(STORAGES
         ../src/storage/Trie.cpp ../include/storage/Trie.hpp)
 
 set(LIBRARIES
-        ../xxHash/xxhash.h ../xxHash/xxhash.c)
+        ../extern/xxHash/xxhash.h ../extern/xxHash/xxhash.c)
 
 set(MODEL_TEST
         model/KeyTest.cpp

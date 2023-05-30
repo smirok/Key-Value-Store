@@ -1,5 +1,5 @@
 #include "storage/BloomFilter.hpp"
-#include "../../xxHash/xxhash.h"
+#include "../../extern/xxHash/xxhash.h"
 #include <cmath>
 
 namespace kvs {
