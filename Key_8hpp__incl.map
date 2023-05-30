@@ -1,6 +1,9 @@
 <map id="/github/workspace/include/model/Key.hpp" name="/github/workspace/include/model/Key.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="47,5,221,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,71,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="95,95,173,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="197,95,252,121"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="46,5,218,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,70,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,48,65,86,61,82,107,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,94,171,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,46,135,79,130,79,130,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="195,94,248,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,44,199,82,195,86,152,48"/>
 </map>

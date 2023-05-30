@@ -1,5 +1,7 @@
 <map id="/github/workspace/include/model/FileOffset.hpp" name="/github/workspace/include/model/FileOffset.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,179,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="17,95,82,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="106,95,166,121"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,178,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="17,94,81,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,48,65,82,60,79,79,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="105,94,164,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,45,123,79,118,82,100,48"/>
 </map>

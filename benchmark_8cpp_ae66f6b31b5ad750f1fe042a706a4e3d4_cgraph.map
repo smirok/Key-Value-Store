@@ -1,33 +1,67 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,493,56,519"/>
-<area shape="rect" id="node2" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,467,267,494"/>
-<area shape="rect" id="node23" href="$classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38" title=" " alt="" coords="335,106,493,133"/>
-<area shape="rect" id="node30" href="$classkvs_1_1Id.html#ac838430626842995c00215208d7fb297" title=" " alt="" coords="125,518,245,545"/>
-<area shape="rect" id="node31" href="$benchmark_8cpp.html#a7aab1b6d2a0ca5a72bd8eb4e2457eb7d" title=" " alt="" coords="137,569,234,595"/>
-<area shape="rect" id="node3" href="$classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594" title=" " alt="" coords="592,325,735,351"/>
-<area shape="rect" id="node6" href="$classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="365,274,463,301"/>
-<area shape="rect" id="node8" href="$classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28" title=" " alt="" coords="341,492,487,533"/>
-<area shape="rect" id="node10" href="$classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976" title=" " alt="" coords="361,558,467,585"/>
-<area shape="rect" id="node11" href="$structkvs_1_1Log_1_1LogIterator.html#a72d61f9b83eb2c3f0a6116613fd2f7dd" title=" " alt="" coords="331,609,497,635"/>
-<area shape="rect" id="node12" href="$classkvs_1_1KeyValue.html#a50a658dfb23cc64e377df476c9fb6216" title=" " alt="" coords="339,659,489,686"/>
-<area shape="rect" id="node13" href="$classkvs_1_1KeyValue.html#a94076e0dbce3067442f95b45a99a33fb" title=" " alt="" coords="333,710,495,737"/>
-<area shape="rect" id="node14" href="$classkvs_1_1Log.html#a3d10ec41ccd308a6d0ea0af8438e122b" title=" " alt="" coords="360,761,468,787"/>
-<area shape="rect" id="node15" href="$classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="341,812,487,853"/>
-<area shape="rect" id="node16" href="$classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622" title=" " alt="" coords="357,157,471,183"/>
-<area shape="rect" id="node17" href="$classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8" title=" " alt="" coords="341,208,487,249"/>
-<area shape="rect" id="node18" href="$classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff" title=" " alt="" coords="336,427,492,468"/>
-<area shape="rect" id="node20" href="$classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="315,375,513,402"/>
-<area shape="rect" id="node4" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="844,325,961,351"/>
-<area shape="rect" id="node5" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="843,274,963,301"/>
-<area shape="rect" id="node7" href="$classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="616,274,711,301"/>
-<area shape="rect" id="node9" href="$classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="581,499,745,526"/>
-<area shape="rect" id="node19" href="$classkvs_1_1Storage.html#a1215b40ee6b66b126e59874e784b6215" title=" " alt="" coords="592,434,735,461"/>
-<area shape="rect" id="node21" href="$classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="570,375,757,402"/>
-<area shape="rect" id="node22" href="$classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="823,376,982,417"/>
-<area shape="rect" id="node24" href="$classkvs_1_1Storage_3_01Record_01_4.html#a59b20e4e56bff6eec4ccd2bc97fe1310" title=" " alt="" coords="590,5,737,47"/>
-<area shape="rect" id="node26" href="$classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3" title=" " alt="" coords="616,122,711,149"/>
-<area shape="rect" id="node27" href="$classkvs_1_1Record.html#a31eed0ec993d3f5418e8e47b8787530c" title=" " alt="" coords="595,173,731,199"/>
-<area shape="rect" id="node28" href="$classkvs_1_1Record.html#a11cf8ad9af0b9f3eaa2c3ec17936df61" title=" " alt="" coords="590,223,737,250"/>
-<area shape="rect" id="node29" href="$classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b" title=" " alt="" coords="561,71,765,98"/>
-<area shape="rect" id="node25" href="$classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c" title=" " alt="" coords="813,13,992,39"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,460,55,485"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="103,460,264,485"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,470,88,470,88,475,55,475"/>
+<area shape="rect" id="Node000023" href="$classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38" title=" " alt="" coords="332,80,490,105"/>
+<area shape="poly" id="edge25_Node000001_Node000023" title=" " alt="" coords="35,458,69,395,128,302,166,251,209,200,258,154,311,114,319,109,322,114,313,119,261,158,213,204,170,254,132,305,73,398,40,460"/>
+<area shape="rect" id="Node000030" href="$benchmark_8cpp.html#a7aab1b6d2a0ca5a72bd8eb4e2457eb7d" title=" " alt="" coords="135,509,232,535"/>
+<area shape="poly" id="edge35_Node000001_Node000030" title=" " alt="" coords="56,479,104,495,123,501,122,507,102,500,54,484"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1BloomFilter.html#a68024326483fff59e4bb0e9e88bb7594" title=" " alt="" coords="588,318,730,344"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,457,239,405,272,376,311,354,377,333,447,322,514,318,574,320,573,325,514,323,447,327,379,338,313,359,275,381,242,409,196,461"/>
+<area shape="rect" id="Node000006" href="$classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="362,268,459,293"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="189,458,234,388,269,346,311,310,347,292,349,297,313,315,273,350,238,391,194,460"/>
+<area shape="rect" id="Node000008" href="$classkvs_1_1Storage_3_01Record_01_4.html#a256a3efa2c5df41f202fdf92c7686c28" title=" " alt="" coords="338,484,483,525"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="265,481,323,489,323,495,264,486"/>
+<area shape="rect" id="Node000010" href="$classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976" title=" " alt="" coords="359,549,463,575"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="241,483,265,494,280,504,290,515,299,525,313,534,345,547,343,552,311,539,296,529,286,518,277,508,263,499,239,488"/>
+<area shape="rect" id="Node000011" href="$structkvs_1_1Log_1_1LogIterator.html#a49f783c7d40d54ff91208a7b387f65a3" title=" " alt="" coords="328,598,494,624"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="248,484,266,494,284,518,290,541,297,564,314,585,319,589,316,593,310,589,292,566,285,543,279,520,262,498,246,488"/>
+<area shape="rect" id="Node000012" href="$classkvs_1_1KeyValue.html#a50a658dfb23cc64e377df476c9fb6216" title=" " alt="" coords="336,648,485,673"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="251,484,266,494,280,512,287,531,290,567,293,602,300,618,314,634,324,642,321,646,310,638,296,621,288,603,285,567,282,532,275,515,262,498,248,488"/>
+<area shape="rect" id="Node000013" href="$classkvs_1_1KeyValue.html#a94076e0dbce3067442f95b45a99a33fb" title=" " alt="" coords="331,697,491,723"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="252,484,266,494,283,519,291,543,292,568,290,592,288,615,290,639,297,661,314,684,319,689,316,693,310,687,292,664,284,640,283,615,285,591,287,568,286,544,278,521,262,498,248,488"/>
+<area shape="rect" id="Node000014" href="$classkvs_1_1Log.html#a3d10ec41ccd308a6d0ea0af8438e122b" title=" " alt="" coords="357,746,464,772"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="252,484,266,495,286,525,294,556,294,587,290,617,286,646,286,676,294,704,314,733,327,744,343,751,341,755,325,748,310,737,289,707,281,676,280,646,285,616,289,586,289,557,281,527,262,498,249,488"/>
+<area shape="rect" id="Node000015" href="$classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="338,796,483,837"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="253,484,266,495,290,532,298,568,297,605,291,640,285,676,284,711,292,747,314,783,327,794,323,798,310,786,287,749,278,712,280,675,286,639,292,604,293,569,285,534,262,498,249,488"/>
+<area shape="rect" id="Node000016" href="$classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622" title=" " alt="" coords="355,153,467,179"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="186,458,237,319,274,241,292,210,310,189,339,173,342,178,314,193,297,213,278,243,242,321,191,460"/>
+<area shape="rect" id="Node000017" href="$classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8" title=" " alt="" coords="338,203,483,243"/>
+<area shape="poly" id="edge17_Node000002_Node000017" title=" " alt="" coords="186,458,201,418,226,363,262,304,285,277,310,253,323,244,326,249,314,257,289,281,267,307,231,365,206,420,191,460"/>
+<area shape="rect" id="Node000018" href="$classkvs_1_1Storage_3_01Record_01_4.html#a81b803ddd33a57e8c1c85ccdfcd597ff" title=" " alt="" coords="333,419,488,459"/>
+<area shape="poly" id="edge18_Node000002_Node000018" title=" " alt="" coords="264,458,318,450,319,455,265,463"/>
+<area shape="rect" id="Node000020" href="$classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="312,369,509,395"/>
+<area shape="poly" id="edge20_Node000002_Node000020" title=" " alt="" coords="206,457,253,431,311,405,335,396,337,401,313,409,256,435,208,461"/>
+<area shape="rect" id="Node000004" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="839,318,956,344"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="730,328,824,328,824,334,730,334"/>
+<area shape="rect" id="Node000005" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="838,269,957,295"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="724,315,823,294,824,300,725,320"/>
+<area shape="rect" id="Node000007" href="$classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="612,268,706,293"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="460,278,597,278,597,283,460,283"/>
+<area shape="rect" id="Node000009" href="$classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="577,492,741,517"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="484,502,562,502,562,507,484,507"/>
+<area shape="poly" id="edge16_Node000016_Node000016" title=" " alt="" coords="373,154,366,144,370,134,385,128,411,126,440,129,454,137,451,142,439,134,411,131,387,134,374,138,371,144,377,151"/>
+<area shape="rect" id="Node000019" href="$classkvs_1_1Storage.html#a1215b40ee6b66b126e59874e784b6215" title=" " alt="" coords="588,426,730,452"/>
+<area shape="poly" id="edge19_Node000018_Node000019" title=" " alt="" coords="489,436,573,436,573,442,489,442"/>
+<area shape="rect" id="Node000021" href="$classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="566,369,752,395"/>
+<area shape="poly" id="edge21_Node000020_Node000021" title=" " alt="" coords="510,379,551,379,551,384,510,384"/>
+<area shape="poly" id="edge22_Node000021_Node000004" title=" " alt="" coords="722,366,824,344,825,349,723,371"/>
+<area shape="poly" id="edge23_Node000021_Node000005" title=" " alt="" coords="733,366,759,354,774,342,783,330,792,316,807,303,823,296,825,300,810,308,796,320,787,333,778,346,762,359,735,371"/>
+<area shape="rect" id="Node000022" href="$classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="818,368,977,409"/>
+<area shape="poly" id="edge24_Node000021_Node000022" title=" " alt="" coords="752,382,803,383,803,388,752,387"/>
+<area shape="poly" id="edge29_Node000023_Node000007" title=" " alt="" coords="492,102,511,114,526,132,533,150,536,186,539,221,546,238,559,254,577,266,598,273,596,278,575,271,556,258,541,241,534,223,531,187,528,151,521,135,508,118,489,106"/>
+<area shape="rect" id="Node000024" href="$classkvs_1_1Storage_3_01Record_01_4.html#a758e279c8ea4870b1f5e609762ad3566" title=" " alt="" coords="586,5,732,46"/>
+<area shape="poly" id="edge26_Node000023_Node000024" title=" " alt="" coords="461,76,571,46,573,52,462,81"/>
+<area shape="rect" id="Node000026" href="$classkvs_1_1Trie.html#aff80131d09f7cc8e3040ef028a4eadc3" title=" " alt="" coords="612,120,706,145"/>
+<area shape="poly" id="edge28_Node000023_Node000026" title=" " alt="" coords="491,102,598,120,597,125,490,108"/>
+<area shape="rect" id="Node000027" href="$classkvs_1_1Record.html#a31eed0ec993d3f5418e8e47b8787530c" title=" " alt="" coords="591,169,727,195"/>
+<area shape="poly" id="edge30_Node000023_Node000027" title=" " alt="" coords="484,103,511,114,526,124,535,135,545,146,559,155,578,163,576,168,556,160,541,150,531,139,522,128,508,119,482,108"/>
+<area shape="rect" id="Node000028" href="$classkvs_1_1Record.html#a11cf8ad9af0b9f3eaa2c3ec17936df61" title=" " alt="" coords="586,218,732,244"/>
+<area shape="poly" id="edge31_Node000023_Node000028" title=" " alt="" coords="492,103,511,114,529,137,536,161,542,184,559,205,573,214,571,218,556,209,537,186,531,162,525,140,508,118,489,107"/>
+<area shape="rect" id="Node000029" href="$classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b" title=" " alt="" coords="557,70,761,96"/>
+<area shape="poly" id="edge32_Node000023_Node000029" title=" " alt="" coords="490,87,543,85,543,90,491,92"/>
+<area shape="rect" id="Node000025" href="$classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c" title=" " alt="" coords="809,13,986,39"/>
+<area shape="poly" id="edge27_Node000024_Node000025" title=" " alt="" coords="732,23,794,23,794,28,732,28"/>
+<area shape="poly" id="edge33_Node000029_Node000004" title=" " alt="" coords="748,94,763,105,781,130,789,156,790,181,788,207,785,232,786,257,793,281,811,305,827,317,824,321,807,309,789,283,781,258,780,232,782,206,785,181,784,157,776,133,759,109,745,99"/>
+<area shape="poly" id="edge34_Node000029_Node000005" title=" " alt="" coords="740,94,762,105,804,139,838,179,866,220,886,254,881,257,861,223,834,183,800,143,759,109,738,99"/>
 </map>

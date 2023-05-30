@@ -1,5 +1,7 @@
 <map id="kvs::Storage&lt; Record &gt;::clear" name="kvs::Storage&lt; Record &gt;::clear">
-<area shape="rect" id="node1" title=" " alt="" coords="287,5,433,47"/>
-<area shape="rect" id="node2" href="$classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204" title=" " alt="" coords="104,5,239,47"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="285,5,430,46"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204" title=" " alt="" coords="103,5,237,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,28,237,28,237,23,270,23"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,28,55,28,55,23,88,23"/>
 </map>

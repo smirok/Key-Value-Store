@@ -1,4 +1,5 @@
 <map id="kvs::Log::add" name="kvs::Log::add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="152,5,247,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,103,31"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="151,5,245,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,16,136,16,136,21,103,21"/>
 </map>

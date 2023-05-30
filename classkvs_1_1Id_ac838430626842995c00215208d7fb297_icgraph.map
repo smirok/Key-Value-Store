@@ -1,6 +1,7 @@
 <map id="kvs::Id::getIdSize" name="kvs::Id::getIdSize">
-<area shape="rect" id="node1" title=" " alt="" coords="208,71,328,98"/>
-<area shape="rect" id="node2" href="$classkvs_1_1TrieNodeSerializer.html#ae4b5a8e9d579587910b0167aae1edd74" title=" " alt="" coords="5,5,160,47"/>
-<area shape="rect" id="node3" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="57,71,108,98"/>
-<area shape="rect" id="node4" href="$classkvs_1_1TrieNodeSerializer.html#a1876f4080f015660cde216ed1be90821" title=" " alt="" coords="5,123,160,164"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="208,46,327,72"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1TrieNodeSerializer.html#ae4b5a8e9d579587910b0167aae1edd74" title=" " alt="" coords="5,5,160,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,48,160,42,161,37,193,43"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1TrieNodeSerializer.html#a1876f4080f015660cde216ed1be90821" title=" " alt="" coords="5,71,160,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,74,161,80,160,75,193,69"/>
 </map>

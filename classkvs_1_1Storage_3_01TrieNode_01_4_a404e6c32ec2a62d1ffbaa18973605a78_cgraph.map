@@ -1,5 +1,7 @@
 <map id="kvs::Storage&lt; TrieNode &gt;::addTrieNodeSubtree" name="kvs::Storage&lt; TrieNode &gt;::addTrieNodeSubtree">
-<area shape="rect" id="node1" title=" " alt="" coords="5,23,164,65"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Storage.html#a406442852f792df1b643005dbfbb3012" title=" " alt="" coords="233,5,355,32"/>
-<area shape="rect" id="node3" href="$classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="212,56,376,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,163,64"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Storage.html#a406442852f792df1b643005dbfbb3012" title=" " alt="" coords="232,5,353,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,31,217,25,218,30,163,37"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1FileOffset.html#aa04420a0d70072110f3da6e7a9ba3f58" title=" " alt="" coords="211,55,374,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,50,196,54,195,59,163,55"/>
 </map>

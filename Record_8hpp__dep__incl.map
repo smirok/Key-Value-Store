@@ -1,15 +1,37 @@
 <map id="/github/workspace/include/model/Record.hpp" name="/github/workspace/include/model/Record.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="203,5,376,47"/>
-<area shape="rect" id="node2" href="$Record_8cpp.html" title=" " alt="" coords="40,102,166,129"/>
-<area shape="rect" id="node3" href="$RecordSerializer_8hpp.html" title=" " alt="" coords="190,95,389,136"/>
-<area shape="rect" id="node12" href="$TrieNodeSerializer_8hpp.html" title=" " alt="" coords="412,95,623,136"/>
-<area shape="rect" id="node4" href="$benchmark_8cpp.html" title=" " alt="" coords="590,452,701,479"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="120,452,195,479"/>
-<area shape="rect" id="node6" href="$RecordSerializer_8cpp.html" title=" " alt="" coords="38,191,232,218"/>
-<area shape="rect" id="node7" href="$Storage_8hpp.html" title=" " alt="" coords="318,184,491,225"/>
-<area shape="rect" id="node8" href="$KeyValueStore_8hpp.html" title=" " alt="" coords="384,363,558,404"/>
-<area shape="rect" id="node10" href="$Trie_8hpp.html" title=" " alt="" coords="260,273,434,315"/>
-<area shape="rect" id="node9" href="$KeyValueStore_8cpp.html" title=" " alt="" coords="405,452,537,479"/>
-<area shape="rect" id="node11" href="$Trie_8cpp.html" title=" " alt="" coords="246,370,360,397"/>
-<area shape="rect" id="node13" href="$TrieNodeSerializer_8cpp.html" title=" " alt="" coords="785,191,992,218"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="460,5,633,46"/>
+<area shape="rect" id="Node000002" href="$RecordSerializer_8hpp.html" title=" " alt="" coords="219,94,418,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,54,371,96,369,91,480,49"/>
+<area shape="rect" id="Node000011" href="$TrieNodeSerializer_8hpp.html" title=" " alt="" coords="441,94,652,135"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="549,61,549,94,544,94,544,61"/>
+<area shape="rect" id="Node000013" href="$Record_8cpp.html" title=" " alt="" coords="676,102,801,127"/>
+<area shape="poly" id="edge22_Node000001_Node000013" title=" " alt="" coords="604,50,713,99,711,103,602,55"/>
+<area shape="rect" id="Node000003" href="$Storage_8hpp.html" title=" " alt="" coords="456,183,629,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,138,492,180,491,185,382,143"/>
+<area shape="rect" id="Node000006" href="$benchmark_8cpp.html" title=" " alt="" coords="284,449,393,474"/>
+<area shape="poly" id="edge14_Node000002_Node000006" title=" " alt="" coords="304,149,282,199,263,263,258,298,257,333,261,367,272,399,292,427,318,446,315,450,288,430,267,402,256,368,251,333,252,297,258,262,277,197,299,147"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="791,449,865,474"/>
+<area shape="poly" id="edge15_Node000002_Node000007" title=" " alt="" coords="328,148,344,205,371,273,389,308,411,342,437,373,467,399,507,423,544,437,578,442,613,443,687,439,730,440,779,446,791,449,790,454,778,451,730,445,687,444,613,448,578,448,542,442,505,428,464,403,433,376,407,345,384,311,366,276,339,206,323,150"/>
+<area shape="rect" id="Node000010" href="$RecordSerializer_8cpp.html" title=" " alt="" coords="5,190,200,216"/>
+<area shape="poly" id="edge16_Node000002_Node000010" title=" " alt="" coords="257,143,134,192,132,187,255,138"/>
+<area shape="rect" id="Node000004" href="$KeyValueStore_8hpp.html" title=" " alt="" coords="616,360,789,401"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="593,229,619,248,643,270,676,315,697,358,692,361,671,318,639,273,616,252,590,233"/>
+<area shape="poly" id="edge12_Node000003_Node000006" title=" " alt="" coords="495,233,469,252,446,273,410,320,381,371,345,449,340,447,376,368,405,317,442,270,466,247,492,229"/>
+<area shape="poly" id="edge13_Node000003_Node000007" title=" " alt="" coords="640,226,692,246,745,274,794,311,814,334,832,359,840,382,841,407,834,449,829,448,836,407,835,383,827,361,810,337,790,315,743,279,690,251,638,231"/>
+<area shape="rect" id="Node000008" href="$Trie_8hpp.html" title=" " alt="" coords="456,271,629,312"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="545,238,545,271,540,271,540,238"/>
+<area shape="rect" id="Node000005" href="$KeyValueStore_8cpp.html" title=" " alt="" coords="636,449,767,474"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="705,416,704,448,699,448,699,416"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="602,406,394,451,393,446,601,401"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="747,406,810,446,807,450,744,411"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="593,317,668,357,665,362,590,322"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="510,323,355,450,351,446,506,319"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="644,306,738,328,777,342,803,358,818,380,826,405,831,448,826,449,821,406,813,382,799,362,775,346,736,333,643,311"/>
+<area shape="rect" id="Node000009" href="$Trie_8cpp.html" title=" " alt="" coords="477,368,592,393"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="542,327,538,367,533,367,537,327"/>
+<area shape="poly" id="edge18_Node000011_Node000003" title=" " alt="" coords="548,150,546,182,541,182,542,149"/>
+<area shape="poly" id="edge19_Node000011_Node000006" title=" " alt="" coords="495,145,469,163,446,184,412,228,391,266,360,361,348,409,342,449,337,448,343,408,355,359,387,264,407,225,442,181,466,159,492,140"/>
+<area shape="poly" id="edge20_Node000011_Node000007" title=" " alt="" coords="667,134,800,160,849,172,872,181,892,215,899,253,898,292,890,332,863,402,838,450,833,447,858,400,885,330,893,292,894,253,887,217,869,185,848,177,799,165,666,139"/>
+<area shape="rect" id="Node000012" href="$TrieNodeSerializer_8cpp.html" title=" " alt="" coords="653,190,859,216"/>
+<area shape="poly" id="edge21_Node000011_Node000012" title=" " alt="" coords="608,138,728,187,726,192,606,143"/>
 </map>

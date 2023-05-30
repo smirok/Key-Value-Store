@@ -1,8 +1,14 @@
 <map id="kvs::InMemoryTrieNode::InMemoryTrieNode" name="kvs::InMemoryTrieNode::InMemoryTrieNode">
-<area shape="rect" id="node1" title=" " alt="" coords="796,31,955,73"/>
-<area shape="rect" id="node2" href="$classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="561,13,748,40"/>
-<area shape="rect" id="node6" href="$classkvs_1_1InMemoryTrieNode.html#a3bc218cd3908655d3d81a509679a3e43" title=" " alt="" coords="335,57,493,98"/>
-<area shape="rect" id="node3" href="$classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="315,5,513,32"/>
-<area shape="rect" id="node4" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
-<area shape="rect" id="node5" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="791,30,949,71"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="557,12,743,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="775,42,743,38,744,33,776,37"/>
+<area shape="rect" id="Node000006" href="$classkvs_1_1InMemoryTrieNode.html#a658f166f845a5d2db4fd3082b568b0fa" title=" " alt="" coords="332,55,490,96"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="776,58,490,74,490,68,776,53"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1Log.html#aa5ce85dbbbce86e4e8928574c11df402" title=" " alt="" coords="312,5,509,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="542,24,510,24,510,18,542,19"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="572,44,491,61,490,56,571,39"/>
+<area shape="rect" id="Node000004" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="103,5,264,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="297,21,264,21,264,16,297,16"/>
+<area shape="rect" id="Node000005" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="88,21,55,21,55,16,88,16"/>
 </map>

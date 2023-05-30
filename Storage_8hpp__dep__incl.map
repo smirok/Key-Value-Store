@@ -1,9 +1,20 @@
 <map id="/github/workspace/include/storage/Storage.hpp" name="/github/workspace/include/storage/Storage.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="181,5,354,47"/>
-<area shape="rect" id="node2" href="$benchmark_8cpp.html" title=" " alt="" coords="5,273,116,300"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="297,273,371,300"/>
-<area shape="rect" id="node4" href="$KeyValueStore_8hpp.html" title=" " alt="" coords="119,184,293,225"/>
-<area shape="rect" id="node6" href="$Trie_8hpp.html" title=" " alt="" coords="243,95,417,136"/>
-<area shape="rect" id="node5" href="$KeyValueStore_8cpp.html" title=" " alt="" coords="140,273,272,300"/>
-<area shape="rect" id="node7" href="$Trie_8cpp.html" title=" " alt="" coords="367,191,482,218"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="179,5,352,46"/>
+<area shape="rect" id="Node000002" href="$KeyValueStore_8hpp.html" title=" " alt="" coords="118,183,290,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,60,232,95,218,142,210,183,204,182,213,140,227,93,244,58"/>
+<area shape="rect" id="Node000004" href="$benchmark_8cpp.html" title=" " alt="" coords="5,271,115,297"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="216,56,179,79,141,108,105,143,76,184,67,206,62,230,62,271,56,271,57,230,62,205,71,181,101,140,137,104,176,74,213,51"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="294,271,367,297"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="350,49,390,68,428,92,453,112,470,131,483,152,495,182,501,204,500,214,494,225,468,251,435,268,400,278,368,283,367,278,399,273,433,263,465,246,490,222,495,212,495,204,489,184,478,155,466,134,449,116,425,96,388,72,347,54"/>
+<area shape="rect" id="Node000006" href="$Trie_8hpp.html" title=" " alt="" coords="242,94,414,135"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="290,57,316,92,312,95,286,60"/>
+<area shape="rect" id="Node000003" href="$KeyValueStore_8cpp.html" title=" " alt="" coords="138,271,270,297"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,238,207,271,201,271,201,238"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="157,233,83,273,81,268,154,228"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="249,229,313,268,310,273,246,234"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="290,145,234,184,231,180,287,141"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="228,130,164,150,134,165,107,185,90,205,78,229,65,271,60,270,73,227,86,202,104,181,131,161,162,145,227,125"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="331,149,333,271,328,271,326,149"/>
+<area shape="rect" id="Node000007" href="$Trie_8cpp.html" title=" " alt="" coords="366,190,480,216"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="362,143,412,188,408,192,358,147"/>
 </map>

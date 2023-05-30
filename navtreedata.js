@@ -36,7 +36,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Typedefs", "functions_type.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -51,7 +51,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"BloomFilter_8cpp.html"
+"BloomFilter_8cpp.html",
+"classkvs_1_1Trie.html#afc8436a751d830455586efb4bb21f622"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

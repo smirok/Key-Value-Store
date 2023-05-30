@@ -1,10 +1,17 @@
 <map id="kvs::RecordSerializer::recordToBytes" name="kvs::RecordSerializer::recordToBytes">
-<area shape="rect" id="node1" title=" " alt="" coords="5,150,148,191"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c" title=" " alt="" coords="196,5,375,32"/>
-<area shape="rect" id="node3" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="227,56,344,83"/>
-<area shape="rect" id="node4" href="$classkvs_1_1Record.html#a31eed0ec993d3f5418e8e47b8787530c" title=" " alt="" coords="217,107,353,133"/>
-<area shape="rect" id="node5" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="225,157,345,184"/>
-<area shape="rect" id="node6" href="$classkvs_1_1Value.html#a94c4873778be40e277dc2e24c5a307ea" title=" " alt="" coords="220,208,351,235"/>
-<area shape="rect" id="node7" href="$classkvs_1_1Record.html#a11cf8ad9af0b9f3eaa2c3ec17936df61" title=" " alt="" coords="212,259,359,285"/>
-<area shape="rect" id="node8" href="$classkvs_1_1Value.html#a7a70c8637e16b3c1459a28b2b998ab5f" title=" " alt="" coords="216,309,355,336"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,146,148,187"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Record.html#a57163b261a4af2f3fb6f67e4e3a0ae5c" title=" " alt="" coords="196,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,144,133,92,162,64,194,40,204,35,206,40,197,44,165,68,136,95,94,147"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="226,55,343,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,143,146,115,195,89,211,83,213,88,197,94,148,120,107,147"/>
+<area shape="rect" id="Node000004" href="$classkvs_1_1Record.html#a31eed0ec993d3f5418e8e47b8787530c" title=" " alt="" coords="217,104,352,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,147,213,131,214,136,148,152"/>
+<area shape="rect" id="Node000005" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="225,153,344,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="148,164,210,164,210,169,148,169"/>
+<area shape="rect" id="Node000006" href="$classkvs_1_1Value.html#a94c4873778be40e277dc2e24c5a307ea" title=" " alt="" coords="219,203,350,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="148,180,214,196,213,201,147,186"/>
+<area shape="rect" id="Node000007" href="$classkvs_1_1Record.html#a11cf8ad9af0b9f3eaa2c3ec17936df61" title=" " alt="" coords="211,252,358,278"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="107,185,148,212,197,238,212,245,210,250,195,243,146,217,104,189"/>
+<area shape="rect" id="Node000008" href="$classkvs_1_1Value.html#a7a70c8637e16b3c1459a28b2b998ab5f" title=" " alt="" coords="215,301,354,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="94,185,136,237,165,265,197,288,206,293,204,297,194,292,162,269,133,241,90,189"/>
 </map>

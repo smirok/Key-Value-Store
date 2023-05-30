@@ -1,9 +1,15 @@
 <map id="/github/workspace/include/storage/File.hpp" name="/github/workspace/include/storage/File.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="89,5,262,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,60,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="85,95,143,121"/>
-<area shape="rect" id="node4" href="$FileOffset_8hpp.html" title=" " alt="" coords="167,95,309,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="333,95,399,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="161,169,227,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="251,169,311,196"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="87,5,260,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,59,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,49,68,89,65,84,137,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="83,94,141,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,48,132,84,128,80,156,45"/>
+<area shape="rect" id="Node000004" href="$FileOffset_8hpp.html" title=" " alt="" coords="165,94,305,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,45,218,80,214,84,186,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="329,94,394,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="221,44,320,86,318,90,219,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="160,168,224,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="230,121,209,156,204,154,225,119"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="248,168,307,193"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="244,119,265,154,260,156,239,121"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="kvs::Trie::add" name="kvs::Trie::add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,104,39"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Storage_3_01TrieNode_01_4.html#a0bc5f631f53bf751fc4c458a06bf4f82" title=" " alt="" coords="152,5,311,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,103,39"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Storage_3_01TrieNode_01_4.html#a0bc5f631f53bf751fc4c458a06bf4f82" title=" " alt="" coords="151,5,308,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,23,136,23,136,28,103,28"/>
 </map>

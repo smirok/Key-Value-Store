@@ -1,12 +1,21 @@
 <map id="kvs::KeyValueStore::del" name="kvs::KeyValueStore::del">
-<area shape="rect" id="node1" title=" " alt="" coords="5,130,164,157"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="241,5,387,47"/>
-<area shape="rect" id="node3" href="$classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b" title=" " alt="" coords="212,71,416,98"/>
-<area shape="rect" id="node6" href="$classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8" title=" " alt="" coords="241,123,387,164"/>
-<area shape="rect" id="node7" href="$classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431" title=" " alt="" coords="254,189,374,215"/>
-<area shape="rect" id="node9" href="$classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b" title=" " alt="" coords="254,239,374,266"/>
-<area shape="rect" id="node4" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="485,46,602,73"/>
-<area shape="rect" id="node5" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="483,97,603,123"/>
-<area shape="rect" id="node8" href="$classkvs_1_1Storage_3_01TrieNode_01_4.html#a0bc5f631f53bf751fc4c458a06bf4f82" title=" " alt="" coords="464,173,623,215"/>
-<area shape="rect" id="node10" href="$classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="496,239,591,266"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,128,163,153"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Storage_3_01Record_01_4.html#abb6419182a92e9763656f19ed87e269f" title=" " alt="" coords="240,5,385,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,125,148,91,209,55,225,48,227,53,212,60,151,95,104,129"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1BloomFilter.html#ab28d6094cf26f8f42a9bf2fd8cfc6a4b" title=" " alt="" coords="211,70,414,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,124,210,106,243,97,245,102,211,111,138,129"/>
+<area shape="rect" id="Node000006" href="$classkvs_1_1Storage_3_01Record_01_4.html#a45deb0d6b6d44a0805e34d033d5c39a8" title=" " alt="" coords="240,120,385,161"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="163,138,225,138,225,143,163,143"/>
+<area shape="rect" id="Node000007" href="$classkvs_1_1Trie.html#a416ee19e818d0b3fb375ac84ef0cd431" title=" " alt="" coords="253,185,372,211"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="138,151,211,170,245,178,243,183,210,175,137,156"/>
+<area shape="rect" id="Node000009" href="$classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b" title=" " alt="" coords="253,234,372,260"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="103,151,150,186,212,221,239,230,237,235,210,225,147,190,100,156"/>
+<area shape="rect" id="Node000004" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="483,46,599,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="414,70,468,64,468,69,415,75"/>
+<area shape="rect" id="Node000005" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="481,96,600,121"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="415,92,467,97,466,103,414,97"/>
+<area shape="rect" id="Node000008" href="$classkvs_1_1Storage_3_01TrieNode_01_4.html#a0bc5f631f53bf751fc4c458a06bf4f82" title=" " alt="" coords="462,169,619,210"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="372,193,447,190,447,196,372,198"/>
+<area shape="rect" id="Node000010" href="$classkvs_1_1Log.html#a211c9a5c54588d6710fc2b155009dcf9" title=" " alt="" coords="494,234,588,260"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="372,244,478,244,478,250,372,250"/>
 </map>

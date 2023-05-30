@@ -1,7 +1,11 @@
 <map id="kvs::Log::clear" name="kvs::Log::clear">
-<area shape="rect" id="node1" title=" " alt="" coords="315,35,420,61"/>
-<area shape="rect" id="node2" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
-<area shape="rect" id="node4" href="$classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204" title=" " alt="" coords="118,57,253,98"/>
-<area shape="rect" id="node3" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,64,56,91"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="312,35,416,60"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="103,5,264,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,39,264,34,265,29,298,34"/>
+<area shape="rect" id="Node000004" href="$classkvs_1_1KeyValueStore.html#a27b3add3097eb1e598589193e2365204" title=" " alt="" coords="116,55,251,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="298,60,251,68,251,62,297,55"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,21,55,21,55,16,88,16"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,63,55,88"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="102,78,55,78,55,73,102,73"/>
 </map>

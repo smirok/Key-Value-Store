@@ -1,8 +1,13 @@
 <map id="kvs::KeyValueStore::clear" name="kvs::KeyValueStore::clear">
-<area shape="rect" id="node1" title=" " alt="" coords="5,89,140,131"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Storage_3_01Record_01_4.html#ae87b927c83324cb3a658947247408f99" title=" " alt="" coords="188,5,335,47"/>
-<area shape="rect" id="node3" href="$classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976" title=" " alt="" coords="209,71,314,98"/>
-<area shape="rect" id="node4" href="$classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c" title=" " alt="" coords="209,122,314,149"/>
-<area shape="rect" id="node6" href="$classkvs_1_1Storage_3_01Record_01_4.html#a0d255888f229b5bb018fb1df087b433e" title=" " alt="" coords="188,173,335,215"/>
-<area shape="rect" id="node5" href="$classkvs_1_1Storage_3_01TrieNode_01_4.html#a645cc6d08f7f32ad43d1fb601419cbc6" title=" " alt="" coords="383,115,541,156"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,88,140,129"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Storage_3_01Record_01_4.html#ae87b927c83324cb3a658947247408f99" title=" " alt="" coords="188,5,333,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,85,198,50,200,55,122,90"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1Log.html#a3d95bd6f153f609c749ef1d8590e3976" title=" " alt="" coords="208,70,313,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="140,97,193,89,194,95,141,102"/>
+<area shape="rect" id="Node000004" href="$classkvs_1_1Trie.html#a2034ef9c1148083f39f1698444a6cd6c" title=" " alt="" coords="208,120,313,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,114,194,121,193,126,140,120"/>
+<area shape="rect" id="Node000006" href="$classkvs_1_1Storage_3_01Record_01_4.html#a0d255888f229b5bb018fb1df087b433e" title=" " alt="" coords="188,169,333,210"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="123,127,199,160,197,165,120,132"/>
+<area shape="rect" id="Node000005" href="$classkvs_1_1Storage_3_01TrieNode_01_4.html#a645cc6d08f7f32ad43d1fb601419cbc6" title=" " alt="" coords="381,112,538,153"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="313,130,366,130,366,135,313,135"/>
 </map>

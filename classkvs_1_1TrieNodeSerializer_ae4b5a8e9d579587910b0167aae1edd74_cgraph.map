@@ -1,4 +1,5 @@
 <map id="kvs::TrieNodeSerializer::bytesToTrieNode" name="kvs::TrieNodeSerializer::bytesToTrieNode">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,160,47"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Id.html#ac838430626842995c00215208d7fb297" title=" " alt="" coords="208,13,328,39"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,160,46"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Id.html#ac838430626842995c00215208d7fb297" title=" " alt="" coords="208,13,327,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,23,193,23,193,28,160,28"/>
 </map>

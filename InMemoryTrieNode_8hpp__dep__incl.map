@@ -1,13 +1,32 @@
 <map id="/github/workspace/include/model/InMemoryTrieNode.hpp" name="/github/workspace/include/model/InMemoryTrieNode.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="250,5,449,47"/>
-<area shape="rect" id="node2" href="$InMemoryTrieNode_8cpp.html" title=" " alt="" coords="56,102,251,129"/>
-<area shape="rect" id="node3" href="$Log_8hpp.html" title=" " alt="" coords="188,184,361,225"/>
-<area shape="rect" id="node9" href="$Storage_8hpp.html" title=" " alt="" coords="325,95,499,136"/>
-<area shape="rect" id="node10" href="$Trie_8hpp.html" title=" " alt="" coords="487,184,660,225"/>
-<area shape="rect" id="node4" href="$benchmark_8cpp.html" title=" " alt="" coords="27,363,138,389"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="425,363,500,389"/>
-<area shape="rect" id="node6" href="$Log_8cpp.html" title=" " alt="" coords="36,281,151,307"/>
-<area shape="rect" id="node7" href="$KeyValueStore_8hpp.html" title=" " alt="" coords="225,273,399,315"/>
-<area shape="rect" id="node8" href="$KeyValueStore_8cpp.html" title=" " alt="" coords="246,363,378,389"/>
-<area shape="rect" id="node11" href="$Trie_8cpp.html" title=" " alt="" coords="575,281,689,307"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="397,5,595,46"/>
+<area shape="rect" id="Node000002" href="$Log_8hpp.html" title=" " alt="" coords="187,183,359,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="410,54,372,72,338,96,319,116,303,140,283,183,278,181,299,137,315,113,334,92,369,68,407,49"/>
+<area shape="rect" id="Node000008" href="$Storage_8hpp.html" title=" " alt="" coords="348,94,521,135"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="476,60,451,95,446,92,471,57"/>
+<area shape="rect" id="Node000009" href="$Trie_8hpp.html" title=" " alt="" coords="486,183,658,223"/>
+<area shape="poly" id="edge18_Node000001_Node000009" title=" " alt="" coords="517,58,536,93,568,181,563,183,531,95,513,60"/>
+<area shape="rect" id="Node000011" href="$InMemoryTrieNode_8cpp.html" title=" " alt="" coords="596,102,790,127"/>
+<area shape="poly" id="edge19_Node000001_Node000011" title=" " alt="" coords="555,50,667,99,665,103,553,55"/>
+<area shape="rect" id="Node000003" href="$KeyValueStore_8hpp.html" title=" " alt="" coords="224,271,397,312"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,236,305,270,300,272,285,238"/>
+<area shape="rect" id="Node000005" href="$benchmark_8cpp.html" title=" " alt="" coords="28,360,137,386"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="173,221,82,242,47,257,25,273,19,284,19,294,29,318,47,340,68,358,64,362,44,344,24,321,14,295,14,282,20,270,44,252,81,237,172,216"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html" title=" " alt="" coords="425,360,498,386"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="347,227,380,246,411,269,429,292,443,316,460,359,455,360,438,319,425,295,407,273,378,250,344,232"/>
+<area shape="rect" id="Node000007" href="$Log_8cpp.html" title=" " alt="" coords="35,279,149,305"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="220,232,118,281,116,276,218,228"/>
+<area shape="rect" id="Node000004" href="$KeyValueStore_8cpp.html" title=" " alt="" coords="245,360,376,386"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="313,327,313,359,308,359,308,327"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="241,320,119,362,117,357,239,315"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="362,317,439,357,437,362,360,322"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="420,149,374,225,333,273,328,269,370,222,416,146"/>
+<area shape="poly" id="edge16_Node000008_Node000005" title=" " alt="" coords="334,122,250,134,204,145,160,160,116,180,77,205,42,236,14,273,8,291,14,311,35,338,61,357,58,362,31,342,9,313,3,291,9,270,38,232,74,200,114,175,158,155,203,140,249,129,333,116"/>
+<area shape="poly" id="edge17_Node000008_Node000006" title=" " alt="" coords="441,149,463,359,457,360,435,150"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="479,141,542,180,539,184,476,145"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="500,231,371,273,369,268,498,226"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="471,213,411,220,345,232,277,249,213,274,187,292,163,314,100,362,97,358,159,310,184,287,211,269,276,244,344,227,410,215,471,207"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="555,237,506,313,472,361,468,358,502,311,550,235"/>
+<area shape="rect" id="Node000010" href="$Trie_8cpp.html" title=" " alt="" coords="573,279,688,305"/>
+<area shape="poly" id="edge15_Node000009_Node000010" title=" " alt="" coords="595,234,625,277,620,280,591,237"/>
 </map>

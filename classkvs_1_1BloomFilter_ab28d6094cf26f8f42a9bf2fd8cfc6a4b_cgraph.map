@@ -1,5 +1,7 @@
 <map id="kvs::BloomFilter::mightContains" name="kvs::BloomFilter::mightContains">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,209,57"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="259,5,376,32"/>
-<area shape="rect" id="node3" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="257,56,377,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,209,56"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="258,5,375,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,28,243,24,243,30,210,34"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="257,55,376,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,53,243,56,242,62,209,58"/>
 </map>

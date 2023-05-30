@@ -1,10 +1,18 @@
 <map id="kvs::Log::get" name="kvs::Log::get">
-<area shape="rect" id="node1" title=" " alt="" coords="483,56,577,83"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="325,5,424,32"/>
-<area shape="rect" id="node5" href="$classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38" title=" " alt="" coords="106,56,265,83"/>
-<area shape="rect" id="node6" href="$classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b" title=" " alt="" coords="315,107,435,133"/>
-<area shape="rect" id="node3" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
-<area shape="rect" id="node4" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,56,57"/>
-<area shape="rect" id="node7" href="$classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="106,107,265,133"/>
-<area shape="rect" id="node8" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,56,133"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="479,56,574,82"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Log.html#a00698ac912f4db4b1974cdfac3872206" title=" " alt="" coords="323,5,420,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,53,412,34,414,29,472,48"/>
+<area shape="rect" id="Node000005" href="$classkvs_1_1KeyValueStore.html#a97e3fbd169afac040b11b32e0a3d0e38" title=" " alt="" coords="104,56,263,82"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="465,72,263,72,263,66,465,66"/>
+<area shape="rect" id="Node000006" href="$classkvs_1_1Log.html#a8e7f0326c820e0c9ed35d67b46dbd72b" title=" " alt="" coords="312,107,431,132"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="472,89,414,109,412,104,470,84"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="103,7,264,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="308,21,264,22,264,16,308,16"/>
+<area shape="rect" id="Node000004" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,32,55,58"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="88,38,56,43,55,38,87,33"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="89,57,55,51,55,46,90,51"/>
+<area shape="rect" id="Node000007" href="$classkvs_1_1KeyValueStore.html#a8921917d7543c5d4c9d8d94ef33e351b" title=" " alt="" coords="105,107,262,132"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="297,122,262,122,262,117,297,117"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,55,132"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="90,122,55,122,55,117,90,117"/>
 </map>

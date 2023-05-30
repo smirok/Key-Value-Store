@@ -1,0 +1,12 @@
+<map id="kvs::InMemoryTrieNode::toInMemoryTrieNode" name="kvs::InMemoryTrieNode::toInMemoryTrieNode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,77,164,117"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1InMemoryTrieNode.html#a50be73190d98567173f02dc62713f3e5" title=" " alt="" coords="212,57,397,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,85,196,81,197,86,165,90"/>
+<area shape="rect" id="Node000005" href="$classkvs_1_1InMemoryTrieNode.html#ae83a20bd1fa9a922fe2d77911e3ab695" title=" " alt="" coords="445,105,603,145"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="164,99,430,116,430,122,164,105"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="466,5,582,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="361,54,452,32,453,38,362,59"/>
+<area shape="rect" id="Node000004" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="465,55,584,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="397,66,450,66,450,71,397,72"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="359,81,431,99,430,104,358,86"/>
+</map>

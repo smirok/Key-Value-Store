@@ -1,4 +1,5 @@
 <map id="kvs::Value::getSize" name="kvs::Value::getSize">
-<area shape="rect" id="node1" title=" " alt="" coords="196,13,327,39"/>
-<area shape="rect" id="node2" href="$classkvs_1_1RecordSerializer.html#a15f404e330a0db3c5caedc870c281b2d" title=" " alt="" coords="5,5,148,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="196,13,326,39"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1RecordSerializer.html#a15f404e330a0db3c5caedc870c281b2d" title=" " alt="" coords="5,5,148,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,28,148,28,148,23,181,23"/>
 </map>

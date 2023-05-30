@@ -1,5 +1,8 @@
 <map id="kvs::Trie::merge" name="kvs::Trie::merge">
-<area shape="rect" id="node1" title=" " alt="" coords="315,5,428,32"/>
-<area shape="rect" id="node2" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="104,5,267,32"/>
-<area shape="rect" id="node3" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="312,29,424,55"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="400,17,390,11,368,8,349,10,339,15,336,20,341,27,337,30,331,21,335,11,347,5,368,3,392,6,403,13"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1KeyValueStore.html#a1eac158e451ee7b6b93faa7aed2940bd" title=" " alt="" coords="103,29,264,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,45,264,45,264,40,297,40"/>
+<area shape="rect" id="Node000003" href="$benchmark_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,45,55,45,55,40,88,40"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="kvs::BloomFilter::add" name="kvs::BloomFilter::add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,148,57"/>
-<area shape="rect" id="node2" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="197,5,315,32"/>
-<area shape="rect" id="node3" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="196,56,316,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,147,56"/>
+<area shape="rect" id="Node000002" href="$classkvs_1_1Key.html#aca2dd7239bef56b93b3ecd5bd7af2e3c" title=" " alt="" coords="196,5,313,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,31,181,26,182,31,148,36"/>
+<area shape="rect" id="Node000003" href="$classkvs_1_1Key.html#a97dc3ae806a72adb77c5807f4d51c54d" title=" " alt="" coords="195,55,314,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,50,180,55,179,60,147,56"/>
 </map>
