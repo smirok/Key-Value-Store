@@ -7,19 +7,17 @@
 namespace kvs {
 
     /**
-     * \brief Класс, представляющий позицию в файле.
+     * \brief A class representing a position in a file.
      */
     class FileOffset {
     public:
         /**
-         *
-         * @param offset Хранимая позиция.
+         * @param offset Stored position.
          */
         explicit FileOffset(size_t offset);
 
         /**
-         *
-         * @return Хранимая позиция.
+         * @return Stored position.
          */
         [[nodiscard]] off64_t getOffset() const;
 
@@ -27,6 +25,6 @@ namespace kvs {
         off64_t _offset;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_FILEOFFSET_HPP

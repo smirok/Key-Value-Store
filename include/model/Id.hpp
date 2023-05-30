@@ -7,28 +7,25 @@
 namespace kvs {
 
     /**
-     * \brief Класс, представляющий идентификатор некоторой структуры.
+     * \brief A class representing the identifier of some object.
      */
     class Id {
     public:
         Id() = default;
 
         /**
-         *
-         * @param objectIdentifier Хранимый идентификатор.
+         * @param objectIdentifier Stored identifier.
          */
         explicit Id(std::size_t objectIdentifier);
 
         /**
-         *
-         * @return Хранимый идентификатор.
+         * @return Stored identifier.
          */
         [[nodiscard]] std::size_t getId() const;
 
 
         /**
-         *
-         * @return размер @p _objectIdentifier в байтах, sizeof(@p size_t).
+         * @return Size of @p _objectIdentifier in bytes, sizeof(@p size_t).
          */
         static std::size_t getIdSize();
 
@@ -38,6 +35,6 @@ namespace kvs {
         std::size_t _objectIdentifier = std::numeric_limits<std::size_t>::max();
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_ID_HPP

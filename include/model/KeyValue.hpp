@@ -7,7 +7,7 @@
 namespace kvs {
 
     /**
-     * \brief Класс, хранящий ключ и значение вместе.
+     * \brief Class representing both key and value.
      */
     class KeyValue {
     public:
@@ -24,6 +24,6 @@ namespace kvs {
         Value _value;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_KEYVALUE_HPP

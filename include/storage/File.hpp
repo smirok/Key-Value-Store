@@ -9,47 +9,44 @@
 namespace kvs {
 
     /**
-     * \brief Класс, отвечающий за запись и чтение в файл.
+     * \brief Class responsible for read and write operations with file.
      */
     class File {
     public:
         /**
-         *
-         * @param fileName Название оборачиваемого файла.
+         * @param fileName File name.
          */
         explicit File(const std::string &fileName);
 
         /**
-         * Закрываем файл.
+         * Close the file.
          */
         ~File();
 
         /**
-         *
-         * @param length Количество читаемых байт.
-         * @param fileOffset Позиция в файле, с которой начинается чтение.
-         * @return Массив прочитанных байт.
+         * @param length Number of reading bytes.
+         * @param fileOffset First position in the file to read.
+         * @return Array of read bytes.
          */
         char *read(std::size_t length, FileOffset fileOffset);
 
         /**
-         *
-         * @param data Массив записываемых байт.
-         * @param length Количество записываемых байт.
-         * @return Позиция в файле на только что записанные данные.
+         * @param data Array of read bytes.
+         * @param length Number of writing bytes.
+         * @return Position in the file on written data.
          */
         FileOffset write(const char *data, std::size_t length);
 
         /**
          *
-         * @param fileOffset Позиция в файле, начиная с которой произойдет запись.
-         * @param data Массив записываемых байт.
-         * @param length Количество записываемых байт.
+         * @param fileOffset Position in the file to write.
+         * @param data Array of bytes to write.
+         * @param length Number of written bytes.
          */
         void writeByOffset(const FileOffset &fileOffset, const char *data, std::size_t length);
 
         /**
-         * Очищает файл.
+         * Clean up file.
          */
         void clear();
 
@@ -58,6 +55,6 @@ namespace kvs {
         std::string _fileName;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_FILE_HPP

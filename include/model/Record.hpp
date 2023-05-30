@@ -8,15 +8,14 @@
 namespace kvs {
 
     /**
-     * \brief Класс, представляющий запись @p KeyValue в файле : ключ, булев флаг, значение.
+     * \brief Class representing record @p KeyValue in the file : key, boolean flag, and value.
      */
     class Record {
     public:
         /**
-         *
-         * @param key Ключ.
-         * @param isOutdated Является ли данная запись устаревшей.
-         * @param value Значение.
+         * @param key Stored key.
+         * @param isOutdated Whether this record is outdated.
+         * @param value Stored value.
          */
         Record(Key key, bool isOutdated, Value value);
 
@@ -32,6 +31,6 @@ namespace kvs {
         Value _value;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_RECORD_HPP

@@ -8,7 +8,7 @@
 namespace kvs {
 
     /**
-     * \brief Класс, хранящий ключ и его размер.
+     * \brief Class representing key and its size.
      */
     class Key {
     public:
@@ -36,7 +36,7 @@ namespace kvs {
         size_t _size;
     };
 
-}
+} // kvs
 
 namespace std {
     template<>

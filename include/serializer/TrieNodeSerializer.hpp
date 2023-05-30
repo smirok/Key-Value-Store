@@ -9,27 +9,26 @@
 namespace kvs {
 
     /**
-     * \brief Класс, отвечающий за сериализацию @p TrieNode.
+     * \brief Class responsible for @p TrieNode serialization and deserialization.
      */
     class TrieNodeSerializer {
     public:
         /**
-         *
-         * @param idSize Размер @p Id в байтах.
+         * @param idSize Size of @p Id (in bytes).
          */
         explicit TrieNodeSerializer(std::size_t idSize);
 
         /**
-         * Преобразовывает @p TrieNode в байты.
-         * @param trieNode Преобразуемая нода.
-         * @return Массив байт после преобразования.
+         * Transform @p TrieNode in sequence of bytes.
+         * @param trieNode Transformable node.
+         * @return Array of bytes after transforming.
          */
         [[nodiscard]] char *trieNodeToBytes(const TrieNode &trieNode) const;
 
         /**
-         * Преобразовывает байты в @p TrieNode.
-         * @param bytes Массив байт, представляющий @p TrieNode.
-         * @return Сама запись.
+         * Transform byte sequence to @p TrieNode.
+         * @param bytes Array of bytes representing @p TrieNode.
+         * @return The record.
          */
         TrieNode bytesToTrieNode(const char *bytes) const;
 
@@ -38,6 +37,6 @@ namespace kvs {
         static constexpr int ALPHABET_SIZE = UCHAR_MAX + 1;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_TRIENODESERIALIZER_HPP

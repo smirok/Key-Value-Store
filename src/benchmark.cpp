@@ -15,15 +15,15 @@ std::mt19937 random_data(2);
 int main() {
     using namespace kvs;
 
-    std::size_t N; // количество элементов в хранилище на момент начала теста
-    std::size_t M; // количество запросов, обращенных к хранилищу в процессе тестирования
-    std::size_t p; // целое число от 0 до 100 -- процент запросов на чтение
+    std::size_t N; // Number of elements in the storage before benchmarking.
+    std::size_t M; // Number of queries during benchmarking.
+    std::size_t p; // The integer number representing percent of read operations.
 
-    std::cout << "Введите кол-во элементов в хранилище на момент начала теста\n";
+    std::cout << "Enter number of elements in the storage before benchmarking\n";
     std::cin >> N;
-    std::cout << "Введите количество запросов, обращенных к хранилищу в процессе тестирования\n";
+    std::cout << "Enter number of queries during benchmarking\n";
     std::cin >> M;
-    std::cout << "Введите целое число от 0 до 100 -- процент запросов на чтение\n";
+    std::cout << "Enter integer number (from 0 to 100) representing percent of read operations\n";
     std::cin >> p;
 
     std::size_t bloomFilterSize = N * 8;
@@ -48,9 +48,7 @@ int main() {
     KeyValueStore keyValueStore(bloomFilter, log, trie, recordStorage);
 
     std::size_t storeSize = 0;
-    int cnt = 0;
     while (storeSize < N) {
-        cnt++;
         std::string keyString, valueString;
 
         for (std::size_t j = 0; j < keySize; ++j) {

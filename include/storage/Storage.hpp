@@ -13,47 +13,47 @@
 namespace kvs {
 
     /**
-     * \brief Интерфейс хранилища пар < @p T, @p Id>. Прослойка между хранилищем-логикой и записью на диск.
-     * @tparam T Тип хранимых объектов.
+     * \brief Storage interface of pairs < @p T, @p Id>. The middleware between logic storage and disk interaction.
+     * @tparam T Type of stored objects.
      */
     template<typename T>
     class Storage {
     public:
         /**
-         * Добавить @p obj в хранилище и присвоить ему идентификатор внутри хранилища.
-         * @param obj Добавляемый объект.
-         * @return Присвоенный идентификатор.
+         * Insert @p obj into a storage and assign it an inner identifier.
+         * @param obj Inserted object.
+         * @return Assigned identifier.
          */
         virtual Id add(const T &obj) = 0;
 
         /**
-         * Получить объект по @p id.
-         * @param id Идентификатор объекта.
-         * @return @p T обернутый в @p std::optional, если в @p Storage есть какой-то объект с @p id;
-         * пустой @p std::optional иначе.
+         * Get object by @p id.
+         * @param id Object identifier.
+         * @return @p T wrapped into @p std::optional, if there is some object in @p Storage with @p id;
+         * empty @p std::optional otherwise.
          */
         virtual std::optional<T> get(const Id &id) const = 0;
 
         /**
-         * Удаляет объект с @p id. Если объекта нет, ничего не делает.
-         * @param id Идентификатор удаляемого объекта.
+         * Remove object with @p id. Do nothing if the object with @p id doesn't exist.
+         * @param id Identifier of removed object.
          */
         virtual void remove(const Id &id) = 0;
 
         /**
-         * Очищает хранилище.
+         * Clean up storage.
          */
         virtual void clear() = 0;
     };
 
     /**
-     * \brief Класс для хранения @p Record на диске.
+     * \brief Class storing @p Record on the disk.
      */
     template<>
     class Storage<Record> {
     public:
         /**
-         * Итератор для итерации по @p Storage<Record>
+         * Iterator over @p Storage<Record>.
          */
         struct RecordStorageIterator {
             using value_type = Record;
@@ -96,8 +96,8 @@ namespace kvs {
 
         /**
          *
-         * @param dataFile Файл для записи @p Record-ов.
-         * @param recordSerializer Класс, сериализующий @p Record-ы.
+         * @param dataFile File for @p Record writing.
+         * @param recordSerializer @p Record serializer.
          */
         Storage(File &dataFile, const RecordSerializer &recordSerializer) : _dataFile(dataFile),
                                                                             _recordSerializer(recordSerializer) {
@@ -105,9 +105,9 @@ namespace kvs {
         }
 
         /**
-         * Добавить @p record в хранилище и присвоить ему идентификатор внутри хранилища.
-         * @param record Добавляемая запись.
-         * @return Присвоенный идентификатор.
+         * Add @p record in storage and assign it identifier.
+         * @param record Inserted record.
+         * @return Assigned identifier.
          */
         Id add(const Record &record) {
             char *recordInBytes = _recordSerializer.recordToBytes(record);
@@ -121,10 +121,10 @@ namespace kvs {
         }
 
         /**
-         * Получить @p Record по @p id.
-         * @param id Идентификатор объекта.
-         * @return @p Record обернутый в @p std::optional, если в @p Storage есть какой-то объект с @p id;
-         * пустой @p std::optional иначе.
+         * Get @p Record by @p id.
+         * @param id Object identifier.
+         * @return @p Record wrapper into @p std::optional, if there is some object in @p Storage with @p id;
+         * empty @p std::optional otherwise.
          */
         [[nodiscard]] std::optional<Record> get(const Id &id) const {
             char *recordInBytes = _dataFile.read(_recordSize, FileOffset(_recordSize * id.getId()));
@@ -134,10 +134,10 @@ namespace kvs {
         }
 
         /**
-         * Получить @p Record по @p id.
-         * Контракт : объект с таким @p id всегда существует, но возможно он устарел.
-         * @param id Идентификатор объекта.
-         * @return @p Record обернутый в @p std::optional.
+         * Get @p Record by @p id.
+         * Contract : object with the given @p id always exists, but probably outdated.
+         * @param id Object identifier.
+         * @return @p Record wrapped into @p std::optional.
          */
         std::optional<Record> getAnyway(const Id &id) {
             char *recordInBytes = _dataFile.read(_recordSize, FileOffset(_recordSize * id.getId()));
@@ -147,8 +147,8 @@ namespace kvs {
         }
 
         /**
-         * Удаляет объект с @p id. Если объекта нет, ничего не делает.
-         * @param id Идентификатор удаляемого объекта.
+         * Remove object with @p id. Do nothing if there is no object.
+         * @param id Identifier of removed object.
          */
         void remove(const Id &id) {
             auto bitOutdatedOffset = FileOffset(id.getId() * _recordSize + _recordSerializer.getKeySize());
@@ -158,23 +158,23 @@ namespace kvs {
         }
 
         /**
-         * Очищает хранилище.
+         * Clean up storage.
          */
         void clear() {
             _dataFile.clear();
         }
 
         /**
-         * Проверяет, заполнено ли хранилище.
-         * @return @p true, если заполнено; @p false иначе.
-         */
+        * Check whether @p Log is full.
+        * @return true if log is full; false otherwise.
+        */
         [[nodiscard]] bool isFull() const {
             return _countAllRecords > 1000 && (_countAllRecords < 2 * _countRemovedRecords);
         }
 
         /**
-         * Удаляет из хранилища все записи с переданными @p Id
-         * @param idsToRemove Массив @p Id, по которым надо удалить записи.
+         * Remove all the records with the given ids.
+         * @param idsToRemove Array of objects @p Id to remove.
          */
         void removeRecordsById(const std::vector<Id> &idsToRemove) {
             for (const Id &id : idsToRemove) {
@@ -183,13 +183,12 @@ namespace kvs {
         }
 
         /**
-         * Перестраивает хранилище, удаляя устаревшие записи и оставляя остальные.
+         * Rebuild storage via deleting outdated records.
          */
         void rebuild() {
             auto readIterator = Storage<Record>::RecordStorageIterator(*this);
             auto writeIterator = Storage<Record>::RecordStorageIterator(*this);
 
-            int cnt = 0;
             for (; readIterator != readIterator.end(); ++readIterator) {
                 Record record = *readIterator;
 
@@ -199,7 +198,6 @@ namespace kvs {
                                             _recordSize);
 
                     ++writeIterator;
-                    cnt++;
                 }
             }
 
@@ -208,7 +206,7 @@ namespace kvs {
         }
 
         /**
-         * @return Размер хранилища.
+         * @return Storage size.
          */
         [[nodiscard]] std::size_t size() const {
             return _countAllRecords;
@@ -223,15 +221,15 @@ namespace kvs {
     };
 
     /**
-     * \brief Класс для хранения @p Record на диске.
+     * \brief Class storing @p Record on the disk.
      */
     template<>
     class Storage<TrieNode> {
     public:
         /**
          *
-         * @param trieNodeFile Файл для записи @p TrieNode.
-         * @param trieNodeSerializer Класс, сериализующий @p TrieNode-ы.
+         * @param trieNodeFile File to writing @p TrieNode.
+         * @param trieNodeSerializer Class serializing @p TrieNode.
          */
         Storage(File &trieNodeFile, const TrieNodeSerializer &trieNodeSerializer) : _trieNodeFile(trieNodeFile),
                                                                                     _trieNodeSerializer(
@@ -239,9 +237,9 @@ namespace kvs {
         }
 
         /**
-         * Добавить @p trieNode в хранилище и присвоить ей идентификатор внутри хранилища.
-         * @param trieNode Добавляемая нода.
-         * @return Присвоенный идентификатор.
+         * Add @p record in storage and assign it identifier.
+         * @param trieNode Inserted trie node.
+         * @return Assigned identifier.
          */
         Id add(const TrieNode &trieNode) {
             char *recordInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
@@ -253,9 +251,10 @@ namespace kvs {
         }
 
         /**
-         * Получить @p TrieNode по @p id. Контракт : по @p id всегда есть @p TrieNode.
-         * @param id Идентификатор объекта.
-         * @return @p TrieNode обернутый в @p std::optional.
+         * Get @p TrieNode by @p id.
+         * Contract : there is @p TrieNode by @p id.
+         * @param id Object identifier.
+         * @return @p TrieNode wrapped into @p std::optional.
          */
         [[nodiscard]] std::optional<TrieNode> get(const Id &id) const {
             char *trieNodeInBytes = _trieNodeFile.read(_trieNodeSize,
@@ -271,9 +270,9 @@ namespace kvs {
         void remove(const Id &id) = delete;
 
         /**
-         * Записать по @p id новую @p trieNode.
-         * @param id Идентификатор.
-         * @param trieNode Нода.
+         * Write by @p id a new @p trieNode.
+         * @param id Identifier.
+         * @param trieNode TrieNode.
          */
         void replace(const Id &id, const TrieNode &trieNode) {
             char *recordInBytes = _trieNodeSerializer.trieNodeToBytes(trieNode);
@@ -286,16 +285,16 @@ namespace kvs {
         }
 
         /**
-         * Очищает хранилище.
+         * Clean up storage.
          */
         void clear() {
             _trieNodeFile.clear();
         }
 
         /**
-         * Добавляет все ноды переданного бора в хранилище
-         * @param node Корень переданного бора.
-         * @return Идентификатор корня @p node в хранилище.
+         * Add all nodes of the given trie to storage.
+         * @param node Root of the given trie.
+         * @return Root identifier @p of the node in storage.
          */
         Id addTrieNodeSubtree(const std::shared_ptr<InMemoryTrieNode> &node) {
             std::vector<Id> ids(UCHAR_MAX + 1, Id(std::numeric_limits<std::size_t>::max()));
@@ -327,6 +326,6 @@ namespace kvs {
         File &_trieNodeFile;
         TrieNodeSerializer _trieNodeSerializer;
     };
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_STORAGE_HPP

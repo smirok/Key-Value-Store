@@ -6,7 +6,7 @@
 namespace kvs {
 
     /**
-     * \brief Класс, хранящий значение и его размер.
+     * \brief Class representing key and its size.
      */
     class Value {
     public:
@@ -31,6 +31,6 @@ namespace kvs {
         size_t _size;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_VALUE_HPP

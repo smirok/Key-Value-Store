@@ -9,13 +9,12 @@
 namespace kvs {
 
     /**
-     * \brief Класс, представляющий хранилище данных в оперативной памяти, оборачивающий @p std::unordered_map
-     * и хранящий пары < @p Key, @p Id> .
+     * \brief Class representing data storage in RAM, wrapping @p std::unordered_map and storing pairs < @p Key, @p Id>.
      */
     class Log : public LogicStorage {
     public:
         /**
-         * \brief Итератор @p Log-а по @p _logMap.
+         * \brief @p Log iterator over @p _logMap.
          */
         struct LogIterator {
             explicit LogIterator(const Log &log) : _begin(log._logMap.begin()),
@@ -49,51 +48,50 @@ namespace kvs {
         };
 
         /**
-         *
-         * @param sizeLimit Максимальный размер хранилища.
+         * @param sizeLimit Maximal storage size.
          */
         explicit Log(std::size_t sizeLimit);
 
         /**
-         * Добавление в @p Log по ключу @p key значение @p id.
-         * Если ранее в @p Log уже был какой-то идентификатор по ключу @p key, то его @p Id обновляется
-         * @param key Ключ.
-         * @param id Идентификатор.
-         * @return @p Id обернутый в @p std::optional, если ранее в @p Log уже был какой-то идентификатор по ключу @p key;
-         * пустой @p std::optional иначе
+         * Insert value @p id in @p Log by @p key.
+         * If there is an identifier by @p key, then @p Id will be updated.
+         * @param key Key.
+         * @param id Identifier.
+         * @return @p Id wrapped into @p std::optional, if there was some identifier by @p key in @p Log;
+         * empty @p std::optional otherwise.
          */
         std::optional<Id> add(const Key &key, const Id &id) override;
 
         /**
-         * Удаление пары c ключом @p key.
-         * @param key Ключ.
-         * @return @p Id обернутый в @p std::optional, если ранее в @p Log уже был какой-то идентификатор по ключу @p key;
-         * пустой @p std::optional иначе.
+         * Remove key-value pair by @p key.
+         * @param key Key.
+         * @return @p Id wrapped into @p std::optional, if there was some identifier by @p key in @p Log;
+         * empty @p std::optional otherwise.
          */
         std::optional<Id> remove(const Key &key) override;
 
         /**
-         * Получить @p Id по ключу @p key.
-         * @param key Ключ.
-         * @return @p Id обернутый в @p std::optional, если в @p Log есть какой-то идентификатор по ключу @p key;
-         * пустой @p std::optional иначе.
+         * Get @p Id by @p key.
+         * @param key Key.
+         * @return @p Id wrapped into @p std::optional, if there was some identifier by @p key in @p Log;
+         * empty @p std::optional otherwise.
          */
         std::optional<Id> get(const Key &key) const override;
 
         /**
-         * Очищает @p Log.
+         * Clean up @p Log.
          */
         void clear() override;
 
         /**
-         * Проверяет, переполнен ли @p Log.
-         * @return true, если переполнен; false иначе.
+         * Check whether @p Log is full.
+         * @return true if log is full; false otherwise.
          */
         bool isFull() const;
 
         /**
-         * Превращение @p Log-а в бор, хранящийся в оперативной памяти.
-         * @return Указатель на корень получившегося бора.
+         * Turn @p Log-а into trie storing in RAM.
+         * @return Pointer on the root of resulting trie.
          */
         std::shared_ptr<InMemoryTrieNode> toInMemoryTrieNode() const;
 
@@ -102,6 +100,6 @@ namespace kvs {
         std::unordered_map<Key, Id> _logMap;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_LOG_HPP

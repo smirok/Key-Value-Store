@@ -8,7 +8,7 @@
 namespace kvs {
 
     /**
-     * \brief Класс, реализующий структуру ноды бора для хранения на диске.
+     * \brief Class representing the trie node for storing on the disk.
      */
     class TrieNode {
     public:
@@ -21,10 +21,10 @@ namespace kvs {
         [[nodiscard]] Id getNextRecord(std::size_t index) const;
 
     private:
-        /** Список идентификаторов детей-нод. */
+        /** Vector of children-nodes identifiers. */
         std::vector<Id> _nextRecords;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_TRIENODE_HPP

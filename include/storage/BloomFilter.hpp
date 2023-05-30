@@ -9,26 +9,23 @@
 namespace kvs {
 
     /**
-     * \brief Класс, реализующий фильтр Блума.
+     * \brief Class implementing Bloom Filter.
      */
     class BloomFilter {
     public:
         /**
-         *
-         * @param size Размер фильтр блума.
+         * @param size Bloom Filter's size.
          */
         explicit BloomFilter(std::size_t size);
 
         /**
-         *
-         * @param key Ключ, добавляемый в фильтр.
+         * @param key Key added to filter.
          */
         void add(const Key &key);
 
         /**
-         *
-         * @param key Ключ, наличие которого в фильтр проверяем.
-         * @return @p true, если ключ может содержаться в фильтре; @p false, если ключа точно нет в фильтре.
+         * @param key The key to check existence.
+         * @return @p true, if the key might be in the Bloom Filter; @p false, if the key is definitely not in the filter.
          */
         [[nodiscard]] bool mightContains(const Key &key) const;
 
@@ -37,6 +34,6 @@ namespace kvs {
         std::size_t _functionsCount;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_BLOOMFILTER_HPP

@@ -8,44 +8,44 @@
 namespace kvs {
 
     /**
-     * \brief Интерфейс хранилища, отвечающего только за логику.
+     * \brief Storage interface responsible for the storage logic.
      */
     class LogicStorage {
     public:
         /**
-         * Добавление в @p LogicStorage по ключу @p key значение @p id.
-         * Если ранее в @p LogicStorage уже был какой-то идентификатор по ключу @p key, то его @p Id обновляется
-         * @param key Ключ.
-         * @param id Идентификатор.
-         * @return @p Id обернутый в @p std::optional, если ранее в реализации @p LogicStorage уже был какой-то идентификатор по ключу @p key;
-         * пустой @p std::optional иначе
+         * Insert value @p id in @p LogicStorage by @p key.
+         * If there was some identifier in @p LogicStorage by @p key, then @p Id will be updated.
+         * @param key Key.
+         * @param id Identifier.
+         * @return @p Id wrapped into @p std::optional, if there was some identifier in @p LogicStorage implementation by @p key;
+         * empty @p std::optional otherwise.
          */
         virtual std::optional<Id> add(const Key &key, const Id &id) = 0;
 
         /**
-         * Удаление пары c ключом @p key.
-         * @param key Ключ.
-         * @return @p Id обернутый в @p std::optional, если ранее в реализации @p LogicStorage уже был какой-то идентификатор по ключу @p key;
-         * пустой @p std::optional иначе.
+         * Remove key-value pair by @p key.
+         * @param key Key.
+         * @return @p Id wrapped into @p std::optional, if there was some identifier in @p LogicStorage implementation by @p key;
+         * empty @p std::optional otherwise.
          */
         virtual std::optional<Id> remove(const Key &key) = 0;
 
         /**
-         * Получить @p Id по ключу @p key.
+         * Get @p Id by @p key.
          * @param key Ключ.
-         * @return @p Id обернутый в @p std::optional, если в реализации @p LogicStorage есть какой-то идентификатор по ключу @p key;
-         * пустой @p std::optional иначе.
+         * @return @p Id wrapped into @p std::optional, if there was some identifier in @p LogicStorage implementation by @p key;
+         * empty @p std::optional otherwise.
          */
         [[nodiscard]] virtual std::optional<Id> get(const Key &key) const = 0;
 
         /**
-         * Очищает @p LogicStorage.
+         * Clean up @p LogicStorage.
          */
         virtual void clear() = 0;
 
         virtual ~LogicStorage() = default;
     };
 
-}
+} // kvs
 
 #endif //KEYVALUESTORAGE_LOGICSTORAGE_HPP
